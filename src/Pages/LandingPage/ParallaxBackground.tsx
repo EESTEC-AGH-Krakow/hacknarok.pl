@@ -2,13 +2,9 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 
 const Background = styled.div<{ offset: number }>`
-  --offset-reduced: calc(${(props) => props.offset * 0.6}px);
   width: 100%;
   position: absolute;
-  top: var(--offset-reduced);
-  height: calc(700px - var(--offset-reduced));
-  overflow-x: hidden;
-  overflow-y: hidden;
+  top: calc(${(props) => props.offset * 0.6}px);
 `;
 
 const Clouds = styled.img`

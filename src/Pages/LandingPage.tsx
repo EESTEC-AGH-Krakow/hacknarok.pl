@@ -4,24 +4,19 @@ import ParallaxBackground from "./LandingPage/ParallaxBackground";
 const Content = styled.div`
   position: relative;
   margin-top: -80px;
-  width: 100%;
+  width: 80%;
   height: 160px;
-  display: flex;
-  justify-content: center;
-  padding-left: 50px;
-  padding-right: 50px;
-
-  @media only screen and (max-width: 600px) {
-    height: 450px;
-  }
-`;
-
-const ContentInner = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+
+  @media only screen and (max-width: 600px) {
+    height: 450px;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 50px;
+  }
 `;
 
 const ApplyContainer = styled.div`
@@ -31,6 +26,11 @@ const ApplyContainer = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  @media only screen and (max-width: 600px) {
+    flex: 0;
+    margin: 20px;
+  }
 
   span {
     font-size: 18px;
@@ -52,6 +52,10 @@ const EventPlaceContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
+  @media only screen and (max-width: 600px) {
+    flex: 0;
+  }
 `;
 
 const EventPlaceInnerContainer = styled.div`
@@ -62,6 +66,11 @@ const EventPlaceInnerContainer = styled.div`
 
   h2 {
     margin-top: 0;
+
+    @media only screen and (max-width: 600px) {
+      font-size: 20px;
+      margin: 0;
+    }
   }
 `;
 
@@ -69,6 +78,10 @@ const LogoContainer = styled.div`
   flex: 1;
   display: flex;
   justify-content: flex-end;
+
+  @media only screen and (max-width: 600px) {
+    flex: 0;
+  }
 `;
 
 const Logo = styled.img`
@@ -91,21 +104,19 @@ function LandingPage() {
     <Page>
       <ParallaxBackground />
       <Content>
-        <ContentInner>
-          <EventPlaceContainer>
-            <EventPlaceInnerContainer>
-              <h2>23-24 marca</h2>
-              <span>Krakowski Park Technologiczny</span>
-            </EventPlaceInnerContainer>
-          </EventPlaceContainer>
-          <ApplyContainer>
-            <span>Zapisy do 17.01</span>
-            <button>Zapisz się</button>
-          </ApplyContainer>
-          <LogoContainer>
-            <Logo src="/logo_eestec.png" />
-          </LogoContainer>
-        </ContentInner>
+        <EventPlaceContainer>
+          <EventPlaceInnerContainer>
+            <h2>23-24 marca</h2>
+            <span>Krakowski Park Technologiczny</span>
+          </EventPlaceInnerContainer>
+        </EventPlaceContainer>
+        <ApplyContainer>
+          <span>Zapisy do 17.01</span>
+          <button>Zapisz się</button>
+        </ApplyContainer>
+        <LogoContainer>
+          <Logo src="/logo_eestec.png" />
+        </LogoContainer>
       </Content>
     </Page>
   );
