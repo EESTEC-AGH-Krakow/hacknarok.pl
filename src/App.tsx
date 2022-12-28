@@ -8,16 +8,17 @@ const Background = styled.div<{ offset: number }>`
   top: var(--offset-reduced);
   height: calc(700px - var(--offset-reduced));
   overflow-x: hidden;
-  overflow-y: visible;
+  overflow-y: hidden;
 `;
 
 const Clouds = styled.img`
   width: 100%;
-  position: absolute;
   min-width: 1600px;
 `;
 
 const TitleContainer = styled.div`
+  position: absolute;
+  top: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -26,7 +27,6 @@ const TitleContainer = styled.div`
 `;
 
 const Title = styled.h1`
-  position: relative;
   color: black;
   font-family: Norse;
   font-size: 100px;
