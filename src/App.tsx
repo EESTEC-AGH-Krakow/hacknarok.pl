@@ -22,7 +22,7 @@ const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
+  padding-top: 20px;
 `;
 
 const Title = styled.h1`
@@ -36,6 +36,7 @@ const MountainsContainer = styled.div`
   position: relative;
   overflow: hidden;
   width: 100%;
+  min-width: 1200px;
   display: flex;
   flex-direction: column;
 `;
@@ -44,7 +45,6 @@ const MountainsContainer = styled.div`
 const MountainsScreenLayer = styled.img`
   width: 100%;
   mix-blend-mode: screen;
-  min-width: 1600px;
 `;
 
 //Hard overlay so that there is no screening effect on the clouds
@@ -52,7 +52,6 @@ const MountainsHardOverlay = styled.img`
   position: absolute;
   mask-image: linear-gradient(180deg, black 20%, transparent 70%);
   width: 100%;
-  min-width: 1600px;
 `;
 
 const MountainBackdrop = styled.div`
@@ -75,9 +74,13 @@ const FakeContent = styled.div`
 
 const Content = styled.div`
   position: relative;
-  margin-top: -50px;
+  margin-top: -80px;
   width: 100%;
   height: 160px;
+  display: flex;
+  justify-content: center;
+  padding-left: 50px;
+  padding-right: 50px;
 `;
 
 const ContentInner = styled.div`
@@ -85,8 +88,7 @@ const ContentInner = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin-left: 100px;
-  margin-right: 100px;
+  width: 80%;
 `;
 
 const ApplyContainer = styled.div`
@@ -123,6 +125,7 @@ const EventPlaceInnerContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
 
   h2 {
     margin-top: 0;
