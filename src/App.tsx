@@ -2,21 +2,19 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Background = styled.div<{ offset: number }>`
-  width: 100%;
-  position: absolute;
-  top: calc(${(props) => props.offset * 0.6}px);
-  height: 500px;
-  overflow-x: hidden;
-  overflow-y: visible;
-`;
-
-const Clouds = styled.img<{ offset: number }>`
   --offset-reduced: calc(${(props) => props.offset * 0.6}px);
   width: 100%;
   position: absolute;
   top: var(--offset-reduced);
-  min-width: 1600px;
   height: calc(700px - var(--offset-reduced));
+  overflow-x: hidden;
+  overflow-y: visible;
+`;
+
+const Clouds = styled.img`
+  width: 100%;
+  position: absolute;
+  min-width: 1600px;
 `;
 
 const TitleContainer = styled.div`
@@ -24,7 +22,7 @@ const TitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 60px;
 `;
 
 const Title = styled.h1`
@@ -67,15 +65,88 @@ const MountainBackdrop = styled.div`
 `;
 
 const FakeContent = styled.div`
-  width: 600px;
-  height: 200vh;
-  background-color: aquamarine;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
 `;
 
 const Content = styled.div`
+  position: relative;
+  margin-top: -50px;
   width: 100%;
-  height: 200px;
-  background-color: red;
+  height: 160px;
+`;
+
+const ContentInner = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+`;
+
+const ApplyContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  span {
+    font-size: 18px;
+  }
+
+  button {
+    margin-top: 10px;
+    font-family: Norse;
+    font-size: 24px;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    padding: 10px 30px 10px 30px;
+  }
+`;
+
+const EventPlaceContainer = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+`;
+
+const EventPlaceInnerContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    margin-top: 0;
+  }
+`;
+
+const LogoContainer = styled.div`
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+`;
+
+const Logo = styled.img`
+  width: 200px;
+  margin-top: -20px;
+`;
+
+const ParallaxContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
 `;
 
 const Page = styled.div`
@@ -85,15 +156,6 @@ const Page = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  overflow: hidden;
-`;
-
-const ParallaxContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  position: relative;
-  display: flex;
-  align-items: flex-end;
   overflow: hidden;
 `;
 
@@ -112,16 +174,41 @@ function App() {
     <>
       <Page>
         <ParallaxContainer>
-          <Clouds src="/clouds.jpg" offset={offset} />
+          <Background offset={offset}>
+            <Clouds src="/clouds.jpg" />
+            <TitleContainer>
+              <Title>Hacknarök</Title>
+            </TitleContainer>
+          </Background>
           <MountainsContainer>
             <MountainBackdrop />
             <MountainsScreenLayer src="/mountains_sum_overlay.png" />
             <MountainsHardOverlay src="/mountains_sum_overlay.png" />
           </MountainsContainer>
         </ParallaxContainer>
-        <Content />
+        <Content>
+          <ContentInner>
+            <EventPlaceContainer>
+              <EventPlaceInnerContainer>
+                <h2>23-24 marca</h2>
+                <span>Krakowski Park Technologiczny</span>
+              </EventPlaceInnerContainer>
+            </EventPlaceContainer>
+            <ApplyContainer>
+              <span>Zapisy do 17.01</span>
+              <button>Zapisz się</button>
+            </ApplyContainer>
+            <LogoContainer>
+              <Logo src="/logo_eestec.png" />
+            </LogoContainer>
+          </ContentInner>
+        </Content>
       </Page>
-      <FakeContent />
+      <FakeContent>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed
+        diam tincidunt, rhoncus tortor vitae, rutrum dolor. Curabitur et feugiat
+        velit. Morbi nec erat nisl.
+      </FakeContent>
     </>
   );
 }
