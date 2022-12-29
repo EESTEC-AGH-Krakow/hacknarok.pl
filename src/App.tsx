@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import LandingPage from "./Pages/LandingPage";
+import Navbar from "./Pages/Navbar";
 
 const FakeContent = styled.div`
   margin-top: 200px;
@@ -13,6 +14,7 @@ const FakeContent = styled.div`
 function App() {
   return (
     <>
+      <Navbar />
       <LandingPage />
       <FakeContent>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed

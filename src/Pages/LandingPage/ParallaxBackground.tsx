@@ -70,6 +70,8 @@ const ParallaxContainer = styled.div`
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+
+  user-select: none;
 `;
 
 function ParallaxBackground() {

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Navbar from "./Navbar";
 import ParallaxBackground from "./LandingPage/ParallaxBackground";
 
 const Content = styled.div`
@@ -96,7 +97,6 @@ const Page = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  overflow: hidden;
 `;
 
 function LandingPage() {

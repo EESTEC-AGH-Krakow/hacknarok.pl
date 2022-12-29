@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "styled-components.vscode-styled-components",
+    "pmneo.tsimporter",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint"
+  ]
+}
