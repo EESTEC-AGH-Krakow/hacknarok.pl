@@ -69,37 +69,10 @@ export default function Navbar({ pageRefs }: NavbarProps) {
     setSelectedPage(pageName);
   };
 
-  const toggleDrawer =
-    (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (
-        event.type === "keydown" &&
-        ((event as React.KeyboardEvent).key === "Tab" ||
-          (event as React.KeyboardEvent).key === "Shift")
-      ) {
-        return;
-      }
-
-      setState(open);
-    };
-
-  const list = () => (
-    <Box
-      sx={{ width: 250 }}
-      role="presentation"
-      onClick={toggleDrawer(false)}
-      onKeyDown={toggleDrawer(false)}
-    >
-      <List>
-        {Object.keys(pageRefs).map((pageName, index) => (
-          <ListItem key={pageName}>
-            <ListItemButton onClick={() => selectPage(pageName)}>
-              <ListItemText primary={pageName} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-    </Box>
-  );
+  const toggleDrawer = (newState: boolean) => {
+    if (state == newState) return;
+    setState(newState);
+  };
 
   return (
     <>
@@ -127,10 +100,25 @@ export default function Navbar({ pageRefs }: NavbarProps) {
       <SwipeableDrawer
         anchor="right"
         open={state}
-        onOpen={toggleDrawer(true)}
-        onClose={toggleDrawer(false)}
+        onOpen={() => toggleDrawer(true)}
+        onClose={() => toggleDrawer(false)}
       >
-        {list()}
+        <Box
+          sx={{ width: 250 }}
+          role="presentation"
+          onClick={() => toggleDrawer(false)}
+          onKeyDown={() => toggleDrawer(false)}
+        >
+          <List>
+            {Object.keys(pageRefs).map((pageName, index) => (
+              <ListItem key={pageName}>
+                <ListItemButton onClick={() => selectPage(pageName)}>
+                  <ListItemText primary={pageName} />
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
       </SwipeableDrawer>
     </>
   );
