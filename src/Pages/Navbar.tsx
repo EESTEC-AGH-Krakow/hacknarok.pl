@@ -6,7 +6,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import * as React from "react";
-import { useState } from "react";
+import { useState, RefObject } from "react";
 import styled from "styled-components";
 
 const TabButton = styled.button<{ isActive: boolean }>`
@@ -51,12 +51,23 @@ const MenuButtonContainer = styled.div`
   }
 `;
 
-const pages = ["Strona główna", "O wydarzeniu", "Kontakt"];
+interface NavbarProps {
+  pageRefs: Record<string, RefObject<HTMLInputElement>>;
+}
 
-export default function Navbar() {
-  const [selectedPage, setSelectedPage] = useState(pages[0]);
+export default function Navbar({ pageRefs }: NavbarProps) {
+  const [selectedPage, setSelectedPage] = useState(Object.keys(pageRefs)[0]);
 
   const [state, setState] = React.useState(false);
+
+  const selectPage = (pageName: string) => {
+    pageRefs[pageName].current?.scrollIntoView({
+      block: "start",
+      behavior: "smooth",
+    });
+
+    setSelectedPage(pageName);
+  };
 
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -79,10 +90,10 @@ export default function Navbar() {
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        {pages.map((text, index) => (
-          <ListItem key={text}>
-            <ListItemButton>
-              <ListItemText primary={text} />
+        {Object.keys(pageRefs).map((pageName, index) => (
+          <ListItem key={pageName}>
+            <ListItemButton onClick={() => selectPage(pageName)}>
+              <ListItemText primary={pageName} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -94,10 +105,10 @@ export default function Navbar() {
     <>
       <Bar>
         <TabsContainer>
-          {pages.map((p) => (
+          {Object.keys(pageRefs).map((p) => (
             <TabButton
               isActive={selectedPage === p}
-              onClick={() => setSelectedPage(p)}
+              onClick={() => selectPage(p)}
             >
               {p}
             </TabButton>

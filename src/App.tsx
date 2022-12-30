@@ -1,27 +1,21 @@
-import styled from "styled-components";
+import LayoutWithNavbar from "./LayoutWithNavbar";
+import About from "./Pages/About";
 import LandingPage from "./Pages/LandingPage";
-import Navbar from "./Pages/Navbar";
-
-const FakeContent = styled.div`
-  margin-top: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-`;
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <LandingPage />
-      <FakeContent>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sed
-        diam tincidunt, rhoncus tortor vitae, rutrum dolor. Curabitur et feugiat
-        velit. Morbi nec erat nisl.
-      </FakeContent>
-    </>
+    <LayoutWithNavbar
+      pages={[
+        {
+          title: "Strona główna",
+          component: <LandingPage />,
+        },
+        {
+          title: "O wydarzeniu",
+          component: <About />,
+        },
+      ]}
+    />
   );
 }
 
