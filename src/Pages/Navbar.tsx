@@ -24,7 +24,7 @@ const TabButton = styled.button<{ isActive: boolean }>`
   border-color: transparent;
 
   :hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(70, 5, 191, 0.2);
   }
 
   @media screen and (max-width: 600px) {
