@@ -1,4 +1,6 @@
+import { Grid } from "@mui/material";
 import styled from "styled-components";
+
 
 
 const PartnersContainer = styled.div`
@@ -10,18 +12,6 @@ const PartnersContainer = styled.div`
     flex-direction: column;
 `;
 
-const LogosGrid = styled.div`
-  width: 70%;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-gap: 30px;
-  column-gap: 100px;
-  align-items: center;
-
-  @media only screen and (max-width: 600px) {
-    width: 50%;
-  }
-`;
 
 
 const LogoContainer = styled.div`
@@ -38,41 +28,65 @@ const Logo = styled.img`
   max-height: 50%;
 `
 
+const GridContainer = styled.div`
+  width: 70%;
+  margin-bottom: 100px;
+`
+
+const TopPageSpacer = styled.div`
+  height: 100px;
+  
+  @media only screen and (max-width: 600px) {
+    height: 60px;
+  }
+`
 
 const Title = styled.h1`
   color: black;
-  margin-top: 100px;
   margin-bottom: 60px;
   font-family: Norse;
   font-size: 60px;
   text-align: center;
-  padding-top: 30px;
-`;
-// f2 jest super i pozwala zmieniac nazwe automatycznie
+
+  @media only screen and (max-width: 600px) {
+    font-size: 40px;
+  }
+`
+
 
 export default function About() {
+  const partnerLogoPaths = ["public/partners/google.png", "public/partners/ibm.png", "public/partners/allegro.png", "public/partners/avsystem.png", "public/partners/sabre.png"];
+  const mediaPatronsLogoPaths = ["public/partners/google.png", "public/partners/ibm.png", "public/partners/allegro.png", "public/partners/avsystem.png", "public/partners/sabre.png"];
+
   return (
     <PartnersContainer>
+      <TopPageSpacer />
       <Title>NASI PARTNERZY</Title>
-      <LogosGrid>
-        <LogoContainer ><Logo src="/../../public/partners/google.png" /></LogoContainer>
-        <LogoContainer ><Logo src="/../../public/partners/allegro.png" /></LogoContainer>
-        <LogoContainer ><Logo src="/../../public/partners/sabre.png" /></LogoContainer>
-        <LogoContainer ><Logo src="/../../public/partners/ibm.png" /></LogoContainer>
-        <LogoContainer ><Logo src="/../../public/partners/avsystem.png" /></LogoContainer>
-        <LogoContainer ><Logo src="/../../public/partners/google.png" /></LogoContainer>
-        <LogoContainer ><Logo src="/../../public/partners/allegro.png" /></LogoContainer>
-        <LogoContainer ><Logo src="/../../public/partners/ibm.png" /></LogoContainer>
-        <LogoContainer ><Logo src="/../../public/partners/google.png" /></LogoContainer>
-        <LogoContainer ><Logo src="/../../public/partners/ibm.png" /></LogoContainer>
-      </LogosGrid>
+      <GridContainer>
+        <Grid container justifyContent="center"
+          alignItems="center"
+          rowSpacing={5}
+          columnSpacing={5}>
+          {partnerLogoPaths.map(logoPath =>
+            <Grid item md={4} sm={6} xs={6}>
+              <LogoContainer><Logo src={logoPath} /></LogoContainer>
+            </Grid>
+          )}
+        </Grid>
+      </GridContainer>
       <Title>PATRONI MEDIALNI</Title>
-      <LogosGrid>
-        <LogoContainer ><Logo src="/../../public/partners/google.png" /></LogoContainer>
-        <LogoContainer ><Logo src="/../../public/partners/allegro.png" /></LogoContainer>
-        <LogoContainer ><Logo src="/../../public/partners/sabre.png" /></LogoContainer>
-        <LogoContainer ><Logo src="/../../public/partners/ibm.png" /></LogoContainer>
-      </LogosGrid>
-    </PartnersContainer>
+      <GridContainer>
+        <Grid container justifyContent="center"
+          alignItems="center"
+          rowSpacing={5}
+          columnSpacing={5}>
+          {mediaPatronsLogoPaths.map(logoPath =>
+            <Grid item md={4} sm={6} xs={6}>
+              <LogoContainer><Logo src={logoPath} /></LogoContainer>
+            </Grid>
+          )}
+        </Grid>
+      </GridContainer>
+    </PartnersContainer >
   );
 }
