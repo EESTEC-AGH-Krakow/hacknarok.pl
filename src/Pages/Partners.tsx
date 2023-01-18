@@ -1,59 +1,78 @@
 import styled from "styled-components";
 
 
-
 const PartnersContainer = styled.div`
     background-color: white;
-    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 `;
 
-const PartnersLogo = styled.div`
+const LogosGrid = styled.div`
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  column-gap: 100px;
+  align-items: center;
+
+  @media only screen and (max-width: 600px) {
+    width: 50%;
+  }
+`;
+
+
+const LogoContainer = styled.div`
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    margin: auto;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    min-width: 0;
 `;
 
 const Logo = styled.img`
-    padding-top:30px;
-    margin-left: auto;
-    margin-right: auto;
-    @media only screen and (max-width: 1280px) {
-        max-width: 25%;
-        height: auto;
-      }
-`;
+  max-width: 100%;
+  max-height: 50%;
+`
 
 
 const Title = styled.h1`
   color: black;
-  margin: 0px;
+  margin-top: 100px;
+  margin-bottom: 60px;
   font-family: Norse;
-  font-size: 100px;
+  font-size: 60px;
   text-align: center;
   padding-top: 30px;
-  @media only screen and (max-width: 1200px) {
-    font-size: 80px;
-  }
 `;
-
+// f2 jest super i pozwala zmieniac nazwe automatycznie
 
 export default function About() {
   return (
     <PartnersContainer>
       <Title>NASI PARTNERZY</Title>
-      <PartnersLogo>
-        <Logo src="/../../public/partners/google.png" />
-        <Logo src="/../../public/partners/allegro.png" />
-        <Logo src="/../../public/partners/sabre.png" />
-        <Logo src="/../../public/partners/ibm.png" />
-        <Logo src="/../../public/partners/avsystem.png" />
-        <Logo src="/../../public/partners/google.png" />
-        <Logo src="/../../public/partners/allegro.png" />
-        <Logo src="/../../public/partners/ibm.png" />
-        <Logo src="/../../public/partners/google.png" />
-        <Logo src="/../../public/partners/google.png" />
-      </PartnersLogo>
+      <LogosGrid>
+        <LogoContainer ><Logo src="/../../public/partners/google.png" /></LogoContainer>
+        <LogoContainer ><Logo src="/../../public/partners/allegro.png" /></LogoContainer>
+        <LogoContainer ><Logo src="/../../public/partners/sabre.png" /></LogoContainer>
+        <LogoContainer ><Logo src="/../../public/partners/ibm.png" /></LogoContainer>
+        <LogoContainer ><Logo src="/../../public/partners/avsystem.png" /></LogoContainer>
+        <LogoContainer ><Logo src="/../../public/partners/google.png" /></LogoContainer>
+        <LogoContainer ><Logo src="/../../public/partners/allegro.png" /></LogoContainer>
+        <LogoContainer ><Logo src="/../../public/partners/ibm.png" /></LogoContainer>
+        <LogoContainer ><Logo src="/../../public/partners/google.png" /></LogoContainer>
+        <LogoContainer ><Logo src="/../../public/partners/ibm.png" /></LogoContainer>
+      </LogosGrid>
+      <Title>PATRONI MEDIALNI</Title>
+      <LogosGrid>
+        <LogoContainer ><Logo src="/../../public/partners/google.png" /></LogoContainer>
+        <LogoContainer ><Logo src="/../../public/partners/allegro.png" /></LogoContainer>
+        <LogoContainer ><Logo src="/../../public/partners/sabre.png" /></LogoContainer>
+        <LogoContainer ><Logo src="/../../public/partners/ibm.png" /></LogoContainer>
+      </LogosGrid>
     </PartnersContainer>
   );
 }
