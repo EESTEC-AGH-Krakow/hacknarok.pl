@@ -1,5 +1,6 @@
 import LayoutWithNavbar from "./LayoutWithNavbar";
 import About from "./Pages/About";
+import Partners from "./Pages/Partners";
 import LandingPage from "./Pages/LandingPage";
 
 function App() {
@@ -13,6 +14,10 @@ function App() {
         {
           title: "O wydarzeniu",
           component: <About />,
+        },
+        {
+          title: "Partnerzy",
+          component: <Partners />,
         },
       ]}
     />
