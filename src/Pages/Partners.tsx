@@ -54,9 +54,9 @@ const Title = styled.h1`
 `
 
 
-export default function About() {
-  const partnerLogoPaths = ["public/partners/google.png", "public/partners/ibm.png", "public/partners/allegro.png", "public/partners/avsystem.png", "public/partners/sabre.png"];
-  const mediaPatronsLogoPaths = ["public/partners/google.png", "public/partners/ibm.png", "public/partners/allegro.png", "public/partners/avsystem.png", "public/partners/sabre.png"];
+export default function Partners() {
+  const partnerLogoPaths = ["public/partners/hid_aa.jpg", "public/partners/capgemini.png", "public/partners/allegro.jpg", "public/partners/dd.png", "public/partners/ge.png", "public/partners/remitly.png", "public/partners/ig.png", "public/partners/kpt.jpg", "public/partners/sabre.png", "public/partners/nokia.png", "public/partners/oracle.png", "public/partners/pga.png", "public/partners/hitachi.png", "public/partners/krakow.jpg"];
+  const mediaPatronsLogoPaths = ["public/media/4p.png", "public/media/bulldogjob.png", "public/media/pb.png", "public/media/iet.png", "public/media/studentnews.png", "public/media/programista.jpg", "public/media/porozmawiajmy.jpg", "public/media/wrss.png"];
 
   return (
     <PartnersContainer>
@@ -68,7 +68,7 @@ export default function About() {
           rowSpacing={5}
           columnSpacing={5}>
           {partnerLogoPaths.map(logoPath =>
-            <Grid item md={4} sm={6} xs={6}>
+            <Grid item md={3} sm={4} xs={6}>
               <LogoContainer><Logo src={logoPath} /></LogoContainer>
             </Grid>
           )}
@@ -81,7 +81,7 @@ export default function About() {
           rowSpacing={5}
           columnSpacing={5}>
           {mediaPatronsLogoPaths.map(logoPath =>
-            <Grid item md={4} sm={6} xs={6}>
+            <Grid item md={3} sm={4} xs={6}>
               <LogoContainer><Logo src={logoPath} /></LogoContainer>
             </Grid>
           )}
