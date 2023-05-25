@@ -32,6 +32,17 @@ const Image = styled.img`
         #00000034 60%,
         rgba(0, 0, 0, 1) 100%
     );
+
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+        height: initial;
+
+        mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            transparent 80%
+        );
+    }
 `;
 
 const TextContainer = styled.div`
@@ -41,9 +52,8 @@ const TextContainer = styled.div`
     flex-direction: column;
     align-items: center;
     width: 30%;
-    margin-left: 100px;
+    min-width: 400px;
     right: 200px;
-    float: left;
 
     @media only screen and (max-width: 600px) {
         position: relative;
@@ -51,6 +61,7 @@ const TextContainer = styled.div`
         right: auto;
         margin: 0;
         width: 80%;
+        min-width: initial;
     }
 `;
 

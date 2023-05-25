@@ -2,12 +2,14 @@ import styled from "styled-components";
 import { Title } from "../components/Title";
 
 const ParentsContainer = styled.div`
+    position: relative;
     margin-top: 100px;
     min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 `;
 
 const ImgContainer = styled.div`
@@ -16,6 +18,7 @@ const ImgContainer = styled.div`
     width: 60%;
     float: left;
     left: calc(40% - 100px);
+    overflow: hidden;
 
     @media only screen and (max-width: 600px) {
         width: 100%;
@@ -26,12 +29,17 @@ const Image = styled.img`
     box-sizing: border-box;
     width: 100%;
     min-width: 600px;
+    overflow: hidden;
 
     mask-image: linear-gradient(
         to left,
         rgba(0, 0, 0, 1) 50%,
         transparent 100%
     );
+
+    @media only screen and (max-width: 600px) {
+        min-width: initial;
+    }
 `;
 
 const TextContainer = styled.div`
