@@ -15,7 +15,6 @@ const TabButton = styled.button<{ isActive: boolean }>`
   text-transform: lowercase;
   font-family: Montserrat;
   border-radius: 100px;
-  font-weight: 800;
   font-size: 16px;
   padding-left: 15px;
   padding-right: 15px;
