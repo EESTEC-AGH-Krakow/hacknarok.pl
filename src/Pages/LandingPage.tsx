@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ParallaxBackground from "./LandingPage/ParallaxBackground";
+import { Button } from "../components/Button";
 
 const Content = styled.div`
     position: relative;
@@ -34,16 +35,6 @@ const ApplyContainer = styled.div`
 
     span {
         font-size: 18px;
-    }
-
-    button {
-        margin-top: 10px;
-        font-family: Norse;
-        font-size: 24px;
-        background-color: white;
-        color: black;
-        border-radius: 15px;
-        padding: 10px 30px 10px 30px;
     }
 `;
 
@@ -111,7 +102,7 @@ function LandingPage() {
                 </EventPlaceContainer>
                 <ApplyContainer>
                     <span>Zapisy do 17.01</span>
-                    <button>Zapisz się</button>
+                    <Button>Zapisz się</Button>
                 </ApplyContainer>
                 <LogoContainer>
                     <Logo src="/logo_eestec.png" />

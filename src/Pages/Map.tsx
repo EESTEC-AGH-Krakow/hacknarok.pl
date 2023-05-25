@@ -1,24 +1,21 @@
 import styled from "styled-components";
 import { Title } from "../components/Title";
+import { Button } from "../components/Button";
 
 const ParentsContainer = styled.div`
-    position: relative;
     margin-top: 100px;
     min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 `;
 
 const ImgContainer = styled.div`
     box-sizing: border-box;
     position: absolute;
-    width: 60%;
-    float: left;
-    left: calc(40% - 100px);
-    overflow: hidden;
+    left: 0;
+    height: 100%;
 
     @media only screen and (max-width: 600px) {
         width: 100%;
@@ -27,29 +24,36 @@ const ImgContainer = styled.div`
 
 const Image = styled.img`
     box-sizing: border-box;
-    width: 100%;
-    min-width: 600px;
-    overflow: hidden;
+    height: 100%;
 
-    mask-image: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 1) 50%,
-        transparent 100%
+    mask-image: radial-gradient(
+        circle at 140% 70%,
+        transparent 40%,
+        #00000034 60%,
+        rgba(0, 0, 0, 1) 100%
     );
 
     @media only screen and (max-width: 600px) {
-        min-width: initial;
+        width: 100%;
+        height: initial;
+
+        mask-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 1) 0%,
+            transparent 80%
+        );
     }
 `;
 
 const TextContainer = styled.div`
     box-sizing: border-box;
     position: absolute;
-    width: 40%;
-    margin-right: 100px;
-    right: 100px;
-    float: left;
-    left: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    min-width: 400px;
+    right: 200px;
 
     @media only screen and (max-width: 600px) {
         position: relative;
@@ -57,11 +61,13 @@ const TextContainer = styled.div`
         right: auto;
         margin: 0;
         width: 80%;
+        min-width: initial;
     }
 `;
 
 const HeaderContainer = styled(Title)`
     color: white;
+    text-align: center;
 `;
 
 const FakeContent = styled.div`
@@ -69,11 +75,18 @@ const FakeContent = styled.div`
     text-align: justify;
 `;
 
-export default function About() {
+const ShowOnMapButton = styled(Button)`
+    margin-top: 50px;
+`;
+
+export default function Map() {
     return (
         <ParentsContainer>
+            <ImgContainer>
+                <Image src="map.png"></Image>
+            </ImgContainer>
             <TextContainer>
-                <HeaderContainer>CZY JESTEŚ GOTÓW NA WYZWANIE?</HeaderContainer>
+                <HeaderContainer>Jak dojechać?</HeaderContainer>
                 <FakeContent>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Vivamus magna neque, vulputate sed placerat eget, dignissim
@@ -85,10 +98,16 @@ export default function About() {
                     curae; Donec at nibh posuere, imperdiet nunc ac, finibus
                     neque.
                 </FakeContent>
+                <ShowOnMapButton
+                    onClick={() => {
+                        window.open(
+                            "https://goo.gl/maps/1pCQR5vRVgAHndsx8?coh=178571&entry=tt"
+                        );
+                    }}
+                >
+                    Pokaż na mapie
+                </ShowOnMapButton>
             </TextContainer>
-            <ImgContainer>
-                <Image src="laptop.png"></Image>
-            </ImgContainer>
         </ParentsContainer>
     );
 }
