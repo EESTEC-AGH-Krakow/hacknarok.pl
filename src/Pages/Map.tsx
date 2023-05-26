@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Title } from "../components/Title";
 import { Button } from "../components/Button";
+import { UnderlinedTitle } from "../components/Title";
 
 const ParentsContainer = styled.div`
     margin-top: 100px;
@@ -68,11 +68,6 @@ const TextContainer = styled.div`
     }
 `;
 
-const HeaderContainer = styled(Title)`
-    color: white;
-    text-align: center;
-`;
-
 const FakeContent = styled.div`
     box-sizing: border-box;
     text-align: justify;
@@ -89,9 +84,13 @@ export default function Map() {
                 <Image src="map.png"></Image>
             </ImgContainer>
             <TextContainer>
-                <HeaderContainer data-aos="fade-left">
-                    Jak dojechać?
-                </HeaderContainer>
+                <div data-aos="fade-left">
+                    <UnderlinedTitle
+                        text="Jak dojechać?"
+                        textColor="light"
+                        align="flex-end"
+                    />
+                </div>
                 <FakeContent data-aos="fade-left">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Vivamus magna neque, vulputate sed placerat eget, dignissim

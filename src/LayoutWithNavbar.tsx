@@ -18,7 +18,6 @@ interface LayoutWithNavbarProps {
 }
 
 function LayoutWithNavbar({ pages }: LayoutWithNavbarProps) {
-    console.log(pages);
     const [refs, setRefs] = useState<Record<string, PageWithRef>>({});
 
     const [currentPage, setCurrentPage] = useState(pages[0].title);

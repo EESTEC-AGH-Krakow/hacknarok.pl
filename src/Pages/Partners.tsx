@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import { PropsWithChildren } from "react";
 import styled from "styled-components";
-import { Title } from "../components/Title";
+import { UnderlinedTitle } from "../components/Title";
 
 const PartnersContainer = styled.div`
     background-color: white;
@@ -36,10 +36,6 @@ const TopPageSpacer = styled.div`
     @media only screen and (max-width: 600px) {
         height: 60px;
     }
-`;
-
-const CenteredTitle = styled(Title)`
-    text-align: center;
 `;
 
 const partnerLogoPaths = [
@@ -96,7 +92,13 @@ export default function Partners() {
     return (
         <PartnersContainer>
             <TopPageSpacer />
-            <CenteredTitle data-aos="fade-up">NASI PARTNERZY</CenteredTitle>
+            <div data-aos="fade-up">
+                <UnderlinedTitle
+                    text="Nasi Partnerzy"
+                    textColor="dark"
+                    align="center"
+                />
+            </div>
             <GridContainer>
                 <PartnersGridContainer>
                     {partnerLogoPaths.map((logoPath) => (
@@ -108,7 +110,13 @@ export default function Partners() {
                     ))}
                 </PartnersGridContainer>
             </GridContainer>
-            <CenteredTitle data-aos="fade-up">PATRONI MEDIALNI</CenteredTitle>
+            <div data-aos="fade-up">
+                <UnderlinedTitle
+                    text="Patroni medialni"
+                    textColor="dark"
+                    align="center"
+                />
+            </div>
             <GridContainer>
                 <PartnersGridContainer>
                     {mediaPatronsLogoPaths.map((logoPath) => (
