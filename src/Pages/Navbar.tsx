@@ -11,21 +11,28 @@ import { useState } from "react";
 import styled, { css } from "styled-components";
 import { PageWithRef } from "../LayoutWithNavbar";
 
-const TabButtonBase = css`
+const TabButton = styled.button<{
+    isActive: boolean;
+    isOnTopOfThePage: boolean;
+}>`
+    background-color: ${(props) => (props.isActive ? "white" : "transparent")};
+    color: ${(props) =>
+        props.isActive || props.isOnTopOfThePage ? "black" : "white"};
+
     box-sizing: border-box;
     text-transform: lowercase;
     font-family: Montserrat;
     border-radius: 100px;
-    font-size: 16px;
+    font-size: 14px;
     padding-left: 15px;
     padding-right: 15px;
-    margin-left: 5px;
     outline: inherit;
-    border: 1px solid transparent;
+    border: 0;
+
+    transition: background-color 0.4s, border 0.4s, color 0.4s;
 
     :hover {
         background-color: rgba(180, 180, 180, 0.932);
-        border-color: transparent;
         outline: inherit;
     }
 
@@ -39,48 +46,6 @@ const TabButtonBase = css`
     }
 `;
 
-const TabButtonOnTopOfPage = css<{ isActive: boolean }>`
-    ${TabButtonBase}
-    background-color: ${(props) => (props.isActive ? "white" : "transparent")};
-
-    color: black;
-`;
-
-const TabButtonScrolled = css<{ isActive: boolean }>`
-    ${TabButtonBase}
-    background-color: ${(props) => (!props.isActive ? "#13131397" : "white")};
-
-    border: 1px solid;
-    border-color: ${(props) => (!props.isActive ? "white" : "black")};
-
-    color: ${(props) => (!props.isActive ? "white" : "black")};
-`;
-
-const TabButton = styled.button<{
-    isActive: boolean;
-    isOnTopOfThePage: boolean;
-}>`
-    ${TabButtonBase}
-
-    ${(props) =>
-        props.isOnTopOfThePage ? TabButtonOnTopOfPage : TabButtonScrolled}
-
-    transition: background-color 0.4s, border 0.4s, color 0.4s;
-`;
-
-const StyledDrawer = styled(SwipeableDrawer)`
-    .MuiDrawer-paper {
-        background-color: #242424;
-        * {
-            font-family: Montserrat !important;
-        }
-    }
-`;
-
-const DrawerHeader = styled.div`
-    padding: 8px;
-`;
-
 const Bar = styled.div`
     position: fixed;
     top: 0;
@@ -92,7 +57,16 @@ const Bar = styled.div`
     flex-direction: row;
 `;
 
-const TabsContainer = styled.div``;
+const TabsContainer = styled.div<{ isOnTopOfThePage: boolean }>`
+    display: flex;
+    gap: 5px;
+    background-color: ${(props) =>
+        props.isOnTopOfThePage ? "transparent" : "#13131397"};
+    border-radius: 100px;
+    padding: 0;
+
+    transition: background-color 0.4s;
+`;
 
 const MenuButtonContainer = styled.div<{ isOnTopOfThePage: boolean }>`
     display: none;
@@ -113,6 +87,19 @@ const MenuButton = styled(IconButton)<{ isOnTopOfThePage: boolean }>`
     :focus:not(:focus-visible) {
         outline: none;
     }
+`;
+
+const StyledDrawer = styled(SwipeableDrawer)`
+    .MuiDrawer-paper {
+        background-color: #242424;
+        * {
+            font-family: Montserrat !important;
+        }
+    }
+`;
+
+const DrawerHeader = styled.div`
+    padding: 8px;
 `;
 
 interface NavbarProps {
@@ -161,12 +148,8 @@ export default function Navbar({
 
     return (
         <>
-            <Bar>
-                <TabsContainer
-                    data-aos="fade-down"
-                    data-aos-offset="1"
-                    data-aos-once
-                >
+            <Bar data-aos="fade-down" data-aos-offset="1" data-aos-once>
+                <TabsContainer isOnTopOfThePage={isOnTopOfThePage}>
                     {Object.keys(pages).map((p) => (
                         <TabButton
                             key={p}
