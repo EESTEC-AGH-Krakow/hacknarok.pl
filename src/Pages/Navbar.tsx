@@ -1,15 +1,15 @@
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import MenuIcon from "@mui/icons-material/Menu";
-import { Box, IconButton } from "@mui/material";
+import { Box, Divider, IconButton, ListItemIcon } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import * as React from "react";
-import { useState, RefObject } from "react";
-import styled from "styled-components";
-import { css } from "styled-components";
-import useIsIntersecting from "../hooks/useIsInViewport";
+import { useState } from "react";
+import styled, { css } from "styled-components";
+import { PageWithRef } from "../LayoutWithNavbar";
 
 const TabButtonBase = css`
     box-sizing: border-box;
@@ -68,6 +68,19 @@ const TabButton = styled.button<{
     transition: background-color 0.4s, border 0.4s, color 0.4s;
 `;
 
+const StyledDrawer = styled(SwipeableDrawer)`
+    .MuiDrawer-paper {
+        background-color: #242424;
+        * {
+            font-family: Montserrat !important;
+        }
+    }
+`;
+
+const DrawerHeader = styled.div`
+    padding: 8px;
+`;
+
 const Bar = styled.div`
     position: fixed;
     top: 0;
@@ -80,30 +93,45 @@ const Bar = styled.div`
 `;
 
 const TabsContainer = styled.div``;
-const MenuButtonContainer = styled.div`
+
+const MenuButtonContainer = styled.div<{ isOnTopOfThePage: boolean }>`
     display: none;
+    border-radius: 50%;
+
     @media screen and (max-width: 600px) {
         display: block;
+        background-color: ${(props) =>
+            props.isOnTopOfThePage ? "transparent" : "#13131397"};
+    }
+`;
+
+const MenuButton = styled(IconButton)<{ isOnTopOfThePage: boolean }>`
+    color: ${(props) =>
+        props.isOnTopOfThePage ? "black" : "white !important"};
+
+    //remove outline when navigated with keyboard
+    :focus:not(:focus-visible) {
+        outline: none;
     }
 `;
 
 interface NavbarProps {
-    pageRefs: Record<string, RefObject<HTMLInputElement>>;
+    pages: Record<string, PageWithRef>;
     currentPage: string;
     onPageSelected: (pageName: string) => void;
 }
 
 export default function Navbar({
-    pageRefs,
+    pages,
     currentPage,
     onPageSelected,
 }: NavbarProps) {
-    const [state, setState] = React.useState(false);
+    const [isSidePanelOpen, setIsSidePanelOpen] = React.useState(false);
 
     const [isOnTopOfThePage, setIsOnTopOfThePage] = useState(true);
 
     const selectPage = (pageName: string) => {
-        pageRefs[pageName].current?.scrollIntoView({
+        pages[pageName].ref.current?.scrollIntoView({
             block: "start",
             behavior: "smooth",
         });
@@ -127,16 +155,17 @@ export default function Navbar({
     });
 
     const toggleDrawer = (newState: boolean) => {
-        if (state == newState) return;
-        setState(newState);
+        if (isSidePanelOpen == newState) return;
+        setIsSidePanelOpen(newState);
     };
 
     return (
         <>
             <Bar>
                 <TabsContainer>
-                    {Object.keys(pageRefs).map((p) => (
+                    {Object.keys(pages).map((p) => (
                         <TabButton
+                            key={p}
                             isActive={currentPage === p}
                             isOnTopOfThePage={isOnTopOfThePage}
                             onClick={() => selectPage(p)}
@@ -145,41 +174,60 @@ export default function Navbar({
                         </TabButton>
                     ))}
                 </TabsContainer>
-                <MenuButtonContainer>
-                    <IconButton
+                <MenuButtonContainer isOnTopOfThePage={isOnTopOfThePage}>
+                    <MenuButton
                         aria-label="menu"
                         color="default"
-                        onClick={() => setState(true)}
+                        isOnTopOfThePage={isOnTopOfThePage}
+                        onClick={() => setIsSidePanelOpen(true)}
                     >
                         <MenuIcon style={{ fontSize: 30 }} />
-                    </IconButton>
+                    </MenuButton>
                 </MenuButtonContainer>
             </Bar>
-            <SwipeableDrawer
+            <StyledDrawer
                 anchor="right"
-                open={state}
+                open={isSidePanelOpen}
                 onOpen={() => toggleDrawer(true)}
                 onClose={() => toggleDrawer(false)}
             >
+                <DrawerHeader>
+                    <IconButton onClick={() => toggleDrawer(false)}>
+                        <ChevronRightIcon style={{ color: "white" }} />
+                    </IconButton>
+                </DrawerHeader>
+                <Divider style={{ backgroundColor: "white" }} />
                 <Box
-                    sx={{ width: 250 }}
+                    sx={{
+                        width: 300,
+                    }}
                     role="presentation"
                     onClick={() => toggleDrawer(false)}
                     onKeyDown={() => toggleDrawer(false)}
                 >
                     <List>
-                        {Object.keys(pageRefs).map((pageName, index) => (
+                        {Object.keys(pages).map((pageName, index) => (
                             <ListItem key={pageName}>
                                 <ListItemButton
-                                    onClick={() => selectPage(pageName)}
+                                    onClick={() => {
+                                        setTimeout(() => {
+                                            selectPage(pageName);
+                                        }, 100);
+                                    }}
                                 >
-                                    <ListItemText primary={pageName} />
+                                    <ListItemIcon>
+                                        {pages[pageName].page.icon}
+                                    </ListItemIcon>
+                                    <ListItemText
+                                        primary={pageName}
+                                        style={{ color: "white" }}
+                                    />
                                 </ListItemButton>
                             </ListItem>
                         ))}
                     </List>
                 </Box>
-            </SwipeableDrawer>
+            </StyledDrawer>
         </>
     );
 }
