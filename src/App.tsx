@@ -3,6 +3,7 @@ import About from "./Pages/About";
 import Partners from "./Pages/Partners";
 import LandingPage from "./Pages/LandingPage";
 import Map from "./Pages/Map";
+import Gallery from "./Pages/Gallery";
 
 function App() {
     return (
@@ -19,6 +20,10 @@ function App() {
                 {
                     title: "Jak dojechać",
                     component: <Map />,
+                },
+                {
+                    title: "Galeria",
+                    component: <Gallery />,
                 },
                 {
                     title: "Partnerzy",
