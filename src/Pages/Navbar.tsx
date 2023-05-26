@@ -162,7 +162,11 @@ export default function Navbar({
     return (
         <>
             <Bar>
-                <TabsContainer>
+                <TabsContainer
+                    data-aos="fade-down"
+                    data-aos-offset="1"
+                    data-aos-once
+                >
                     {Object.keys(pages).map((p) => (
                         <TabButton
                             key={p}

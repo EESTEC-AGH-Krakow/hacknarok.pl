@@ -9,6 +9,7 @@ const Content = styled.div`
     flex-direction: column;
     min-height: 100vh;
     padding-bottom: 60px;
+    overflow: hidden;
 `;
 
 const TopPageSpacer = styled.div`
@@ -28,7 +29,7 @@ export default function Faq() {
     return (
         <Content>
             <TopPageSpacer />
-            <CenteredTitle>FAQ</CenteredTitle>
+            <CenteredTitle data-aos="fade-up">FAQ</CenteredTitle>
             <FaqAccordion
                 question={"Czy mogę zgłosić się bez drużyny?"}
                 answer={

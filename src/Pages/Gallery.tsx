@@ -69,8 +69,8 @@ export default function Gallery() {
     return (
         <Content>
             <TopPageSpacer />
-            <CenteredTitle>Galeria</CenteredTitle>
-            <CarouselContainer ref={carouselContainerRef}>
+            <CenteredTitle data-aos="fade-up">Galeria</CenteredTitle>
+            <CarouselContainer ref={carouselContainerRef} data-aos="fade-up">
                 <Carousel
                     infiniteLoop
                     centerMode

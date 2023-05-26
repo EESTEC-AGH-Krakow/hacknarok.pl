@@ -73,8 +73,10 @@ export default function About() {
     return (
         <ParentsContainer>
             <TextContainer>
-                <HeaderContainer>CZY JESTEŚ GOTÓW NA WYZWANIE?</HeaderContainer>
-                <FakeContent>
+                <HeaderContainer data-aos="fade-right">
+                    CZY JESTEŚ GOTÓW NA WYZWANIE?
+                </HeaderContainer>
+                <FakeContent data-aos="fade-right">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Vivamus magna neque, vulputate sed placerat eget, dignissim
                     eu neque. Nulla facilisi. Aliquam vulputate varius cursus.
@@ -86,7 +88,7 @@ export default function About() {
                     neque.
                 </FakeContent>
             </TextContainer>
-            <ImgContainer>
+            <ImgContainer data-aos="fade-up">
                 <Image src="laptop.png"></Image>
             </ImgContainer>
         </ParentsContainer>

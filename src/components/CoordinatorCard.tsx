@@ -69,16 +69,18 @@ interface CoordinatorCardProps {
     src: string;
     name: string;
     position: string;
+    animationDelay: number;
 }
 
 export default function CoordinatorCard({
     src,
     name,
     position,
+    animationDelay,
 }: CoordinatorCardProps) {
     return (
         <Grid item lg={2} md={3} sm={4} xs={6}>
-            <InnerDiv>
+            <InnerDiv data-aos="fade-up" data-aos-delay={animationDelay}>
                 <CoordinatorCardDiv>
                     <CoordinatorCardImage src={src} />
                     <Overlay>

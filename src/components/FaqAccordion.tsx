@@ -8,12 +8,15 @@ import { useState } from "react";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import styled from "styled-components";
 
-const StyledAccordion = styled(Accordion)`
+const Container = styled.div`
     width: 90%;
+    margin-bottom: 20px;
+`;
+
+const StyledAccordion = styled(Accordion)`
     background-color: rgba(0, 0, 0, 0.2) !important;
     color: white !important;
     border-top: 1px solid #941c2f;
-    margin-bottom: 20px;
 `;
 
 const StyledAccordionSummary = styled(AccordionSummary)`
@@ -46,17 +49,19 @@ export default function FaqAccordion({ question, answer }: FaqAccordionProps) {
     };
 
     return (
-        <StyledAccordion expanded={expanded} onChange={handleChange}>
-            <StyledAccordionSummary
-                expandIcon={<StyledIcon />}
-                aria-controls="panel1bh-content"
-                id="panel1bh-header"
-            >
-                <Text>{question}</Text>
-            </StyledAccordionSummary>
-            <AccordionDetails>
-                <Text>{answer}</Text>
-            </AccordionDetails>
-        </StyledAccordion>
+        <Container data-aos="fade-up-left">
+            <StyledAccordion expanded={expanded} onChange={handleChange}>
+                <StyledAccordionSummary
+                    expandIcon={<StyledIcon />}
+                    aria-controls="panel1bh-content"
+                    id="panel1bh-header"
+                >
+                    <Text>{question}</Text>
+                </StyledAccordionSummary>
+                <AccordionDetails>
+                    <Text>{answer}</Text>
+                </AccordionDetails>
+            </StyledAccordion>
+        </Container>
     );
 }

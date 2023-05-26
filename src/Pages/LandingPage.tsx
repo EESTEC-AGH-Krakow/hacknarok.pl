@@ -95,17 +95,33 @@ function LandingPage() {
             <ParallaxBackground />
             <Content>
                 <EventPlaceContainer>
-                    <EventPlaceInnerContainer>
+                    <EventPlaceInnerContainer
+                        data-aos="fade-up"
+                        data-aos-offset="1"
+                        data-aos-delay="500"
+                        data-aos-once
+                    >
                         <h2>23-24 marca</h2>
                         <span>Krakowski Park Technologiczny</span>
                     </EventPlaceInnerContainer>
                 </EventPlaceContainer>
-                <ApplyContainer>
+                <ApplyContainer
+                    data-aos="fade-up"
+                    data-aos-offset="1"
+                    data-aos-delay="700"
+                    data-aos-once
+                >
                     <span>Zapisy do 17.01</span>
                     <Button>Zapisz się</Button>
                 </ApplyContainer>
                 <LogoContainer>
-                    <Logo src="/logo_eestec.png" />
+                    <Logo
+                        src="/logo_eestec.png"
+                        data-aos="fade-up"
+                        data-aos-offset="1"
+                        data-aos-delay="900"
+                        data-aos-once
+                    />
                 </LogoContainer>
             </Content>
         </Page>

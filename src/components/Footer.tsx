@@ -6,6 +6,7 @@ const Container = styled.div`
     border-top: 1px solid #941c2f;
     width: 100%;
     padding: 20px;
+    margin-top: 60px;
 `;
 
 const FooterLogo = styled.img`
