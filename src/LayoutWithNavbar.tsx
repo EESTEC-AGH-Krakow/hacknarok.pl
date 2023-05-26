@@ -2,9 +2,15 @@ import { createRef, ReactNode, RefObject, useEffect, useState } from "react";
 import Navbar from "./Pages/Navbar";
 import Observable from "./components/Observable";
 
-interface Page {
+export interface Page {
     title: string;
     component: ReactNode;
+    icon: ReactNode;
+}
+
+export interface PageWithRef {
+    page: Page;
+    ref: RefObject<HTMLInputElement>;
 }
 
 interface LayoutWithNavbarProps {
@@ -12,9 +18,8 @@ interface LayoutWithNavbarProps {
 }
 
 function LayoutWithNavbar({ pages }: LayoutWithNavbarProps) {
-    const [refs, setRefs] = useState<
-        Record<string, RefObject<HTMLInputElement>>
-    >({});
+    console.log(pages);
+    const [refs, setRefs] = useState<Record<string, PageWithRef>>({});
 
     const [currentPage, setCurrentPage] = useState(pages[0].title);
 
@@ -27,7 +32,10 @@ function LayoutWithNavbar({ pages }: LayoutWithNavbarProps) {
             Object.fromEntries(
                 pages.map((page) => [
                     page.title,
-                    current[page.title] || createRef(),
+                    {
+                        page: page,
+                        ref: current[page.title]?.ref || createRef(),
+                    } as PageWithRef,
                 ])
             )
         );
@@ -53,18 +61,19 @@ function LayoutWithNavbar({ pages }: LayoutWithNavbarProps) {
     return (
         <>
             <Navbar
-                pageRefs={refs}
+                pages={refs}
                 currentPage={currentPage}
                 onPageSelected={(pageName) => setCurrentPage(pageName)}
             />
             {pages.map((page) => {
                 return (
                     <Observable
+                        key={page.title}
                         onIntersectionChange={(isIntersecting) =>
                             onIntersectionChange(isIntersecting, page.title)
                         }
                     >
-                        <div ref={refs[page.title]}>{page.component}</div>
+                        <div ref={refs[page.title]?.ref}>{page.component}</div>
                     </Observable>
                 );
             })}
