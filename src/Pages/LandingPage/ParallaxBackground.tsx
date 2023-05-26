@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import Snowfall from "react-snowfall";
 import styled from "styled-components";
 
+const DisplaySnowflakes = true;
+
 const Background = styled.div<{ offset: number }>`
     width: 100%;
     position: absolute;
@@ -114,25 +116,29 @@ function ParallaxBackground() {
                 >
                     <Title>Hacknarök</Title>
                 </TitleContainer>
-                <Snowfall
-                    color="white"
-                    snowflakeCount={getFarSnowFlakeCount()}
-                    radius={[0.3, 1.5]}
-                    speed={getSnowSpeed()}
-                />
+                {DisplaySnowflakes && (
+                    <Snowfall
+                        color="white"
+                        snowflakeCount={getFarSnowFlakeCount()}
+                        radius={[0.3, 1.5]}
+                        speed={getSnowSpeed()}
+                    />
+                )}
             </Background>
             <MountainsContainer>
                 <MountainBackdrop />
                 <MountainsScreenLayer src="/mountains_sum_overlay.png" />
                 <MountainsHardOverlay src="/mountains_sum_overlay.png" />
             </MountainsContainer>
-            <Snowfall
-                color="white"
-                snowflakeCount={getCloseSnowFlakeCount()}
-                style={{ height: "70%" }}
-                radius={[1, 3]}
-                speed={getSnowSpeed()}
-            />
+            {DisplaySnowflakes && (
+                <Snowfall
+                    color="white"
+                    snowflakeCount={getCloseSnowFlakeCount()}
+                    style={{ height: "70%" }}
+                    radius={[1, 3]}
+                    speed={getSnowSpeed()}
+                />
+            )}
         </ParallaxContainer>
     );
 }
