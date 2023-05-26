@@ -1,8 +1,8 @@
-import styled from "styled-components";
-import { Title } from "../components/Title";
 import { Grid } from "@mui/material";
-import Footer from "../components/Footer";
+import styled from "styled-components";
 import CoordinatorCard from "../components/CoordinatorCard";
+import Footer from "../components/Footer";
+import { UnderlinedTitle } from "../components/Title";
 
 const Content = styled.div`
     width: 100%;
@@ -21,11 +21,6 @@ const TopPageSpacer = styled.div`
     }
 `;
 
-const CenteredTitle = styled(Title)`
-    text-align: center;
-    color: white;
-`;
-
 const GridContainer = styled.div`
     margin-top: 100px;
     padding-left: 30px;
@@ -40,7 +35,13 @@ export default function Contact() {
     return (
         <Content>
             <TopPageSpacer />
-            <CenteredTitle data-aos="fade-up">KONTAKT</CenteredTitle>
+            <div data-aos="fade-up">
+                <UnderlinedTitle
+                    text="Kontakt"
+                    textColor="light"
+                    align="center"
+                />
+            </div>
             <GridContainer>
                 <Grid
                     container

@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { Title } from "../components/Title";
 import FaqAccordion from "../components/FaqAccordion";
+import { UnderlinedTitle } from "../components/Title";
 
 const Content = styled.div`
     width: 100%;
@@ -20,16 +20,13 @@ const TopPageSpacer = styled.div`
     }
 `;
 
-const CenteredTitle = styled(Title)`
-    text-align: center;
-    color: white;
-`;
-
 export default function Faq() {
     return (
         <Content>
             <TopPageSpacer />
-            <CenteredTitle data-aos="fade-up">FAQ</CenteredTitle>
+            <div data-aos="fade-up">
+                <UnderlinedTitle text="FAQ" textColor="light" align="center" />
+            </div>
             <FaqAccordion
                 question={"Czy mogę zgłosić się bez drużyny?"}
                 answer={

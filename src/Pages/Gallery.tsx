@@ -1,8 +1,8 @@
-import { Carousel } from "react-responsive-carousel";
-import styled from "styled-components";
-import { Title } from "../components/Title";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useEffect, useRef, useState } from "react";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import styled from "styled-components";
+import { UnderlinedTitle } from "../components/Title";
 
 const Content = styled.div`
     width: 100%;
@@ -23,11 +23,6 @@ const TopPageSpacer = styled.div`
     @media only screen and (max-width: 600px) {
         height: 60px;
     }
-`;
-
-const CenteredTitle = styled(Title)`
-    text-align: center;
-    color: white;
 `;
 
 const CarouselContainer = styled.div`
@@ -69,7 +64,13 @@ export default function Gallery() {
     return (
         <Content>
             <TopPageSpacer />
-            <CenteredTitle data-aos="fade-up">Galeria</CenteredTitle>
+            <div data-aos="fade-up">
+                <UnderlinedTitle
+                    text="Galeria"
+                    textColor="light"
+                    align="center"
+                />
+            </div>
             <CarouselContainer ref={carouselContainerRef} data-aos="fade-up">
                 <Carousel
                     infiniteLoop

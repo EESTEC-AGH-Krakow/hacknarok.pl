@@ -102,6 +102,8 @@ const DrawerHeader = styled.div`
     padding: 8px;
 `;
 
+const NavbarStyleChangeThreshold = 150;
+
 interface NavbarProps {
     pages: Record<string, PageWithRef>;
     currentPage: string;
@@ -128,10 +130,16 @@ export default function Navbar({
 
     React.useEffect(() => {
         window.onscroll = () => {
-            if (window.scrollY > 500 && isOnTopOfThePage) {
+            if (
+                window.scrollY > NavbarStyleChangeThreshold &&
+                isOnTopOfThePage
+            ) {
                 setIsOnTopOfThePage(false);
             }
-            if (window.scrollY <= 500 && !isOnTopOfThePage) {
+            if (
+                window.scrollY <= NavbarStyleChangeThreshold &&
+                !isOnTopOfThePage
+            ) {
                 setIsOnTopOfThePage(true);
             }
         };

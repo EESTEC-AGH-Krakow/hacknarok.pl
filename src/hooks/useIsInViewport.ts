@@ -10,7 +10,7 @@ export default function useIsIntersecting(ref: RefObject<HTMLElement>) {
                     setIsIntersected(entry.isIntersecting);
                 },
                 {
-                    threshold: 0.5,
+                    threshold: 0.3,
                 }
             ),
         []

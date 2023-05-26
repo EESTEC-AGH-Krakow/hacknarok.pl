@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ParallaxBackground from "./LandingPage/ParallaxBackground";
 import { Button } from "../components/Button";
+import { RedLine } from "../components/Title";
 
 const Content = styled.div`
     position: relative;
@@ -16,7 +17,7 @@ const Content = styled.div`
         height: 450px;
         flex-direction: column;
         justify-content: flex-end;
-        margin-bottom: 50px;
+        margin-bottom: 60px;
     }
 `;
 
@@ -68,16 +69,21 @@ const EventPlaceInnerContainer = styled.div`
 const LogoContainer = styled.div`
     flex: 1;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 
     @media only screen and (max-width: 600px) {
         flex: 0;
+        max-width: 100px;
     }
 `;
 
 const Logo = styled.img`
     width: 200px;
     margin-top: -20px;
+
+    @media only screen and (max-width: 600px) {
+        max-width: 120px;
+    }
 `;
 
 const Page = styled.div`
@@ -88,6 +94,13 @@ const Page = styled.div`
     justify-content: flex-end;
     align-items: center;
 `;
+
+const Date = styled.h2`
+    font-family: Montserrat;
+    margin-bottom: 10px;
+`;
+
+const Place = styled.p``;
 
 function LandingPage() {
     return (
@@ -101,8 +114,9 @@ function LandingPage() {
                         data-aos-delay="500"
                         data-aos-once
                     >
-                        <h2>23-24 marca</h2>
-                        <span>Krakowski Park Technologiczny</span>
+                        <Date>23-24 marca</Date>
+                        <RedLine />
+                        <Place>Krakowski Park Technologiczny</Place>
                     </EventPlaceInnerContainer>
                 </EventPlaceContainer>
                 <ApplyContainer

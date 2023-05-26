@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Title } from "../components/Title";
+import { UnderlinedTitle } from "../components/Title";
 
 const ParentsContainer = styled.div`
     position: relative;
@@ -60,10 +60,6 @@ const TextContainer = styled.div`
     }
 `;
 
-const HeaderContainer = styled(Title)`
-    color: white;
-`;
-
 const FakeContent = styled.div`
     box-sizing: border-box;
     text-align: justify;
@@ -73,9 +69,13 @@ export default function About() {
     return (
         <ParentsContainer>
             <TextContainer>
-                <HeaderContainer data-aos="fade-right">
-                    CZY JESTEŚ GOTÓW NA WYZWANIE?
-                </HeaderContainer>
+                <div data-aos="fade-right">
+                    <UnderlinedTitle
+                        text="CZY JESTEŚ GOTÓW NA WYZWANIE?"
+                        textColor="light"
+                        align="flex-start"
+                    />
+                </div>
                 <FakeContent data-aos="fade-right">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Vivamus magna neque, vulputate sed placerat eget, dignissim
