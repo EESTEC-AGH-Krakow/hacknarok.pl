@@ -5,9 +5,14 @@ export default function useIsIntersecting(ref: RefObject<HTMLElement>) {
 
     const observer = useMemo(
         () =>
-            new IntersectionObserver(([entry]) => {
-                setIsIntersected(entry.isIntersecting);
-            }),
+            new IntersectionObserver(
+                ([entry]) => {
+                    setIsIntersected(entry.isIntersecting);
+                },
+                {
+                    threshold: 0.5,
+                }
+            ),
         []
     );
 

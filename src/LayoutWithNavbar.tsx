@@ -22,6 +22,8 @@ function LayoutWithNavbar({ pages }: LayoutWithNavbarProps) {
     const [refs, setRefs] = useState<Record<string, PageWithRef>>({});
 
     const [currentPage, setCurrentPage] = useState(pages[0].title);
+    const [suppressReactionToScroll, setSuppressReactionToScroll] =
+        useState(false);
 
     const [pagesIntersections, setPagesIntersections] = useState(
         Object.fromEntries(pages.map((page) => [page.title, false]))
@@ -48,14 +50,40 @@ function LayoutWithNavbar({ pages }: LayoutWithNavbarProps) {
         setCurrentPage(page!);
     }, [pagesIntersections]);
 
+    const onPageSelected = (page: string) => {
+        setCurrentPage(page);
+        setSuppressReactionToScroll(true);
+        setTimeout(() => {
+            setSuppressReactionToScroll(false);
+        }, 1000);
+    };
+
     const onIntersectionChange = (
         isIntersecting: boolean,
         pageTitle: string
     ) => {
-        setPagesIntersections((current) => ({
-            ...current,
-            [pageTitle]: isIntersecting,
-        }));
+        if (suppressReactionToScroll) return;
+
+        setPagesIntersections((current) => {
+            const next = {
+                ...current,
+                [pageTitle]: isIntersecting,
+            };
+
+            if (!isIntersecting) return next;
+
+            // when scroll is done very quickly sometimes we get intersection of ex. page 1 and page 7. Knowing the last intersected page we can clean the other pages
+            const currentPageIndex = Object.keys(next).indexOf(pageTitle);
+
+            for (let i = 0; i < Object.keys(next).length; i++) {
+                if (i >= currentPageIndex - 1 && i <= currentPageIndex + 1)
+                    continue;
+
+                next[Object.keys(next)[i]] = false;
+            }
+
+            return next;
+        });
     };
 
     return (
@@ -63,7 +91,7 @@ function LayoutWithNavbar({ pages }: LayoutWithNavbarProps) {
             <Navbar
                 pages={refs}
                 currentPage={currentPage}
-                onPageSelected={(pageName) => setCurrentPage(pageName)}
+                onPageSelected={onPageSelected}
             />
             {pages.map((page) => {
                 return (
