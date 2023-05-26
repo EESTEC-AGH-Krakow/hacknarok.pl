@@ -96,25 +96,25 @@ export default function Partners() {
     return (
         <PartnersContainer>
             <TopPageSpacer />
-            <CenteredTitle>NASI PARTNERZY</CenteredTitle>
+            <CenteredTitle data-aos="fade-up">NASI PARTNERZY</CenteredTitle>
             <GridContainer>
                 <PartnersGridContainer>
                     {partnerLogoPaths.map((logoPath) => (
                         <PartnersGridItem key={logoPath}>
                             <LogoContainer>
-                                <Logo src={logoPath} />
+                                <Logo src={logoPath} data-aos="fade-up" />
                             </LogoContainer>
                         </PartnersGridItem>
                     ))}
                 </PartnersGridContainer>
             </GridContainer>
-            <CenteredTitle>PATRONI MEDIALNI</CenteredTitle>
+            <CenteredTitle data-aos="fade-up">PATRONI MEDIALNI</CenteredTitle>
             <GridContainer>
                 <PartnersGridContainer>
                     {mediaPatronsLogoPaths.map((logoPath) => (
                         <PartnersGridItem key={logoPath}>
                             <LogoContainer>
-                                <Logo src={logoPath} />
+                                <Logo src={logoPath} data-aos="fade-up" />
                             </LogoContainer>
                         </PartnersGridItem>
                     ))}

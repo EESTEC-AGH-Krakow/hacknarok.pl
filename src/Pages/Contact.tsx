@@ -40,7 +40,7 @@ export default function Contact() {
     return (
         <Content>
             <TopPageSpacer />
-            <CenteredTitle>KONTAKT</CenteredTitle>
+            <CenteredTitle data-aos="fade-up">KONTAKT</CenteredTitle>
             <GridContainer>
                 <Grid
                     container
@@ -53,26 +53,31 @@ export default function Contact() {
                         name="Julia Zajchowska"
                         position="Koordynator ds. Promocji"
                         src="img/coordinators/julia.jpg"
+                        animationDelay={0}
                     />
                     <CoordinatorCard
                         name="Kacper Iwicki"
                         position="Koordynator ds. Kontaktu z uczestnikami"
                         src="img/coordinators/kacper.jpg"
+                        animationDelay={100}
                     />
                     <CoordinatorCard
                         name="Natalia Fitowska"
                         position="Koordynator Główny"
                         src="img/coordinators/natalia.jpg"
+                        animationDelay={200}
                     />
                     <CoordinatorCard
                         name="Mikołaj Wyka"
                         position="Koordynator ds. Logistyki"
                         src="img/coordinators/mikolaj.jpg"
+                        animationDelay={300}
                     />
                     <CoordinatorCard
                         name="Klaudia Dyl"
                         position="Koordynator ds. Pozyskiwania funduszy"
                         src="img/coordinators/klaudia.jpg"
+                        animationDelay={400}
                     />
                 </Grid>
             </GridContainer>

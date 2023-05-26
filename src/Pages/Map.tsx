@@ -6,6 +6,7 @@ const ParentsContainer = styled.div`
     margin-top: 100px;
     min-height: 100vh;
     width: 100%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,12 +85,14 @@ const ShowOnMapButton = styled(Button)`
 export default function Map() {
     return (
         <ParentsContainer>
-            <ImgContainer>
+            <ImgContainer data-aos="fade-up">
                 <Image src="map.png"></Image>
             </ImgContainer>
             <TextContainer>
-                <HeaderContainer>Jak dojechać?</HeaderContainer>
-                <FakeContent>
+                <HeaderContainer data-aos="fade-left">
+                    Jak dojechać?
+                </HeaderContainer>
+                <FakeContent data-aos="fade-left">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     Vivamus magna neque, vulputate sed placerat eget, dignissim
                     eu neque. Nulla facilisi. Aliquam vulputate varius cursus.
@@ -101,6 +104,7 @@ export default function Map() {
                     neque.
                 </FakeContent>
                 <ShowOnMapButton
+                    data-aos="fade-up"
                     onClick={() => {
                         window.open(
                             "https://goo.gl/maps/1pCQR5vRVgAHndsx8?coh=178571&entry=tt"
