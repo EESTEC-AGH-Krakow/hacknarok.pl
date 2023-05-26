@@ -4,6 +4,7 @@ import Partners from "./Pages/Partners";
 import LandingPage from "./Pages/LandingPage";
 import Map from "./Pages/Map";
 import Gallery from "./Pages/Gallery";
+import Faq from "./Pages/Faq";
 
 function App() {
     return (
@@ -24,6 +25,10 @@ function App() {
                 {
                     title: "Galeria",
                     component: <Gallery />,
+                },
+                {
+                    title: "FAQ",
+                    component: <Faq />,
                 },
                 {
                     title: "Partnerzy",

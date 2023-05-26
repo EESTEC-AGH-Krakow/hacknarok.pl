@@ -1,7 +1,7 @@
 import { Carousel } from "react-responsive-carousel";
 import styled from "styled-components";
 import { Title } from "../components/Title";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useEffect, useRef, useState } from "react";
 
 const Content = styled.div`
@@ -30,7 +30,7 @@ const CenteredTitle = styled(Title)`
     color: white;
 `;
 
-const TestDiv = styled.div`
+const CarouselContainer = styled.div`
     height: 100%;
     width: 100%;
 `;
@@ -59,8 +59,6 @@ export default function Gallery() {
     ) => {
         const result = (containerHeight / containerWidth) * 100;
 
-        console.log(result);
-
         if (result > 90) return 90;
 
         if (result < 60) return 60;
@@ -72,7 +70,7 @@ export default function Gallery() {
         <Content>
             <TopPageSpacer />
             <CenteredTitle>Galeria</CenteredTitle>
-            <TestDiv ref={carouselContainerRef}>
+            <CarouselContainer ref={carouselContainerRef}>
                 <Carousel
                     infiniteLoop
                     centerMode
@@ -108,7 +106,7 @@ export default function Gallery() {
                         <img src="img/6.webp" />
                     </div>
                 </Carousel>
-            </TestDiv>
+            </CarouselContainer>
         </Content>
     );
 }
