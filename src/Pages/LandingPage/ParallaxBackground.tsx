@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Snowfall from "react-snowfall";
 import styled from "styled-components";
 
 const Background = styled.div<{ offset: number }>`
@@ -85,6 +86,22 @@ function ParallaxBackground() {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
+    // without below methods on mobile there are too many and too fast snowflakes
+    const getFarSnowFlakeCount = (): number => {
+        return window.outerWidth * 0.7;
+    };
+
+    const getCloseSnowFlakeCount = (): number => {
+        return window.outerWidth * 0.05;
+    };
+
+    const getSnowSpeed = (): [number, number] => {
+        return [
+            (window.outerWidth / 1920) * 1.0,
+            (window.outerWidth / 1920) * 3.0,
+        ];
+    };
+
     return (
         <ParallaxContainer>
             <Background offset={offset}>
@@ -97,12 +114,25 @@ function ParallaxBackground() {
                 >
                     <Title>Hacknarök</Title>
                 </TitleContainer>
+                <Snowfall
+                    color="white"
+                    snowflakeCount={getFarSnowFlakeCount()}
+                    radius={[0.3, 1.5]}
+                    speed={getSnowSpeed()}
+                />
             </Background>
             <MountainsContainer>
                 <MountainBackdrop />
                 <MountainsScreenLayer src="/mountains_sum_overlay.png" />
                 <MountainsHardOverlay src="/mountains_sum_overlay.png" />
             </MountainsContainer>
+            <Snowfall
+                color="white"
+                snowflakeCount={getCloseSnowFlakeCount()}
+                style={{ height: "70%" }}
+                radius={[1, 3]}
+                speed={getSnowSpeed()}
+            />
         </ParallaxContainer>
     );
 }
