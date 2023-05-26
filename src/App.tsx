@@ -5,6 +5,7 @@ import LandingPage from "./Pages/LandingPage";
 import Map from "./Pages/Map";
 import Gallery from "./Pages/Gallery";
 import Faq from "./Pages/Faq";
+import Contact from "./Pages/Contact";
 
 function App() {
     return (
@@ -33,6 +34,10 @@ function App() {
                 {
                     title: "Partnerzy",
                     component: <Partners />,
+                },
+                {
+                    title: "Kontakt",
+                    component: <Contact />,
                 },
             ]}
         />
