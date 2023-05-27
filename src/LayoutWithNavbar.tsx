@@ -1,36 +1,111 @@
 import { createRef, ReactNode, RefObject, useEffect, useState } from "react";
 import Navbar from "./Pages/Navbar";
+import Observable from "./components/Observable";
 
-interface Page {
-  title: string;
-  component: ReactNode;
+export interface Page {
+    title: string;
+    component: ReactNode;
+    icon: ReactNode;
+}
+
+export interface PageWithRef {
+    page: Page;
+    ref: RefObject<HTMLInputElement>;
 }
 
 interface LayoutWithNavbarProps {
-  pages: Page[];
+    pages: Page[];
 }
 
 function LayoutWithNavbar({ pages }: LayoutWithNavbarProps) {
-  const [refs, setRefs] = useState<Record<string, RefObject<HTMLInputElement>>>(
-    {}
-  );
+    const [refs, setRefs] = useState<Record<string, PageWithRef>>({});
 
-  useEffect(() => {
-    setRefs((current) =>
-      Object.fromEntries(
-        pages.map((page) => [page.title, current[page.title] || createRef()])
-      )
+    const [currentPage, setCurrentPage] = useState(pages[0].title);
+    const [suppressReactionToScroll, setSuppressReactionToScroll] =
+        useState(false);
+
+    const [pagesIntersections, setPagesIntersections] = useState(
+        Object.fromEntries(pages.map((page) => [page.title, false]))
     );
-  }, []);
 
-  return (
-    <>
-      <Navbar pageRefs={refs} />
-      {pages.map((page) => {
-        return <div ref={refs[page.title]}>{page.component}</div>;
-      })}
-    </>
-  );
+    useEffect(() => {
+        setRefs((current) =>
+            Object.fromEntries(
+                pages.map((page) => [
+                    page.title,
+                    {
+                        page: page,
+                        ref: current[page.title]?.ref || createRef(),
+                    } as PageWithRef,
+                ])
+            )
+        );
+    }, []);
+
+    useEffect(() => {
+        const page = Object.keys(pagesIntersections).findLast(
+            (p) => pagesIntersections[p]
+        );
+        setCurrentPage(page!);
+    }, [pagesIntersections]);
+
+    const onPageSelected = (page: string) => {
+        setCurrentPage(page);
+        setSuppressReactionToScroll(true);
+        setTimeout(() => {
+            setSuppressReactionToScroll(false);
+        }, 1000);
+    };
+
+    const onIntersectionChange = (
+        isIntersecting: boolean,
+        pageTitle: string
+    ) => {
+        if (suppressReactionToScroll) return;
+
+        setPagesIntersections((current) => {
+            const next = {
+                ...current,
+                [pageTitle]: isIntersecting,
+            };
+
+            if (!isIntersecting) return next;
+
+            // when scroll is done very quickly sometimes we get intersection of ex. page 1 and page 7. Knowing the last intersected page we can clean the other pages
+            const currentPageIndex = Object.keys(next).indexOf(pageTitle);
+
+            for (let i = 0; i < Object.keys(next).length; i++) {
+                if (i >= currentPageIndex - 1 && i <= currentPageIndex + 1)
+                    continue;
+
+                next[Object.keys(next)[i]] = false;
+            }
+
+            return next;
+        });
+    };
+
+    return (
+        <>
+            <Navbar
+                pages={refs}
+                currentPage={currentPage}
+                onPageSelected={onPageSelected}
+            />
+            {pages.map((page) => {
+                return (
+                    <Observable
+                        key={page.title}
+                        onIntersectionChange={(isIntersecting) =>
+                            onIntersectionChange(isIntersecting, page.title)
+                        }
+                    >
+                        <div ref={refs[page.title]?.ref}>{page.component}</div>
+                    </Observable>
+                );
+            })}
+        </>
+    );
 }
 
 export default LayoutWithNavbar;
