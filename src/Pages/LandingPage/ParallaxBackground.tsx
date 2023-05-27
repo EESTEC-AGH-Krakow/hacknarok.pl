@@ -1,6 +1,10 @@
 import { useState, useEffect } from "react";
 import Snowfall from "react-snowfall";
 import styled from "styled-components";
+import {
+    useProgressiveImage,
+    useLoadImage,
+} from "../../hooks/useProgressiveImage";
 
 const DisplaySnowflakes = true;
 
@@ -80,6 +84,17 @@ const ParallaxContainer = styled.div`
 function ParallaxBackground() {
     const [offset, setOffset] = useState(0);
 
+    const cloudsImg = useProgressiveImage(
+        "/clouds.jpg",
+        "/clouds_thumb_10.jpg"
+    );
+
+    const mountainsImg = useProgressiveImage(
+        "/mountains_sum_overlay.png",
+        "/mountains_sum_overlay_thumb_5.png",
+        "/mountains_sum_overlay_thumb_10.png"
+    );
+
     useEffect(() => {
         const onScroll = () => setOffset(window.pageYOffset);
         // clean up code
@@ -107,7 +122,7 @@ function ParallaxBackground() {
     return (
         <ParallaxContainer>
             <Background offset={offset}>
-                <Clouds src="/clouds.jpg" />
+                <Clouds src={cloudsImg} />
                 <TitleContainer
                     data-aos="fade-up"
                     data-aos-offset="1"
@@ -127,8 +142,8 @@ function ParallaxBackground() {
             </Background>
             <MountainsContainer>
                 <MountainBackdrop />
-                <MountainsScreenLayer src="/mountains_sum_overlay.png" />
-                <MountainsHardOverlay src="/mountains_sum_overlay.png" />
+                <MountainsScreenLayer src={mountainsImg} />
+                <MountainsHardOverlay src={mountainsImg} />
             </MountainsContainer>
             {DisplaySnowflakes && (
                 <Snowfall

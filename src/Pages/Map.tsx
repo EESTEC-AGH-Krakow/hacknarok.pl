@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Button } from "../components/Button";
 import { UnderlinedTitle } from "../components/Title";
+import { useProgressiveImage } from "../hooks/useProgressiveImage";
 
 const ParentsContainer = styled.div`
     margin-top: 100px;
@@ -78,10 +79,16 @@ const ShowOnMapButton = styled(Button)`
 `;
 
 export default function Map() {
+    const mapImg = useProgressiveImage(
+        "map.png",
+        "map_thumb_5.png",
+        "map_thumb_10.png"
+    );
+
     return (
         <ParentsContainer>
             <ImgContainer data-aos="fade-up">
-                <Image src="map.png"></Image>
+                <Image src={mapImg}></Image>
             </ImgContainer>
             <TextContainer>
                 <div data-aos="fade-left">

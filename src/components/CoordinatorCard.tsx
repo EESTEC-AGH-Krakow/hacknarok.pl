@@ -1,5 +1,7 @@
 import { Grid } from "@mui/material";
+import { useState, useEffect } from "react";
 import styled from "styled-components";
+import { useLoadImage } from "../hooks/useProgressiveImage";
 
 const CoordinatorCardImage = styled.img`
     width: 100%;
@@ -65,11 +67,35 @@ const InnerDiv = styled.div`
     }
 `;
 
-interface CoordinatorCardProps {
+export interface CoordinatorCardProps {
     src: string;
     name: string;
     position: string;
     animationDelay: number;
+    placeholderSrc: string;
+}
+
+function CoordinatorImage({
+    src,
+    placeholderSrc,
+}: {
+    src: string;
+    placeholderSrc: string;
+}) {
+    const [useFullImages, setUseFullImages] = useState(false);
+    const full = useLoadImage(src);
+
+    useEffect(() => {
+        const imageUpscaleDelay = 10000;
+        setTimeout(() => setUseFullImages(true), imageUpscaleDelay);
+    });
+
+    return (
+        <CoordinatorCardImage
+            src={(useFullImages && full) || placeholderSrc}
+            placeholder={placeholderSrc}
+        />
+    );
 }
 
 export default function CoordinatorCard({
@@ -77,12 +103,16 @@ export default function CoordinatorCard({
     name,
     position,
     animationDelay,
+    placeholderSrc,
 }: CoordinatorCardProps) {
     return (
         <Grid item lg={2} md={3} sm={4} xs={6}>
             <InnerDiv data-aos="fade-up" data-aos-delay={animationDelay}>
                 <CoordinatorCardDiv>
-                    <CoordinatorCardImage src={src} />
+                    <CoordinatorImage
+                        src={src}
+                        placeholderSrc={placeholderSrc}
+                    />
                     <Overlay>
                         <ThumbnailName>{name}</ThumbnailName>
                     </Overlay>

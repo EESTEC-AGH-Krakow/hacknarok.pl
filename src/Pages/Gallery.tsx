@@ -76,7 +76,7 @@ export default function Gallery() {
                     infiniteLoop
                     centerMode
                     showArrows
-                    showStatus
+                    showStatus={false}
                     showIndicators
                     centerSlidePercentage={centerSlidePercentage}
                     showThumbs={false}
