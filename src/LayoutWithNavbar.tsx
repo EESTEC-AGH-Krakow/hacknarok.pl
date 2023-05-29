@@ -43,9 +43,10 @@ function LayoutWithNavbar({ pages }: LayoutWithNavbarProps) {
     }, []);
 
     useEffect(() => {
-        const page = Object.keys(pagesIntersections).findLast(
+        const visiblePages = Object.keys(pagesIntersections).filter(
             (p) => pagesIntersections[p]
         );
+        const page = visiblePages[visiblePages.length - 1];
         setCurrentPage(page!);
     }, [pagesIntersections]);
 
