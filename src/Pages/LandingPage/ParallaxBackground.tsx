@@ -46,12 +46,22 @@ const MountainsContainer = styled.div`
     min-width: 1200px;
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: 600px) {
+        height: 50%;
+        object-fit: contain;
+    }
 `;
 
 //Screen blend mode makes the mountains nicely blend into the background
 const MountainsScreenLayer = styled.img`
     width: 100%;
     mix-blend-mode: screen;
+
+    @media only screen and (max-width: 600px) {
+        height: 100%;
+        width: fit-content;
+    }
 `;
 
 //Hard overlay so that there is no screening effect on the clouds
@@ -59,6 +69,11 @@ const MountainsHardOverlay = styled.img`
     position: absolute;
     mask-image: linear-gradient(180deg, black 20%, transparent 70%);
     width: 100%;
+
+    @media only screen and (max-width: 600px) {
+        height: 100%;
+        width: fit-content;
+    }
 `;
 
 const MountainBackdrop = styled.div`

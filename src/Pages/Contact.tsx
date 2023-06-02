@@ -24,7 +24,6 @@ const TopPageSpacer = styled.div`
 `;
 
 const GridContainer = styled.div`
-    width: 100%;
     margin-top: 100px;
     min-height: 400px;
     padding-left: 30px;
