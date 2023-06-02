@@ -26,8 +26,12 @@ const TopPageSpacer = styled.div`
 const GridContainer = styled.div`
     margin-top: 100px;
     min-height: 400px;
-    padding-left: 30px;
-    padding-right: 30px;
+    width: 100%;
+`;
+
+const InternalGridContainer = styled.div`
+    margin-left: 30px;
+    margin-right: 30px;
 `;
 
 const FlexSpacer = styled.div`
@@ -84,20 +88,22 @@ export default function Contact() {
                 />
             </div>
             <GridContainer>
-                <Grid
-                    container
-                    justifyContent="center"
-                    alignItems="baseline"
-                    rowSpacing={5}
-                    columnSpacing={5}
-                >
-                    {coordinators.map((coordinator) => (
-                        <CoordinatorCard
-                            key={coordinator.name}
-                            {...coordinator}
-                        />
-                    ))}
-                </Grid>
+                <InternalGridContainer>
+                    <Grid
+                        container
+                        justifyContent="center"
+                        alignItems="baseline"
+                        rowSpacing={5}
+                        columnSpacing={5}
+                    >
+                        {coordinators.map((coordinator) => (
+                            <CoordinatorCard
+                                key={coordinator.name}
+                                {...coordinator}
+                            />
+                        ))}
+                    </Grid>
+                </InternalGridContainer>
             </GridContainer>
             <FlexSpacer />
             <Footer />
