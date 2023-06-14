@@ -49,7 +49,7 @@ export default function Contact() {
         },
         {
             name: "Kacper Iwicki",
-            position: "Koordynator ds. Kontaktu z uczestnikami",
+            position: "Koordynator ds. Logistyki i Barteru",
             src: "img/coordinators/kacper.jpg",
             placeholderSrc: "img/coordinators/kacper_thumb_10.jpg",
             animationDelay: 100,
@@ -63,7 +63,7 @@ export default function Contact() {
         },
         {
             name: "Mikołaj Wyka",
-            position: "Koordynator ds. Logistyki",
+            position: "Koordynator ds. Kontaktu z Uczestnikami i Administracji",
             src: "img/coordinators/mikolaj.jpg",
             placeholderSrc: "img/coordinators/mikolaj_thumb_10.jpg",
             animationDelay: 300,

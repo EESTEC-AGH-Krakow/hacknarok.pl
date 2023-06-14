@@ -4,7 +4,7 @@ import { useProgressiveImage } from "../hooks/useProgressiveImage";
 
 const ParentsContainer = styled.div`
     position: relative;
-    margin-top: 100px;
+    margin-top: 40px;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -17,7 +17,7 @@ const ImgContainer = styled.div`
     box-sizing: border-box;
     position: absolute;
     width: 60%;
-    float: left;
+    top: 0;
     left: calc(40% - 100px);
     overflow: hidden;
 
@@ -75,6 +75,9 @@ export default function About() {
 
     return (
         <ParentsContainer>
+            <ImgContainer data-aos="fade-up">
+                <Image src={laptopImg}></Image>
+            </ImgContainer>
             <TextContainer>
                 <div data-aos="fade-right">
                     <UnderlinedTitle
@@ -84,20 +87,17 @@ export default function About() {
                     />
                 </div>
                 <FakeContent data-aos="fade-right">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vivamus magna neque, vulputate sed placerat eget, dignissim
-                    eu neque. Nulla facilisi. Aliquam vulputate varius cursus.
-                    Proin et pretium velit. Pellentesque imperdiet risus
-                    suscipit elit maximus sollicitudin ut tristique odio. Donec
-                    iaculis consectetur risus eu molestie. Vestibulum ante ipsum
-                    primis in faucibus orci luctus et ultrices posuere cubilia
-                    curae; Donec at nibh posuere, imperdiet nunc ac, finibus
-                    neque.
+                    Chwyć klawiaturę w dłoń i wyrusz w 24-godzinną podróż po
+                    świecie kodu. Tu walka odbywa się z wykorzystaniem siły
+                    linijek kodu, które napiszesz razem z Twoim zespołem. Czy
+                    uda Ci się stworzyć coś niepowtarzalnego? Dołącz do
+                    wydarzenia i przekonaj się sam! W trakcie hackathonu Twoja
+                    przestrzeń zamieni się w arenę z atmosferą sprzyjającą
+                    niemal boskim, twórczym siłom. Obecni mentorzy będą gotowi
+                    znaleźć wyjaśnienie na każdą wątpliwość. Nie przegap okazji
+                    i zapisz się już dziś!
                 </FakeContent>
             </TextContainer>
-            <ImgContainer data-aos="fade-up">
-                <Image src={laptopImg}></Image>
-            </ImgContainer>
         </ParentsContainer>
     );
 }
