@@ -20,6 +20,9 @@ const ImgContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: var(
+        --background-color
+    ); //needed for mix-blend-mode to work on the img
 
     @media only screen and (max-width: 600px) {
         width: 100%;
@@ -29,6 +32,7 @@ const ImgContainer = styled.div`
 const Image = styled.img`
     box-sizing: border-box;
     height: 100%;
+    mix-blend-mode: lighten;
 
     mask-image: radial-gradient(
         circle at 140% 70%,
