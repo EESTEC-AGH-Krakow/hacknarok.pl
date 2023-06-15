@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Button = styled.button<{ disabled: boolean }>`
+export const Button = styled.button<{ disabled?: boolean }>`
     margin-top: 10px;
     font-family: Norse;
     font-size: 24px;
