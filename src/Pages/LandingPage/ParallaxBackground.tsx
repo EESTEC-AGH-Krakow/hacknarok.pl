@@ -12,11 +12,18 @@ const Background = styled.div<{ offset: number }>`
     width: 100%;
     position: absolute;
     top: calc(${(props) => props.offset * 0.6}px);
+
+    transition: all cubic-bezier(1, 0, 0, 1); //chosen very randomly but out of tested transitions it seemed the smoothest
 `;
 
 const Clouds = styled.img`
     width: 100%;
     min-width: 1600px;
+
+    //these parameters are eyeballed. The idea is to make the clouds extend beyond the top of the screen,
+    //so that the delay while scrolling doesn't show the background and instead shows part of the clouds
+    margin-top: -420px;
+    height: 1300px;
 `;
 
 const TitleContainer = styled.div`
@@ -46,12 +53,22 @@ const MountainsContainer = styled.div`
     min-width: 1200px;
     display: flex;
     flex-direction: column;
+
+    @media only screen and (max-width: 600px) {
+        height: 50%;
+        object-fit: contain;
+    }
 `;
 
 //Screen blend mode makes the mountains nicely blend into the background
 const MountainsScreenLayer = styled.img`
     width: 100%;
     mix-blend-mode: screen;
+
+    @media only screen and (max-width: 600px) {
+        height: 100%;
+        width: fit-content;
+    }
 `;
 
 //Hard overlay so that there is no screening effect on the clouds
@@ -59,6 +76,11 @@ const MountainsHardOverlay = styled.img`
     position: absolute;
     mask-image: linear-gradient(180deg, black 20%, transparent 70%);
     width: 100%;
+
+    @media only screen and (max-width: 600px) {
+        height: 100%;
+        width: fit-content;
+    }
 `;
 
 const MountainBackdrop = styled.div`
@@ -79,6 +101,8 @@ const ParallaxContainer = styled.div`
     overflow: hidden;
 
     user-select: none;
+
+    background-color: #f1f0ee; //primary color of the clouds background so that the underneath matches
 `;
 
 function ParallaxBackground() {

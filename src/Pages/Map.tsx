@@ -20,6 +20,9 @@ const ImgContainer = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: var(
+        --background-color
+    ); //needed for mix-blend-mode to work on the img
 
     @media only screen and (max-width: 600px) {
         width: 100%;
@@ -29,6 +32,7 @@ const ImgContainer = styled.div`
 const Image = styled.img`
     box-sizing: border-box;
     height: 100%;
+    mix-blend-mode: lighten;
 
     mask-image: radial-gradient(
         circle at 140% 70%,
@@ -99,15 +103,15 @@ export default function Map() {
                     />
                 </div>
                 <FakeContent data-aos="fade-left">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Vivamus magna neque, vulputate sed placerat eget, dignissim
-                    eu neque. Nulla facilisi. Aliquam vulputate varius cursus.
-                    Proin et pretium velit. Pellentesque imperdiet risus
-                    suscipit elit maximus sollicitudin ut tristique odio. Donec
-                    iaculis consectetur risus eu molestie. Vestibulum ante ipsum
-                    primis in faucibus orci luctus et ultrices posuere cubilia
-                    curae; Donec at nibh posuere, imperdiet nunc ac, finibus
-                    neque.
+                    Wydarzenie odbędzie się w Krakowskim Parku Technologicznym,
+                    który wspiera nas od pierwszej edycji. Krakowski Park
+                    Technologiczny to najbardziej kompletny one-stop-shop dla
+                    biznesu w Polsce, gdzie przedsiębiorcy, naukowcy i
+                    samorządowcy tworzą ekosystem rozwoju małopolskiej
+                    gospodarki. Udostępnia także firmom i organizacjom sprzęt
+                    elektroniczny, specjalistyczne oprogramowanie i
+                    infrastrukturę pomocną w rozszerzaniu ich możliwości i
+                    oferty.
                 </FakeContent>
                 <ShowOnMapButton
                     data-aos="fade-up"
