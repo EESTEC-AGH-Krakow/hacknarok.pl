@@ -102,6 +102,9 @@ const Date = styled.h2`
 
 const Place = styled.p``;
 
+const FormOpen = false;
+const FormLink: string | undefined = undefined;
+
 function LandingPage() {
     return (
         <Page>
@@ -126,7 +129,16 @@ function LandingPage() {
                     data-aos-once
                 >
                     <span>Zapisy do 17.01</span>
-                    <Button>Zapisz się</Button>
+                    {FormOpen ? (
+                        <Button
+                            disabled={false}
+                            onClick={() => window.open(FormLink, "_blank")}
+                        >
+                            Zapisz się
+                        </Button>
+                    ) : (
+                        <Button disabled={true}>Zapisy zamknięte</Button>
+                    )}
                 </ApplyContainer>
                 <LogoContainer>
                     <Logo
