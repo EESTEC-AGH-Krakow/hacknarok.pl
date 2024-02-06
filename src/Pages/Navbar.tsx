@@ -15,7 +15,7 @@ const TabButton = styled.button<{
     isActive: boolean;
     isOnTopOfThePage: boolean;
 }>`
-    background-color: ${(props) => (props.isActive ? "white" : "transparent")};
+    background-color: ${(props) => (props.isActive ? "#B6D7F2" : "transparent")};
     color: ${(props) =>
         props.isActive || props.isOnTopOfThePage ? "black" : "white"};
 
@@ -32,7 +32,7 @@ const TabButton = styled.button<{
     transition: background-color 0.4s, border 0.4s, color 0.4s;
 
     :hover {
-        background-color: rgba(180, 180, 180, 0.932);
+        background-color: #E8EEF8;
         outline: inherit;
     }
 

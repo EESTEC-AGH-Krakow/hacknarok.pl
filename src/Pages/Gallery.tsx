@@ -32,7 +32,7 @@ const CarouselContainer = styled.div`
 
 export default function Gallery() {
     const carouselContainerRef = useRef<HTMLDivElement>(null);
-
+    const images = Array.from({length: 21}, (_, i) => i + 1);
     const [centerSlidePercentage, setCenterSlidePercentage] = useState(60);
 
     useEffect(() => {
@@ -89,22 +89,67 @@ export default function Gallery() {
                     interval={5000}
                 >
                     <div>
-                        <img src="img/1.webp" />
+                        <img src="img/1.jpg" />
                     </div>
                     <div>
-                        <img src="img/2.webp" />
+                        <img src="img/2.jpg" />
                     </div>
                     <div>
-                        <img src="img/3.webp" />
+                        <img src="img/3.jpg" />
                     </div>
                     <div>
-                        <img src="img/4.webp" />
+                        <img src="img/4.jpg" />
                     </div>
                     <div>
-                        <img src="img/5.webp" />
+                        <img src="img/5.jpg" />
                     </div>
                     <div>
-                        <img src="img/6.webp" />
+                        <img src="img/6.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/7.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/8.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/9.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/10.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/11.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/12.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/13.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/14.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/15.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/16.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/17.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/18.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/19.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/20.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/21.jpg" />
                     </div>
                 </Carousel>
             </CarouselContainer>

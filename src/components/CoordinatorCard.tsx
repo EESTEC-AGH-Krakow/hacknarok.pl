@@ -9,7 +9,7 @@ const CoordinatorCardImage = styled.img`
 `;
 
 const CoordinatorCardDiv = styled.div`
-    border-top: 1px solid #941c2f;
+    border-top: 1px solid #B6D7F2;
     position: relative;
 `;
 
@@ -51,7 +51,7 @@ const InnerDiv = styled.div`
     }
 
     :hover {
-        border: 1px solid #941c2f;
+        border: 1px solid #B6D7F2;
         border-top: 0;
         background-color: rgba(0, 0, 0, 0.2);
 
@@ -73,6 +73,7 @@ export interface CoordinatorCardProps {
     position: string;
     animationDelay: number;
     placeholderSrc: string;
+    email: string;
 }
 
 function CoordinatorImage({
@@ -100,6 +101,7 @@ function CoordinatorImage({
 
 export default function CoordinatorCard({
     src,
+    email,
     name,
     position,
     animationDelay,
@@ -119,6 +121,7 @@ export default function CoordinatorCard({
                 </CoordinatorCardDiv>
                 <DetailsDiv>
                     <p>{name}</p>
+                    <PositionText>{email}</PositionText>
                     <PositionText>{position}</PositionText>
                 </DetailsDiv>
             </InnerDiv>
