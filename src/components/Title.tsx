@@ -11,7 +11,7 @@ const UnderlinedTitleContainer = styled.div<{
 
 export const RedLine = styled.div`
     width: 100px;
-    border-top: 2px solid #941c2f;
+    border-top: 2px solid #B6D7F2;
     height: 1px;
     margin-top: 7px;
     margin-left: 10px;

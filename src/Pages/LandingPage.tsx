@@ -117,7 +117,7 @@ function LandingPage() {
                         data-aos-delay="500"
                         data-aos-once
                     >
-                        <Date>23-24 marca</Date>
+                        <Date>6 - 7 kwietnia</Date>
                         <RedLine />
                         <Place>Krakowski Park Technologiczny</Place>
                     </EventPlaceInnerContainer>
@@ -128,7 +128,7 @@ function LandingPage() {
                     data-aos-delay="700"
                     data-aos-once
                 >
-                    <span>Zapisy do 17.01</span>
+                    <span>Zapisz się już dziś! Zapisy tylko do 10 marca!</span>
                     {FormOpen ? (
                         <Button
                             disabled={false}
