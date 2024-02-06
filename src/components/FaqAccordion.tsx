@@ -16,7 +16,7 @@ const Container = styled.div`
 const StyledAccordion = styled(Accordion)`
     background-color: rgba(0, 0, 0, 0.2) !important;
     color: white !important;
-    border-top: 1px solid #941c2f;
+    border-top: 1px solid #B6D7F2;
 `;
 
 const StyledAccordionSummary = styled(AccordionSummary)`
