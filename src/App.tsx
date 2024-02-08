@@ -13,6 +13,7 @@ import QuizIcon from "@mui/icons-material/Quiz";
 import HandshakeIcon from "@mui/icons-material/Handshake";
 import EmailIcon from "@mui/icons-material/Email";
 import HomeIcon from "@mui/icons-material/Home";
+import Categories from "./Pages/Categories";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -34,6 +35,11 @@ function App() {
                 {
                     title: "O wydarzeniu",
                     component: <About />,
+                    icon: <InfoIcon sx={{ color: "white" }} />,
+                },
+                {
+                    title: "Kategorie",
+                    component: <Categories />,
                     icon: <InfoIcon sx={{ color: "white" }} />,
                 },
                 {

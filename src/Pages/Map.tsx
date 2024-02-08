@@ -84,9 +84,9 @@ const ShowOnMapButton = styled(Button)`
 
 export default function Map() {
     const mapImg = useProgressiveImage(
-        "map.png",
-        "map_thumb_5.png",
-        "map_thumb_10.png"
+        "jak_dojechac.png",
+        // "map_thumb_5.png",
+        // "map_thumb_10.png"
     );
 
     return (
