@@ -68,9 +68,9 @@ const FakeContent = styled.div`
 
 export default function About() {
     const laptopImg = useProgressiveImage(
-        "laptop.png",
-        "laptop_thumb_5.png",
-        "laptop_thumb_10.png"
+        "odyn.png",
+        // "laptop_thumb_5.png",
+        // "laptop_thumb_10.png"
     );
 
     return (

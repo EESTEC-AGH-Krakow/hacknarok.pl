@@ -2,6 +2,7 @@ import styled from "styled-components";
 import ParallaxBackground from "./LandingPage/ParallaxBackground";
 import { Button } from "../components/Button";
 import { RedLine } from "../components/Title";
+import CountdownTimer from "../components/Countdown";
 
 const Content = styled.div`
     position: relative;
@@ -100,6 +101,27 @@ const Date = styled.h2`
     margin-bottom: 10px;
 `;
 
+const TitleContainer = styled.div`
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+`;
+
+const Title = styled.h1`
+    color: white;
+    
+    font-family: 'Montserrat';
+    font-size: 20px;
+    font-weight: 300;
+    @media only screen and (max-width: 600px) {
+        font-size: 10px;
+    }
+`;
+
 const Place = styled.p``;
 
 const FormOpen = false;
@@ -120,15 +142,7 @@ function LandingPage() {
                         <Date>6 - 7 kwietnia</Date>
                         <RedLine />
                         <Place>Krakowski Park Technologiczny</Place>
-                    </EventPlaceInnerContainer>
-                </EventPlaceContainer>
-                <ApplyContainer
-                    data-aos="fade-up"
-                    data-aos-offset="1"
-                    data-aos-delay="700"
-                    data-aos-once
-                >
-                    <span>Zapisz się już dziś! Zapisy tylko do 10 marca!</span>
+                        <span>Zapisz się już dziś! Zapisy tylko do 10 marca!</span>
                     {FormOpen ? (
                         <Button
                             disabled={false}
@@ -137,8 +151,17 @@ function LandingPage() {
                             Zapisz się
                         </Button>
                     ) : (
-                        <Button disabled={true}>Zapisy zamknięte</Button>
+                        <Button disabled={true}>Zapisy już wkrótce</Button>
                     )}
+                    </EventPlaceInnerContainer>
+                </EventPlaceContainer>
+                <ApplyContainer
+                    data-aos="fade-up"
+                    data-aos-offset="1"
+                    data-aos-delay="700"
+                    data-aos-once
+                >
+                        <Title><CountdownTimer /></Title>
                 </ApplyContainer>
                 <LogoContainer>
                     <Logo
