@@ -36,6 +36,7 @@ const DetailsDiv = styled.div`
 
 const PositionText = styled.p`
     font-size: 14px;
+    word-wrap: break-word;
 `;
 
 const ThumbnailName = styled.span``;
@@ -121,7 +122,7 @@ export default function CoordinatorCard({
                 </CoordinatorCardDiv>
                 <DetailsDiv>
                     <p>{name}</p>
-                    <PositionText>{email}</PositionText>
+                    <PositionText><a href={`mailto:${email}`}>{email}</a></PositionText>
                     <PositionText>{position}</PositionText>
                 </DetailsDiv>
             </InnerDiv>

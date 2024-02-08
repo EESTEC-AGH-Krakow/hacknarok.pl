@@ -39,31 +39,30 @@ const TopPageSpacer = styled.div`
 `;
 
 const partnerLogoPaths = [
-    "partners/hid_aa.jpg",
-    "partners/capgemini.png",
-    "partners/allegro.jpg",
-    "partners/dd.png",
-    "partners/ge.png",
-    "partners/remitly.png",
-    "partners/ig.png",
-    "partners/kpt.jpg",
-    "partners/sabre.png",
-    "partners/nokia.png",
-    "partners/oracle.png",
-    "partners/pga.png",
-    "partners/hitachi.png",
-    "partners/krakow.jpg",
+    "partners/APTIV.png",
+    "partners/CodeEurope.png",
+    "partners/Kraków.jpg",
+    "partners/Pega.png",
+    "partners/Remitly.png",
+    "partners/Sprout.png",
 ];
 
 const mediaPatronsLogoPaths = [
-    "media/4p.png",
-    "media/bulldogjob.png",
-    "media/pb.png",
-    "media/iet.png",
-    "media/studentnews.png",
-    "media/programista.jpg",
-    "media/porozmawiajmy.jpg",
-    "media/wrss.png",
+    "media/Crossweb.png",
+    "media/dailyweb.png",
+    "media/Devmentor.png",
+    "media/HackYeah.png",
+    "media/KMS.png",
+    "media/krakow.pl.jpg",
+    "media/KSAF.png",
+    "media/MagazynProgramista.jpg",
+    "media/NFJ.png",
+    "media/OpenSecurity.png",
+    "media/Perspektywy.jpg",
+    "media/Radio1.7.png",
+    "media/SOLID.Jobs.png",
+    "media/TeoriaBiznesu.pl.png",
+    "media/URSS.png",
 ];
 
 function PartnersGridContainer({ children }: PropsWithChildren) {
