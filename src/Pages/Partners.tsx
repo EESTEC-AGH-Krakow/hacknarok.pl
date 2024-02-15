@@ -68,10 +68,11 @@ const partnerLogoPaths = [
     "partners/CodeEurope.png",
     "partners/Kraków.jpg",
     "partners/Pega.png",
-    "partners/remitly.png",
+    "partners/Remitly.png",
     "partners/KPT.jpg",
     "partners/AVSystem.png",
     "partners/Sabre.png",
+    "partners/ASSA.jpg"
 ];
 
 const mediaPatronsLogoPaths = [
