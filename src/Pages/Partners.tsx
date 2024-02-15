@@ -64,6 +64,7 @@ const MainPartnerLogo = styled(Logo)`
 `;
 
 const partnerLogoPaths = [
+    "partners/ASSA.jpg",
     "partners/APTIV.png",
     "partners/CodeEurope.png",
     "partners/Kraków.jpg",
@@ -72,7 +73,7 @@ const partnerLogoPaths = [
     "partners/KPT.jpg",
     "partners/AVSystem.png",
     "partners/Sabre.png",
-    "partners/ASSA.jpg"
+
 ];
 
 const mediaPatronsLogoPaths = [
