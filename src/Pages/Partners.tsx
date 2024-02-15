@@ -43,8 +43,10 @@ const partnerLogoPaths = [
     "partners/CodeEurope.png",
     "partners/Kraków.jpg",
     "partners/Pega.png",
-    "partners/Remitly.png",
-    "partners/Sprout.png",
+    "partners/remitly.png",
+    "partners/KPT.jpg",
+    "partners/AVSystem.png",
+    "partners/Sabre.png",
 ];
 
 const mediaPatronsLogoPaths = [
@@ -53,7 +55,7 @@ const mediaPatronsLogoPaths = [
     "media/Devmentor.png",
     "media/HackYeah.png",
     "media/KMS.png",
-    "media/krakow.pl.jpg",
+    "media/krakow.jpg",
     "media/KSAF.png",
     "media/MagazynProgramista.jpg",
     "media/NFJ.png",
@@ -91,6 +93,22 @@ export default function Partners() {
     return (
         <PartnersContainer>
             <TopPageSpacer />
+            <div data-aos="fade-up">
+                <UnderlinedTitle
+                    text="Partner Główny"
+                    textColor="dark"
+                    align="center"
+                />
+            </div>
+            <GridContainer>
+                <PartnersGridContainer>
+                    <PartnersGridItem>
+                        <LogoContainer>
+                            <Logo src="partners/Sprout.png" data-aos="fade-up" />
+                        </LogoContainer>
+                    </PartnersGridItem>
+                </PartnersGridContainer>
+            </GridContainer>
             <div data-aos="fade-up">
                 <UnderlinedTitle
                     text="Nasi Partnerzy"
