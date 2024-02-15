@@ -111,11 +111,11 @@ const TitleContainer = styled.div`
     padding-top: 20px;
 `;
 
-const Title = styled.h1`
-    color: white;
+const Countdown = styled.h1`
+    color: #B6D7F2;
     
     font-family: 'Montserrat';
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 300;
     @media only screen and (max-width: 600px) {
         font-size: 10px;
@@ -142,7 +142,7 @@ function LandingPage() {
                         <Date>6 - 7 kwietnia</Date>
                         <RedLine />
                         <Place>Krakowski Park Technologiczny</Place>
-                        <span>Zapisz się już dziś! Zapisy tylko do 10 marca!</span>
+                        <span>Zapisz się już dziś! <br></br> Zapisy tylko do 10 marca!</span>
                     {FormOpen ? (
                         <Button
                             disabled={false}
@@ -161,7 +161,7 @@ function LandingPage() {
                     data-aos-delay="700"
                     data-aos-once
                 >
-                        <Title><CountdownTimer /></Title>
+                        <Countdown><CountdownTimer /></Countdown>
                 </ApplyContainer>
                 <LogoContainer>
                     <Logo
