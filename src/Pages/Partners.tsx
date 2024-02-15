@@ -25,6 +25,8 @@ const Logo = styled.img`
     max-height: 50%;
 `;
 
+
+
 const GridContainer = styled.div`
     width: 80%;
     margin-bottom: 100px;
@@ -36,6 +38,29 @@ const TopPageSpacer = styled.div`
     @media only screen and (max-width: 600px) {
         height: 60px;
     }
+`;
+
+const MainPartnerGridItem = styled(Grid).attrs(() => ({
+    item: true,
+    lg: 4,
+    md: 6,
+    sm: 8,
+    xs: 12,
+}))`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
+const MainPartnerLogoContainer = styled(LogoContainer)`
+    width: 100%;
+    height: 100%;
+`;
+
+const MainPartnerLogo = styled(Logo)`
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 `;
 
 const partnerLogoPaths = [
@@ -102,11 +127,11 @@ export default function Partners() {
             </div>
             <GridContainer>
                 <PartnersGridContainer>
-                    <PartnersGridItem>
-                        <LogoContainer>
-                            <Logo src="partners/Sprout.png" data-aos="fade-up" />
-                        </LogoContainer>
-                    </PartnersGridItem>
+                    <MainPartnerGridItem>
+                        <MainPartnerLogoContainer>
+                            <MainPartnerLogo src="partners/Sprout.png" data-aos="fade-up" />
+                        </MainPartnerLogoContainer>
+                    </MainPartnerGridItem>
                 </PartnersGridContainer>
             </GridContainer>
             <div data-aos="fade-up">
