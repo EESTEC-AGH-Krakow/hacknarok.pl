@@ -64,6 +64,7 @@ const MainPartnerLogo = styled(Logo)`
 `;
 
 const partnerLogoPaths = [
+    "partners/ASSA.jpg",
     "partners/APTIV.png",
     "partners/CodeEurope.png",
     "partners/Kraków.jpg",
@@ -72,7 +73,6 @@ const partnerLogoPaths = [
     "partners/KPT.jpg",
     "partners/AVSystem.png",
     "partners/Sabre.png",
-    "partners/ASSA.jpg"
 ];
 
 const mediaPatronsLogoPaths = [
@@ -137,7 +137,7 @@ export default function Partners() {
             </GridContainer>
             <div data-aos="fade-up">
                 <UnderlinedTitle
-                    text="Nasi Partnerzy"
+                    text="Partnerzy Wydarzenia"
                     textColor="dark"
                     align="center"
                 />
