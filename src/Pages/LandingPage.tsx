@@ -145,13 +145,13 @@ function LandingPage() {
                         <span>Zapisz się już dziś! <br></br> Zapisy tylko do 10 marca!</span>
                     {FormOpen ? (
                         <Button
-                            disabled={false}
-                            onClick={() => window.open(FormLink, "_blank")}
+                            disabled={true}
+                            onClick={() => window.open(FormLink, "https://forms.gle/dLmZ5Ho3wAXJY9sh9")}
                         >
                             Zapisz się
                         </Button>
                     ) : (
-                        <Button disabled={true}>Zapisy już wkrótce</Button>
+                        <Button disabled={false}>Zapisy już wkrótce</Button>
                     )}
                     </EventPlaceInnerContainer>
                 </EventPlaceContainer>
