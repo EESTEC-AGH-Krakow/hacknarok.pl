@@ -40,4 +40,4 @@ Travis CI zmienił swoje plany taryfowe wiec na moment obecny (20/02/2024) nie p
 
 `./deployments/deploy_hack.sh`
 
-Na czas awarii wskaznik (...)/hacknarok.pl/public_nodejs/public jest ustawiony na repo zaciagniete repo zamiast przeslany build z Travisa.
+Na czas awarii wskaznik (...)/hacknarok.pl/public_nodejs/public jest ustawiony na zaciagniete repo zamiast na przeslany build z Travisa.
