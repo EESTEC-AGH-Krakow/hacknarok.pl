@@ -124,8 +124,8 @@ const Countdown = styled.h1`
 
 const Place = styled.p``;
 
-const FormOpen = false;
-const FormLink: string | undefined = undefined;
+const FormOpen = true;
+const FormLink: string | undefined = "https://forms.gle/dLmZ5Ho3wAXJY9sh9";
 
 function LandingPage() {
     return (
@@ -146,7 +146,7 @@ function LandingPage() {
                     {FormOpen ? (
                         <Button
                             disabled={false}
-                            onClick={() => window.open(FormLink, "https://forms.gle/dLmZ5Ho3wAXJY9sh9")}
+                            onClick={() => window.open(FormLink)}
                         >
                             Zapisz się
                         </Button>

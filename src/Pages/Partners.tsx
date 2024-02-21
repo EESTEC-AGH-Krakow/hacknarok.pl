@@ -92,7 +92,16 @@ const mediaPatronsLogoPaths = [
     "media/TeoriaBiznesu.pl.png",
     "media/URSS.png",
 ];
+const AssaLogo = styled(Logo)`
+    width: 150%; // Increase the width
+    height: 150%; // Increase the height
+    object-fit: contain;
+`;
 
+const AssaLogoContainer = styled(LogoContainer)`
+    width: 130%; // Keep the width
+    height: 130%; // Keep the height
+`;
 function PartnersGridContainer({ children }: PropsWithChildren) {
     return (
         <Grid
@@ -146,9 +155,15 @@ export default function Partners() {
                 <PartnersGridContainer>
                     {partnerLogoPaths.map((logoPath) => (
                         <PartnersGridItem key={logoPath}>
-                            <LogoContainer>
-                                <Logo src={logoPath} data-aos="fade-up" />
-                            </LogoContainer>
+                            {logoPath === "partners/ASSA.jpg" ? (
+                                <AssaLogoContainer>
+                                    <AssaLogo src={logoPath} data-aos="fade-up" />
+                                </AssaLogoContainer>
+                            ) : (
+                                <LogoContainer>
+                                    <Logo src={logoPath} data-aos="fade-up" />
+                                </LogoContainer>
+                            )}
                         </PartnersGridItem>
                     ))}
                 </PartnersGridContainer>
