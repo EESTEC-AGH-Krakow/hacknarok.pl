@@ -18,6 +18,7 @@ const LogoContainer = styled.div`
     justify-content: center;
     overflow: hidden;
     min-width: 0;
+    margin-left: 10px;
 `;
 
 const Logo = styled.img`
@@ -51,7 +52,17 @@ const MainPartnerGridItem = styled(Grid).attrs(() => ({
     justify-content: center;
     align-items: center;
 `;
-
+const AssaPartnerGridItem = styled(Grid).attrs(() => ({
+    item: true,
+    lg: 4,
+    md: 6,
+    sm: 8,
+    xs: 12,
+}))`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 const MainPartnerLogoContainer = styled(LogoContainer)`
     width: 100%;
     height: 100%;
@@ -64,7 +75,6 @@ const MainPartnerLogo = styled(Logo)`
 `;
 
 const partnerLogoPaths = [
-    "partners/ASSA.jpg",
     "partners/APTIV.png",
     "partners/CodeEurope.png",
     "partners/Kraków.jpg",
@@ -93,14 +103,17 @@ const mediaPatronsLogoPaths = [
     "media/URSS.png",
 ];
 const AssaLogo = styled(Logo)`
-    width: 150%; // Increase the width
-    height: 150%; // Increase the height
-    object-fit: contain;
+    width: 200%; // Increase the width
+    height: 200%; // Increase the height
 `;
 
 const AssaLogoContainer = styled(LogoContainer)`
-    width: 130%; // Keep the width
-    height: 130%; // Keep the height
+    width: 100%; // Keep the width
+    height: 100%; // Keep the height
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 `;
 function PartnersGridContainer({ children }: PropsWithChildren) {
     return (
@@ -152,18 +165,19 @@ export default function Partners() {
                 />
             </div>
             <GridContainer>
+            <PartnersGridContainer>
+                <AssaPartnerGridItem>
+                    <AssaLogoContainer>
+                        <AssaLogo src="partners/ASSA.jpg" data-aos="fade-up" />
+                    </AssaLogoContainer>
+                </AssaPartnerGridItem>
+                </PartnersGridContainer>
                 <PartnersGridContainer>
                     {partnerLogoPaths.map((logoPath) => (
                         <PartnersGridItem key={logoPath}>
-                            {logoPath === "partners/ASSA.jpg" ? (
-                                <AssaLogoContainer>
-                                    <AssaLogo src={logoPath} data-aos="fade-up" />
-                                </AssaLogoContainer>
-                            ) : (
                                 <LogoContainer>
                                     <Logo src={logoPath} data-aos="fade-up" />
                                 </LogoContainer>
-                            )}
                         </PartnersGridItem>
                     ))}
                 </PartnersGridContainer>
