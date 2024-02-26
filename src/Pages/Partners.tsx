@@ -102,12 +102,33 @@ const mediaPatronsLogoPaths = [
     "media/TeoriaBiznesu.pl.png",
     "media/URSS.png",
 ];
+
+const mediaPatronsUrls = [
+    "https://crossweb.pl/",
+    "https://dailyweb.pl/",
+    "https://devmentor.pl/",
+    "https://hackyeah.pl/",
+    "https://kms.org.pl/",
+    "https://krakow.pl/",
+    "https://ksaf.pl/",
+    "https://programistamag.pl/",
+    "https://nofluffjobs.com/",
+    "https://opensecurity.pl/",
+    "https://perspektywy.pl/",
+    "https://radio17.pl/",
+    "https://solid.jobs/",
+    "https://teoriabiznesu.pl/",
+    "https://samorzad.agh.edu.pl/",
+];
+
 const AssaLogo = styled(Logo)`
     width: 200%; // Increase the width
     height: 200%; // Increase the height
 `;
 
 const AssaLogoContainer = styled(LogoContainer)`
+    margin-top: 20px;
+    margin-bottom: 50px;
     width: 100%; // Keep the width
     height: 100%; // Keep the height
     display: flex;
@@ -165,19 +186,19 @@ export default function Partners() {
                 />
             </div>
             <GridContainer>
-            <PartnersGridContainer>
-                <AssaPartnerGridItem>
-                    <AssaLogoContainer>
-                        <AssaLogo src="partners/ASSA.jpg" data-aos="fade-up" />
-                    </AssaLogoContainer>
-                </AssaPartnerGridItem>
+                <PartnersGridContainer>
+                    <AssaPartnerGridItem>
+                        <AssaLogoContainer>
+                            <AssaLogo src="partners/ASSA.jpg" data-aos="fade-up" />
+                        </AssaLogoContainer>
+                    </AssaPartnerGridItem>
                 </PartnersGridContainer>
                 <PartnersGridContainer>
                     {partnerLogoPaths.map((logoPath) => (
                         <PartnersGridItem key={logoPath}>
-                                <LogoContainer>
-                                    <Logo src={logoPath} data-aos="fade-up" />
-                                </LogoContainer>
+                            <LogoContainer>
+                                <Logo src={logoPath} data-aos="fade-up" />
+                            </LogoContainer>
                         </PartnersGridItem>
                     ))}
                 </PartnersGridContainer>
@@ -191,10 +212,12 @@ export default function Partners() {
             </div>
             <GridContainer>
                 <PartnersGridContainer>
-                    {mediaPatronsLogoPaths.map((logoPath) => (
+                    {mediaPatronsLogoPaths.map((logoPath, index) => (
                         <PartnersGridItem key={logoPath}>
                             <LogoContainer>
-                                <Logo src={logoPath} data-aos="fade-up" />
+                                <a href={mediaPatronsUrls[index]} target="_blank" rel="noopener noreferrer">
+                                    <Logo src={logoPath} data-aos="fade-up" />
+                                </a>
                             </LogoContainer>
                         </PartnersGridItem>
                     ))}
