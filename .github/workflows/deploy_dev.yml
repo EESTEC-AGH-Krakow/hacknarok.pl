@@ -23,7 +23,7 @@ jobs:
       run: npm run build
 
     - name: Execute before deploy script
-      run: ./iac/before_deploy.sh
+      run: ./iac/before_deploy.sh ${{ secrets.SERVER_USERNAME }} ${{ secrets.SERVER_ADDRESS }}
 
     - name: Deploy to dev
       run: bash ./iac/deploy.sh /domains/dev.hacknarok.pl ${{ secrets.SERVER_USERNAME }} ${{ secrets.SERVER_ADDRESS }}
