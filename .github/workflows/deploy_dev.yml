@@ -26,4 +26,4 @@ jobs:
       run: ./iac/before_deploy.sh
 
     - name: Deploy to dev
-      run: bash ./iac/deploy.sh /domains/dev.hacknarok.pl
+      run: bash ./iac/deploy.sh /domains/dev.hacknarok.pl ${{ secrets.SERVER_USERNAME }} ${{ secrets.SERVER_ADDRESS }}
