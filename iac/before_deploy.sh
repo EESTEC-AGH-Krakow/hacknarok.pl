@@ -1,5 +1,8 @@
 #!/bin/bash
 
+USERNAME=$1
+SERVER_ADDRESS=$2
+
 printf "start decrypting file ...\n"
 openssl aes-256-cbc -K $encrypted_189e52c2c347_key -iv $encrypted_189e52c2c347_iv -in ./iac/deploy_key.enc -out ./.deploy_key -d
 
