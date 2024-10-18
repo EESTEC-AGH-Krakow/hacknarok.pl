@@ -140,7 +140,7 @@ export default function Categories() {
         // "map_thumb_10.png"
     );
     const mapImgem = useProgressiveImage(
-        "aaa.png",
+        "temporary_category.png",
         // "map_thumb_5.png",
         // "map_thumb_10.png"
     );
