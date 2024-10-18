@@ -5,7 +5,7 @@ const Countdown = styled.div`
     font-weight: 500;
 `;
 const CountdownTimer: React.FC = () => {
-    const [countdownDate, setCountdownDate] = useState(new Date("Apr 6, 2024 00:00:00").getTime());
+    const [countdownDate, setCountdownDate] = useState(new Date("Apr 11, 2025 00:00:00").getTime());
     const [secondDate] = useState(new Date("Apr 7, 2024 15:37:25").getTime());
     const [now, setNow] = useState(new Date().getTime());
     const [distance, setDistance] = useState(countdownDate - now);
