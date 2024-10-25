@@ -42,7 +42,7 @@ export default function Contact() {
     const coordinators: CoordinatorCardProps[] = [
         {
             name: "Klaudia Sulowska",
-            email: "@hacknarok.pl",
+            email: "klaudia.sulowska@hacknarok.pl",
             position: "Koordynator ds. Promocji",
             src: "",
             placeholderSrc: "",
@@ -50,7 +50,7 @@ export default function Contact() {
         },
         {
             name: "Michał Filipkowski",
-            email: "@hacknarok.pl",
+            email: "michal.filipkowski@hacknarok.pl",
             position: "Koordynator ds. Logistyki i Barteru",
             src: "",
             placeholderSrc: "",
@@ -65,8 +65,8 @@ export default function Contact() {
             animationDelay: 200,
         },
         {
-            name: "Adrian Jaśkowiec",
-            email: "@hacknarok.pl",
+            name: "Oskaj Jung",
+            email: "oskar.jung@hacknarok.pl",
             position: "Koordynator ds. Kontaktu z Uczestnikami i Administracji",
             src: "",
             placeholderSrc: "",
