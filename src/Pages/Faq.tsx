@@ -40,9 +40,9 @@ export default function Faq() {
                 }
             />
             <FaqAccordion
-                question={"Ile osób może liczyć drużyna?"}
+                question={"Ile osób może liczyć zespół?"}
                 answer={
-                    "Drużyny mogą liczyć od 3 do 4 osób dla kategorii programistycznej i 4 osoby dla kategorii Embedded.."
+                    "Drużyny mogą liczyć od 3 do 4 osób dla kategorii programistycznej."
                 }
             />
             <FaqAccordion
