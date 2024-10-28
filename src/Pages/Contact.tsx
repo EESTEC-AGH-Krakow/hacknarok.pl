@@ -65,7 +65,7 @@ export default function Contact() {
             animationDelay: 200,
         },
         {
-            name: "Oskaj Jung",
+            name: "Oskar Jung",
             email: "oskar.jung@hacknarok.pl",
             position: "Koordynator ds. Kontaktu z Uczestnikami i Administracji",
             src: "",
