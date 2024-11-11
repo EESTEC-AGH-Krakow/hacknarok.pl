@@ -89,67 +89,67 @@ export default function Gallery() {
                     interval={5000}
                 >
                     <div>
-                        <img src="img/1.jpg" />
+                        <img src="img/galery-hack9/1.jpg" />
                     </div>
                     <div>
-                        <img src="img/2.jpg" />
+                        <img src="img/galery-hack9/2.jpg" />
                     </div>
                     <div>
-                        <img src="img/3.jpg" />
+                        <img src="img/galery-hack9/3.jpg" />
                     </div>
                     <div>
-                        <img src="img/4.jpg" />
+                        <img src="img/galery-hack9/4.jpg" />
                     </div>
                     <div>
-                        <img src="img/5.jpg" />
+                        <img src="img/galery-hack9/5.jpg" />
                     </div>
                     <div>
-                        <img src="img/6.jpg" />
+                        <img src="img/galery-hack9/6.jpg" />
                     </div>
                     <div>
-                        <img src="img/7.jpg" />
+                        <img src="img/galery-hack9/7.jpg" />
                     </div>
                     <div>
-                        <img src="img/8.jpg" />
+                        <img src="img/galery-hack9/8.jpg" />
                     </div>
                     <div>
-                        <img src="img/9.jpg" />
+                        <img src="img/galery-hack9/9.jpg" />
                     </div>
                     <div>
-                        <img src="img/10.jpg" />
+                        <img src="img/galery-hack9/10.jpg" />
                     </div>
                     <div>
-                        <img src="img/11.jpg" />
+                        <img src="img/galery-hack9/11.jpg" />
                     </div>
                     <div>
-                        <img src="img/12.jpg" />
+                        <img src="img/galery-hack9/12.jpg" />
                     </div>
                     <div>
-                        <img src="img/13.jpg" />
+                        <img src="img/galery-hack9/13.jpg" />
                     </div>
                     <div>
-                        <img src="img/14.jpg" />
+                        <img src="img/galery-hack9/14.jpg" />
                     </div>
                     <div>
-                        <img src="img/15.jpg" />
+                        <img src="img/galery-hack9/15.jpg" />
                     </div>
                     <div>
-                        <img src="img/16.jpg" />
+                        <img src="img/galery-hack9/16.jpg" />
                     </div>
                     <div>
-                        <img src="img/17.jpg" />
+                        <img src="img/galery-hack9/17.jpg" />
                     </div>
                     <div>
-                        <img src="img/18.jpg" />
+                        <img src="img/galery-hack9/18.jpg" />
                     </div>
                     <div>
-                        <img src="img/19.jpg" />
+                        <img src="img/galery-hack9/19.jpg" />
                     </div>
                     <div>
-                        <img src="img/20.jpg" />
+                        <img src="img/galery-hack9/20.jpg" />
                     </div>
                     <div>
-                        <img src="img/21.jpg" />
+                        <img src="img/galery-hack9/21.jpg" />
                     </div>
                 </Carousel>
             </CarouselContainer>
