@@ -31,7 +31,7 @@ const CountdownTimer: React.FC = () => {
         return () => clearInterval(interval);
     }, [now, countdownDate, distance, secondDate, phase]);
     
-    function formatTime(number) {
+    function formatTime(number: number) {
         return String(number).padStart(2, '0');
       }
 
