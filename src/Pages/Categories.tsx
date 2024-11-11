@@ -175,13 +175,13 @@ export default function Categories() {
                 <TextContainerRight >
                     <div data-aos="fade-left">
                         <UnderlinedTitle
-                            text="KATEGORIA AUGMENTED REALITY"
+                            text="KATEGORIA MOBILE AUGMENTED REALITY"
                             textColor="light"
                             align="flex-end"
                         />
                     </div>
                     <FakeContentRight data-aos="fade-right">
-                    Kategoria Rozszerzonej Rzeczywistości przenosi uczestników do fascynującego świata, gdzie granice między światem fizycznym a cyfrowym zacierają się, oferując nieskończone możliwości twórcze. To miejsce, gdzie innowacja spotyka technologię, a wyobraźnia przenika rzeczywistość dzięki zastosowaniu technologii AR. Dedykowana pasjonatom nowoczesnych rozwiązań cyfrowych, kategoria ta pozwala na prezentację umiejętności w projektowaniu i programowaniu zaawansowanych aplikacji rozszerzonej rzeczywistości. Uczestnicy mogą tworzyć interaktywne gry, aplikacje edukacyjne, narzędzia do pracy zdalnej, czy wizualizacje danych, które redefiniują sposoby interakcji z otaczającym nas światem. A to wszystko wykorzystując do pomocy tylko aparat w telefonie lub kamerkę w komputerze. Wyzwania, jakie niesie ze sobą ta kategoria, stanowią prawdziwe pole doświadczalne dla twórców pragnących połączyć swoją kreatywność z technologiczną precyzją. Czy to w edukacji, medycynie, czy w rozrywce, możliwości są ograniczone jedynie przez wyobraźnię uczestników.
+                    Kategoria Rozszerzonej Rzeczywistości przenosi uczestników do fascynującego świata, gdzie granice między światem fizycznym a cyfrowym zacierają się, oferując nieskończone możliwości twórcze. To miejsce, gdzie innowacja spotyka technologię, a wyobraźnia przenika rzeczywistość dzięki zastosowaniu technologii MAR. Dedykowana pasjonatom nowoczesnych rozwiązań cyfrowych, kategoria ta pozwala na prezentację umiejętności w projektowaniu i programowaniu zaawansowanych aplikacji rozszerzonej rzeczywistości. Uczestnicy mogą tworzyć interaktywne gry, aplikacje edukacyjne, narzędzia do pracy zdalnej, czy wizualizacje danych, które redefiniują sposoby interakcji z otaczającym nas światem. A to wszystko wykorzystując do pomocy tylko aparat w telefonie lub kamerkę w komputerze. Wyzwania, jakie niesie ze sobą ta kategoria, stanowią prawdziwe pole doświadczalne dla twórców pragnących połączyć swoją kreatywność z technologiczną precyzją. Czy to w edukacji, medycynie, czy w rozrywce, możliwości są ograniczone jedynie przez wyobraźnię uczestników.
 
 
                     </FakeContentRight>

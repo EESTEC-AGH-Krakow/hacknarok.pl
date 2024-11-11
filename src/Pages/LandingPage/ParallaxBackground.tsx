@@ -161,7 +161,7 @@ function ParallaxBackground() {
                         style={{ 
                         width: '100px', 
                         height: 'auto', 
-                        transform: 'scale(4.1)', // becouse of big background
+                        transform: 'scale(5.5)', // becouse of big background
                         transformOrigin: 'center' 
                         }} 
                     />
