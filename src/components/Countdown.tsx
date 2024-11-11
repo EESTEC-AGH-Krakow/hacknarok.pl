@@ -30,11 +30,15 @@ const CountdownTimer: React.FC = () => {
 
         return () => clearInterval(interval);
     }, [now, countdownDate, distance, secondDate, phase]);
+    
+    function formatTime(number) {
+        return String(number).padStart(2, '0');
+      }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const days = formatTime(Math.floor(distance / (1000 * 60 * 60 * 24)));
+    const hours = formatTime(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    const minutes = formatTime(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+    const seconds = formatTime(Math.floor((distance % (1000 * 60)) / 1000));
 
     return (
         <div>
