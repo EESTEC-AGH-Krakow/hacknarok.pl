@@ -87,7 +87,7 @@ export default function About() {
                     />
                 </div>
                 <FakeContent data-aos="fade-right">
-                Chwyć klawiaturę w dłoń i wyrusz w 24-godzinną podróż po światach mitologii nordyckiej. Tu walka odbywa się z wykorzystaniem siły linijek kodu, które napiszesz razem z Twoim zespołem. Czy uda Ci się stworzyć coś absolutnie wyjątkowego? Dołącz do wydarzenia i przekonaj się sam! W trakcie Hackathonu Twoje miejsce pracy zamieni się w arenę pełną niemal boskich, kreatywnych energii, a doświadczeni mentorzy będą służyć radą w kryzysowych momentach tej nierównej walki. Całość odbędzie się w Krakowskim Parku Technologicznym, w którym zapanuje wyjątkowa atmosfera... Nie możesz przegapić takiej okazji, zapisz się już dziś!
+                    Chwyć klawiaturę w dłoń i wyrusz w 24-godzinną podróż po światach mitologii nordyckiej. Tu walka odbywa się z wykorzystaniem siły linijek kodu, które napiszesz razem z Twoim zespołem. Czy uda Ci się stworzyć coś absolutnie wyjątkowego? Dołącz do wydarzenia i przekonaj się sam! W trakcie Hackathonu Twoje miejsce pracy zamieni się w arenę pełną niemal boskich, kreatywnych energii, a doświadczeni mentorzy będą służyć radą w kryzysowych momentach tej nierównej walki. Całość odbędzie się w Krakowskim Parku Technologicznym, w którym zapanuje wyjątkowa atmosfera... Nie możesz przegapić takiej okazji, zapisz się już dziś!
                 </FakeContent>
             </TextContainer>
         </ParentsContainer>
