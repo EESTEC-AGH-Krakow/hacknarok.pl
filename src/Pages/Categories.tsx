@@ -64,6 +64,11 @@ const ImageRight = styled.img`
 
     @media only screen and (max-width: 600px) {
         min-width: initial;
+        mask-image: linear-gradient(
+            to left,
+            rgba(0, 0, 0, 1) 10%,
+            transparent 100%
+    );
     }
 `;
 const Image = styled.img`
@@ -80,6 +85,11 @@ const Image = styled.img`
 
     @media only screen and (max-width: 600px) {
         min-width: initial;
+        mask-image: linear-gradient(
+            to bottom left,
+            rgba(0, 0, 0, 1) 10%,
+            transparent 80%
+    );
     }
 `;
 const TextContainerRight = styled.div`
@@ -140,7 +150,7 @@ export default function Categories() {
         // "map_thumb_10.png"
     );
     const mapImgem = useProgressiveImage(
-        "temporary_category.png",
+        "mar.png",
         // "map_thumb_5.png",
         // "map_thumb_10.png"
     );
@@ -181,7 +191,7 @@ export default function Categories() {
                         />
                     </div>
                     <FakeContentRight data-aos="fade-right">
-                    Kategoria Rozszerzonej Rzeczywistości przenosi uczestników do fascynującego świata, gdzie granice między światem fizycznym a cyfrowym zacierają się, oferując nieskończone możliwości twórcze. To miejsce, gdzie innowacja spotyka technologię, a wyobraźnia przenika rzeczywistość dzięki zastosowaniu technologii MAR. Dedykowana pasjonatom nowoczesnych rozwiązań cyfrowych, kategoria ta pozwala na prezentację umiejętności w projektowaniu i programowaniu zaawansowanych aplikacji rozszerzonej rzeczywistości. Uczestnicy mogą tworzyć interaktywne gry, aplikacje edukacyjne, narzędzia do pracy zdalnej, czy wizualizacje danych, które redefiniują sposoby interakcji z otaczającym nas światem. A to wszystko wykorzystując do pomocy tylko aparat w telefonie lub kamerkę w komputerze. Wyzwania, jakie niesie ze sobą ta kategoria, stanowią prawdziwe pole doświadczalne dla twórców pragnących połączyć swoją kreatywność z technologiczną precyzją. Czy to w edukacji, medycynie, czy w rozrywce, możliwości są ograniczone jedynie przez wyobraźnię uczestników.
+                    Kategoria Mobilnej Rozszerzonej Rzeczywistości przenosi uczestników do fascynującego świata, gdzie granice między światem fizycznym a cyfrowym zacierają się, oferując nieskończone możliwości twórcze. To miejsce, gdzie innowacja spotyka technologię, a wyobraźnia przenika rzeczywistość dzięki zastosowaniu technologii MAR. Dedykowana pasjonatom nowoczesnych rozwiązań cyfrowych, kategoria ta pozwala na prezentację umiejętności w projektowaniu i programowaniu zaawansowanych aplikacji rozszerzonej rzeczywistości. Uczestnicy mogą tworzyć interaktywne gry, aplikacje edukacyjne, narzędzia do pracy zdalnej, czy wizualizacje danych, które redefiniują sposoby interakcji z otaczającym nas światem. A to wszystko wykorzystując do pomocy tylko aparat w telefonie lub kamerkę w komputerze. Wyzwania, jakie niesie ze sobą ta kategoria, stanowią prawdziwe pole doświadczalne dla twórców pragnących połączyć swoją kreatywność z technologiczną precyzją. Czy to w edukacji, medycynie, czy w rozrywce, możliwości są ograniczone jedynie przez wyobraźnię uczestników.
 
 
                     </FakeContentRight>

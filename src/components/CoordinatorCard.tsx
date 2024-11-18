@@ -9,7 +9,7 @@ const CoordinatorCardImage = styled.img`
 `;
 
 const CoordinatorCardDiv = styled.div`
-    border-top: 1px solid #B6D7F2;
+    border-top: 1px solid #ffffff;
     position: relative;
 `;
 
@@ -52,7 +52,7 @@ const InnerDiv = styled.div`
     }
 
     :hover {
-        border: 1px solid #B6D7F2;
+        border: 1px solid #ffffff;
         border-top: 0;
         background-color: rgba(0, 0, 0, 0.2);
 

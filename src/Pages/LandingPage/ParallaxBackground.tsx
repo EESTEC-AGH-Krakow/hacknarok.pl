@@ -161,12 +161,12 @@ function ParallaxBackground() {
                         style={{ 
                         width: '100px', 
                         height: 'auto', 
-                        transform: 'scale(5.5)', // becouse of big background
-                        transformOrigin: 'center' 
+                        transform: 'scale(5.5)', 
+                        transformOrigin: 'center',
+                        [window.outerWidth < 600 ? 'transform' : '']: 'scale(4)',
                         }} 
                     />
                     </Title>
-
                 </TitleContainer>
                 {DisplaySnowflakes && (
                     <Snowfall

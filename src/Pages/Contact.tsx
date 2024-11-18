@@ -5,21 +5,22 @@ import CoordinatorCard, {
 } from "../components/CoordinatorCard";
 import Footer from "../components/Footer";
 import { UnderlinedTitle } from "../components/Title";
+import { Visibility } from "@mui/icons-material";
 
 const Content = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 0vh;//100vh;
     overflow: hidden;
 `;
 
 const TopPageSpacer = styled.div`
-    height: 100px;
+    height: 0px;//100px;
 
     @media only screen and (max-width: 600px) {
-        height: 60px;
+        height: 60px;//60px;
     }
 `;
 
@@ -85,7 +86,7 @@ export default function Contact() {
     return (
         <Content>
             <TopPageSpacer />
-            <div data-aos="fade-up">
+            {/* <div data-aos="fade-up">
                 <UnderlinedTitle
                     text="Kontakt"
                     textColor="light"
@@ -109,7 +110,7 @@ export default function Contact() {
                         ))}
                     </Grid>
                 </InternalGridContainer>
-            </GridContainer>
+            </GridContainer> */}
             <FlexSpacer />
             <Footer />
         </Content>

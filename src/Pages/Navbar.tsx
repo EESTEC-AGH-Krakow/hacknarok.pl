@@ -15,7 +15,7 @@ const TabButton = styled.button<{
     isActive: boolean;
     isOnTopOfThePage: boolean;
 }>`
-    background-color: ${(props) => (props.isActive ? "#B6D7F2" : "transparent")};
+    background-color: ${(props) => (props.isActive ? "#ffffff" : "transparent")};
     color: ${(props) =>
         props.isActive || props.isOnTopOfThePage ? "black" : "white"};
 
