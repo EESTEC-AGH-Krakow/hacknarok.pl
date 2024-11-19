@@ -40,6 +40,11 @@ const Image = styled.img`
 
     @media only screen and (max-width: 600px) {
         min-width: initial;
+        mask-image: linear-gradient(
+            to bottom left,
+            rgba(0, 0, 0, 1) 0%,
+            transparent 100%
+    );
     }
 `;
 
@@ -68,7 +73,7 @@ const FakeContent = styled.div`
 
 export default function About() {
     const laptopImg = useProgressiveImage(
-        "odyn.png",
+        "odyn-hack9.png",
         // "laptop_thumb_5.png",
         // "laptop_thumb_10.png"
     );

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
     background-color: rgba(0, 0, 0, 0.2);
-    border-top: 1px solid #B6D7F2;
+    border-top: 1px solid #ffffff;
     width: 100%;
     padding: 20px;
     margin-top: 60px;
@@ -35,7 +35,7 @@ export default function Footer() {
                     <MailtoLink
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="regulamin.pdf"
+                        href="regulamin-hack9.pdf"
                     >
                         regulamin
                     </MailtoLink>
@@ -49,7 +49,7 @@ export default function Footer() {
                     <FooterLogo src="logo_eestec.png" />
                 </Grid>
                 <Grid item lg={2} md={3} sm={6} xs={12} textAlign={"center"}>
-                    <FooterLogo src="hackathon_logo.png" />
+                    <FooterLogo src="favicon-hack9.png" />
                 </Grid>
             </Grid>
         </Container>

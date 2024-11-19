@@ -112,7 +112,7 @@ const TitleContainer = styled.div`
 `;
 
 const Countdown = styled.h1`
-    color: #B6D7F2;
+    color: #ffffff;
     
     font-family: 'Montserrat';
     font-size: 16px;
