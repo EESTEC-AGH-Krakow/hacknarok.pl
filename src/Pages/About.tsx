@@ -34,7 +34,7 @@ const Image = styled.img`
 
     mask-image: linear-gradient(
         to left,
-        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 1) 30%,
         transparent 100%
     );
 
