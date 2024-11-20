@@ -51,13 +51,13 @@ const ImgContainerRight = styled.div`
         width: 100%;
     }
 `;
-const ImageRight = styled.img`
+const ImageRight = styled.img` // Kategoria Programistyczna
     box-sizing: border-box;
     height: 100%;
     mix-blend-mode: lighten;
 
     mask-image: linear-gradient(
-        to left,
+        to right,
         rgba(0, 0, 0, 1) 50%,
         transparent 100%
     );
@@ -71,7 +71,7 @@ const ImageRight = styled.img`
     );
     }
 `;
-const Image = styled.img`
+const Image = styled.img`       // Category MOBILE AUGMENTED REALITY
     box-sizing: border-box;
     width: 100%;
     min-width: 600px;
@@ -79,7 +79,7 @@ const Image = styled.img`
 
     mask-image: linear-gradient(
         to left,
-        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 1) 20%,
         transparent 100%
     );
 
@@ -87,7 +87,7 @@ const Image = styled.img`
         min-width: initial;
         mask-image: linear-gradient(
             to bottom left,
-            rgba(0, 0, 0, 1) 10%,
+            rgba(0, 0, 0, 1) 0%,
             transparent 80%
     );
     }
