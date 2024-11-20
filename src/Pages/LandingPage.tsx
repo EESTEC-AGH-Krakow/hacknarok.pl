@@ -112,7 +112,7 @@ const TitleContainer = styled.div`
 `;
 
 const Countdown = styled.h1`
-    color: #B6D7F2;
+    color: #ffffff;
     
     font-family: 'Montserrat';
     font-size: 16px;
@@ -121,11 +121,10 @@ const Countdown = styled.h1`
         font-size: 10px;
     }
 `;
-
 const Place = styled.p``;
 
 const FormOpen = true;
-const FormLink: string | undefined = "https://forms.gle/dLmZ5Ho3wAXJY9sh9";
+const FormLink: string | undefined = "";
 
 function LandingPage() {
     return (
@@ -139,20 +138,20 @@ function LandingPage() {
                         data-aos-delay="500"
                         data-aos-once
                     >
-                        <Date>6 - 7 kwietnia</Date>
+                        <Date> 12-13 kwietnia</Date>
                         <RedLine />
                         <Place>Krakowski Park Technologiczny</Place>
-                        <span>Zapisz się już dziś! <br></br> Zapisy tylko do 10 marca!</span>
-                    {FormOpen ? (
-                        <Button
-                            disabled={false}
-                            onClick={() => window.open(FormLink)}
-                        >
-                            Zapisz się
-                        </Button>
-                    ) : (
-                        <Button disabled={true}>Zapisy już wkrótce</Button>
-                    )}
+                        <span><br></br> Zapisy startują 24 lutego! </span>
+                        {FormOpen ? (
+                            <Button
+                                disabled={true}
+                                onClick={() => window.open(FormLink)}
+                            >
+                                Zapisz się
+                            </Button>
+                        ) : (
+                            <Button disabled={false} >Zapisy już wkrótce</Button>
+                        )}
                     </EventPlaceInnerContainer>
                 </EventPlaceContainer>
                 <ApplyContainer
@@ -161,7 +160,7 @@ function LandingPage() {
                     data-aos-delay="700"
                     data-aos-once
                 >
-                        <Countdown><CountdownTimer /></Countdown>
+                    <Countdown><CountdownTimer /></Countdown>
                 </ApplyContainer>
                 <LogoContainer>
                     <Logo

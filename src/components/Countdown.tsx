@@ -5,8 +5,8 @@ const Countdown = styled.div`
     font-weight: 500;
 `;
 const CountdownTimer: React.FC = () => {
-    const [countdownDate, setCountdownDate] = useState(new Date("Apr 6, 2024 00:00:00").getTime());
-    const [secondDate] = useState(new Date("Apr 7, 2024 15:37:25").getTime());
+    const [countdownDate, setCountdownDate] = useState(new Date("Apr 12, 2025 00:00:00").getTime());
+    const [secondDate] = useState(new Date("Apr 13, 2025 15:37:25").getTime());
     const [now, setNow] = useState(new Date().getTime());
     const [distance, setDistance] = useState(countdownDate - now);
     const [phase, setPhase] = useState('beforeFirstDate');
@@ -30,11 +30,15 @@ const CountdownTimer: React.FC = () => {
 
         return () => clearInterval(interval);
     }, [now, countdownDate, distance, secondDate, phase]);
+    
+    function formatTime(number: number) {
+        return String(number).padStart(2, '0');
+      }
 
-    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    const days = formatTime(Math.floor(distance / (1000 * 60 * 60 * 24)));
+    const hours = formatTime(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+    const minutes = formatTime(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+    const seconds = formatTime(Math.floor((distance % (1000 * 60)) / 1000));
 
     return (
         <div>

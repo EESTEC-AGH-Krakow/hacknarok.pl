@@ -25,3 +25,4 @@ dist-ssr
 *.sw?
 
 iac/deploy_key
+vite.config.ts.*

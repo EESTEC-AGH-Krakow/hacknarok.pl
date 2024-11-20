@@ -57,13 +57,18 @@ const ImageRight = styled.img`
     mix-blend-mode: lighten;
 
     mask-image: linear-gradient(
-        to left,
+        to right,
         rgba(0, 0, 0, 1) 50%,
         transparent 100%
     );
 
     @media only screen and (max-width: 600px) {
         min-width: initial;
+        mask-image: linear-gradient(
+            to left,
+            rgba(0, 0, 0, 1) 10%,
+            transparent 100%
+    );
     }
 `;
 const Image = styled.img`
@@ -74,12 +79,17 @@ const Image = styled.img`
 
     mask-image: linear-gradient(
         to left,
-        rgba(0, 0, 0, 1) 50%,
+        rgba(0, 0, 0, 1) 20%,
         transparent 100%
     );
 
     @media only screen and (max-width: 600px) {
         min-width: initial;
+        mask-image: linear-gradient(
+            to bottom left,
+            rgba(0, 0, 0, 1) 0%,
+            transparent 80%
+    );
     }
 `;
 const TextContainerRight = styled.div`
@@ -140,54 +150,53 @@ export default function Categories() {
         // "map_thumb_10.png"
     );
     const mapImgem = useProgressiveImage(
-        "embedded.png",
+        "mar.png",
         // "map_thumb_5.png",
         // "map_thumb_10.png"
     );
 
     return (
         <>
-        <ParentsContainer>
-            <ImgContainer data-aos="fade-up">
-                <ImageRight src={mapImgog}></ImageRight>
-            </ImgContainer>
-            <TextContainer alignRight>
-                <div data-aos="fade-left">
-                    <UnderlinedTitle
-                        text="Kategoria Programistyczna"
-                        textColor="light"
-                        align="flex-end"
-                    />
-                </div>
-                <FakeContent data-aos="fade-left">
+            <ParentsContainer>
+                <ImgContainer data-aos="fade-up">
+                    <ImageRight src={mapImgog}></ImageRight>
+                </ImgContainer>
+                <TextContainer alignRight>
+                    <div data-aos="fade-left">
+                        <UnderlinedTitle
+                            text="Kategoria Programistyczna"
+                            textColor="light"
+                            align="flex-end"
+                        />
+                    </div>
+                    <FakeContent data-aos="fade-left">
 
-                Niezależnie od tego, czy jesteś doświadczonym programistą czy dopiero zaczynasz swoją przygodę z kodowaniem, kategoria główna  - Programistyczna oferuje coś dla każdego. Zaprasza do pokonania wyzwań, począwszy od skomplikowanych problemów algorytmicznych, które sprawdzą Twoje umiejętności logicznego myślenia, aż po tworzenie zaawansowanych aplikacji, które wymagają nie tylko umiejętności technicznych, ale również kreatywności i innowacyjnego podejścia.
-Uczestnicy mają pełną swobodę w wyborze technologii, co pozwala dostosować się do wielu zadań. Oczekujemy, że projekty będą wykorzystywać najpopularniejsze i najnowocześniejsze technologie webowe oraz różnorodne języki programowania, takie jak React, React Native, Angular, Flutter, Python, Java czy C#. Ta elastyczność nie tylko umożliwia uczestnikom wykazanie się technicznym kunsztem, ale także zachęca do eksploracji nowych obszarów i rozwijania swoich umiejętności.
-
-
-                </FakeContent>
-            </TextContainer>
-        </ParentsContainer>
-        <ParentsContainerRight>
-            <ImgContainerRight data-aos="fade-up">
-                <Image src={mapImgem}></Image>
-            </ImgContainerRight>
-            <TextContainerRight >
-                <div data-aos="fade-left">
-                    <UnderlinedTitle
-                        text="Kategoria Embedded"
-                        textColor="light"
-                        align="flex-end"
-                    />
-                </div>
-                <FakeContentRight data-aos="fade-right">
-                Kategoria Embedded otwiera drzwi do fascynującego świata systemów wbudowanych i Internetu Rzeczy (IoT), gdzie technologia splata się z rzeczywistością poprzez zastosowanie różnorodnych czujników, modułów Bluetooth, GPS, WiFi czy też magistrali CAN. To miejsce, gdzie inżynieria spotyka się z innowacją, a kreatywność łączy się z techniczną precyzją.
-Dedykowana pasjonatom systemów wbudowanych, kategoria oferuje wyjątkową okazję do demonstracji umiejętności w projektowaniu, programowaniu i integracji skomplikowanych systemów opartych na mikroprocesorach. Wyzwania, jakie stawia, stanowią prawdziwe pole doświadczalne dla umysłów inżynieryjnych, pragnących wykorzystać swoją wiedzę w praktycznych, często złożonych aplikacjach. Mogą obejmować szeroki zakres tematyczny, począwszy od tworzenia oprogramowania dla inteligentnych urządzeń, poprzez automatyzację procesów, aż po rozwinięte systemy robotyczne. To idealne miejsce dla entuzjastów, którzy pragną połączyć swoją pasję do technologii z realnymi, fizycznymi systemami. W ramach tej kategorii, projekty powinny być głównie realizowane przy użyciu języków programowania takich jak C i C++.
+                        Niezależnie od tego, czy jesteś doświadczonym programistą czy dopiero zaczynasz swoją przygodę z kodowaniem, kategoria główna  - Programistyczna oferuje coś dla każdego. Zaprasza do pokonania wyzwań, począwszy od skomplikowanych problemów algorytmicznych, które sprawdzą Twoje umiejętności logicznego myślenia, aż po tworzenie zaawansowanych aplikacji, które wymagają nie tylko umiejętności technicznych, ale również kreatywności i innowacyjnego podejścia.
+                        Uczestnicy mają pełną swobodę w wyborze technologii, co pozwala dostosować się do wielu zadań. Oczekujemy, że projekty będą wykorzystywać najpopularniejsze i najnowocześniejsze technologie webowe oraz różnorodne języki programowania, takie jak React, React Native, Angular, Flutter, Python, Java czy C#. Ta elastyczność nie tylko umożliwia uczestnikom wykazanie się technicznym kunsztem, ale także zachęca do eksploracji nowych obszarów i rozwijania swoich umiejętności.
 
 
-                </FakeContentRight>
-            </TextContainerRight>
-        </ParentsContainerRight>
-        </>    
+                    </FakeContent>
+                </TextContainer>
+            </ParentsContainer>
+            <ParentsContainerRight>
+                <ImgContainerRight data-aos="fade-up">
+                    <Image src={mapImgem}></Image>
+                </ImgContainerRight>
+                <TextContainerRight >
+                    <div data-aos="fade-left">
+                        <UnderlinedTitle
+                            text="KATEGORIA MOBILE AUGMENTED REALITY"
+                            textColor="light"
+                            align="flex-end"
+                        />
+                    </div>
+                    <FakeContentRight data-aos="fade-right">
+                    Kategoria Mobilnej Rozszerzonej Rzeczywistości przenosi uczestników do fascynującego świata, gdzie granice między światem fizycznym a cyfrowym zacierają się, oferując nieskończone możliwości twórcze. To miejsce, gdzie innowacja spotyka technologię, a wyobraźnia przenika rzeczywistość dzięki zastosowaniu technologii MAR. Dedykowana pasjonatom nowoczesnych rozwiązań cyfrowych, kategoria ta pozwala na prezentację umiejętności w projektowaniu i programowaniu zaawansowanych aplikacji rozszerzonej rzeczywistości. Uczestnicy mogą tworzyć interaktywne gry, aplikacje edukacyjne, narzędzia do pracy zdalnej, czy wizualizacje danych, które redefiniują sposoby interakcji z otaczającym nas światem. A to wszystko wykorzystując do pomocy tylko aparat w telefonie lub kamerkę w komputerze. Wyzwania, jakie niesie ze sobą ta kategoria, stanowią prawdziwe pole doświadczalne dla twórców pragnących połączyć swoją kreatywność z technologiczną precyzją. Czy to w edukacji, medycynie, czy w rozrywce, możliwości są ograniczone jedynie przez wyobraźnię uczestników.
+
+
+                    </FakeContentRight>
+                </TextContainerRight>
+            </ParentsContainerRight>
+        </>
     );
 }

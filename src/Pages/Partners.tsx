@@ -164,7 +164,7 @@ export default function Partners() {
             <TopPageSpacer />
             <div data-aos="fade-up">
                 <UnderlinedTitle
-                    text="Partner Główny"
+                    text="Zaufali nam"
                     textColor="dark"
                     align="center"
                 />
@@ -180,7 +180,7 @@ export default function Partners() {
             </GridContainer>
             <div data-aos="fade-up">
                 <UnderlinedTitle
-                    text="Partnerzy Wydarzenia"
+                    text="Zaufali nam"
                     textColor="dark"
                     align="center"
                 />

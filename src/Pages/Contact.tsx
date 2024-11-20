@@ -5,21 +5,22 @@ import CoordinatorCard, {
 } from "../components/CoordinatorCard";
 import Footer from "../components/Footer";
 import { UnderlinedTitle } from "../components/Title";
+import { Visibility } from "@mui/icons-material";
 
 const Content = styled.div`
     width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 0vh;//100vh;
     overflow: hidden;
 `;
 
 const TopPageSpacer = styled.div`
-    height: 100px;
+    height: 0px;//100px;
 
     @media only screen and (max-width: 600px) {
-        height: 60px;
+        height: 60px;//60px;
     }
 `;
 
@@ -41,43 +42,43 @@ const FlexSpacer = styled.div`
 export default function Contact() {
     const coordinators: CoordinatorCardProps[] = [
         {
-            name: "Konrad Maciejewski",
-            email: "konrad.maciejewski@hacknarok.pl",
+            name: "Klaudia Sulowska",
+            email: "klaudia.sulowska@hacknarok.pl",
             position: "Koordynator ds. Promocji",
-            src: "img/coordinators/hack8/konrad.JPG",
-            placeholderSrc: "img/coordinators/julia_thumb_10.jpg",
+            src: "img/coordinators/unnown.png",
+            placeholderSrc: "",
             animationDelay: 0,
         },
         {
-            name: "Jakub Kłoczko",
-            email: "jakub.kloczko@hacknarok.pl",
+            name: "Michał Filipkowski",
+            email: "michal.filipkowski@hacknarok.pl",
             position: "Koordynator ds. Logistyki i Barteru",
-            src: "img/coordinators/hack8/jakub.JPG",
-            placeholderSrc: "img/coordinators/kacper_thumb_10.jpg",
+            src: "img/coordinators/unnown.png",
+            placeholderSrc: "",
             animationDelay: 100,
-        },
-        {
-            name: "Angelika Żyła",
-            email: "angelika.zyla@hacknarok.pl",
-            position: "Koordynatorka Główna",
-            src: "img/coordinators/hack8/angelika.JPG",
-            placeholderSrc: "img/coordinators/natalia_thumb_10.jpg",
-            animationDelay: 200,
         },
         {
             name: "Adrian Jaśkowiec",
             email: "adrian.jaskowiec@hacknarok.pl",
+            position: "Koordynator Główny",
+            src: "img/coordinators/unnown.png",
+            placeholderSrc: "",
+            animationDelay: 200,
+        },
+        {
+            name: "Oskar Jung",
+            email: "oskar.jung@hacknarok.pl",
             position: "Koordynator ds. Kontaktu z Uczestnikami i Administracji",
-            src: "img/coordinators/hack8/adrian.JPG",
-            placeholderSrc: "img/coordinators/mikolaj_thumb_10.jpg",
+            src: "img/coordinators/unnown.png",
+            placeholderSrc: "",
             animationDelay: 300,
         },
         {
-            name: "Wiktoria Góralczyk",
-            email: "wiktoria.goralczyk@hacknarok.pl",
+            name: "Asia Zwierzyńska",
+            email: "@hacknarok.pl",
             position: "Koordynatorka ds. Fundraisingu",
-            src: "img/coordinators/hack8/wiktoria.JPG",
-            placeholderSrc: "img/coordinators/klaudia_thumb_10.jpg",
+            src: "img/coordinators/unnown.png",
+            placeholderSrc: "",
             animationDelay: 400,
         },
     ];
@@ -85,7 +86,7 @@ export default function Contact() {
     return (
         <Content>
             <TopPageSpacer />
-            <div data-aos="fade-up">
+            {/* <div data-aos="fade-up">
                 <UnderlinedTitle
                     text="Kontakt"
                     textColor="light"
@@ -109,7 +110,7 @@ export default function Contact() {
                         ))}
                     </Grid>
                 </InternalGridContainer>
-            </GridContainer>
+            </GridContainer> */}
             <FlexSpacer />
             <Footer />
         </Content>

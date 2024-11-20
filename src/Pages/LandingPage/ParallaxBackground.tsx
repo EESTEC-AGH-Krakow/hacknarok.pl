@@ -5,6 +5,7 @@ import {
     useProgressiveImage,
     useLoadImage,
 } from "../../hooks/useProgressiveImage";
+import hacknarokLogo from '../../../public/hacknarok_black.png';
 
 const DisplaySnowflakes = true;
 
@@ -153,7 +154,19 @@ function ParallaxBackground() {
                     data-aos-delay="500"
                     data-aos-once
                 >
-                    <Title>Hacknarök</Title>
+                    <Title>
+                    <img 
+                        src={hacknarokLogo} 
+                        alt="Hacknarok Logo" 
+                        style={{ 
+                        width: '100px', 
+                        height: 'auto', 
+                        transform: 'scale(5.5)', 
+                        transformOrigin: 'center',
+                        [window.outerWidth < 600 ? 'transform' : '']: 'scale(4)',
+                        }} 
+                    />
+                    </Title>
                 </TitleContainer>
                 {DisplaySnowflakes && (
                     <Snowfall

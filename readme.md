@@ -30,14 +30,14 @@ git checkout -b zmiana-logo-partnerów
 
 ## Deployment
 
-~~Strona wykorzystuje Travis CI do deploymentu. [Strona repozytorium na Travisie](https://app.travis-ci.com/github/EESTEC-AGH-Krakow/hacknarok.pl).~~
+Strona wykorzystuje GitHub Actions do deploymentu.
 
-~~W momencie mergowania do brancha `develop` stronka zdeployuje się na [dev.hacknarok.pl](dev.hacknarok.pl).~~
+W momencie mergowania do brancha `develop` stronka zdeployuje się na [dev.hacknarok.pl](dev.hacknarok.pl).
 
-~~W momencie mergowania do brancha `master` stronka zdeployuje się na [hacknarok.pl](hacknarok.pl).~~
+W momencie mergowania do brancha `master` stronka zdeployuje się na [hacknarok.pl](hacknarok.pl).
 
-Travis CI zmienił swoje plany taryfowe wiec na moment obecny (20/02/2024) nie posiadamy CI/CD. Aby wykonac deployment recznie, polacz sie przez SSH do serwera MyDevil i wpisz nastepujaca komende:
+Aby wykonac deployment recznie, polacz sie przez SSH do serwera MyDevil i wpisz nastepujaca komende:
 
 `./deployments/deploy_hack.sh`
 
-Na czas awarii wskaznik (...)/hacknarok.pl/public_nodejs/public jest ustawiony na zaciagniete repo zamiast na przeslany build z Travisa.
+
