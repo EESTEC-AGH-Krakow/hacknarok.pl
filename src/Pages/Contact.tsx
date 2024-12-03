@@ -75,7 +75,7 @@ export default function Contact() {
         },
         {
             name: "Asia Zwierzyńska",
-            email: "@hacknarok.pl",
+            email: "asia.zwierzynska@hacknarok.pl",
             position: "Koordynatorka ds. Fundraisingu",
             src: "img/coordinators/hack9/asia.JPG",
             placeholderSrc: "",
