@@ -51,7 +51,7 @@ const ImgContainerRight = styled.div`
         width: 100%;
     }
 `;
-const ImageRight = styled.img`
+const ImageRight = styled.img` // Kategoria Programistyczna
     box-sizing: border-box;
     height: 100%;
     mix-blend-mode: lighten;
@@ -71,7 +71,7 @@ const ImageRight = styled.img`
     );
     }
 `;
-const Image = styled.img`
+const Image = styled.img`       // Category MOBILE AUGMENTED REALITY
     box-sizing: border-box;
     width: 100%;
     min-width: 600px;
