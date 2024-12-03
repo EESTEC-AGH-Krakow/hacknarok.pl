@@ -12,15 +12,15 @@ const Content = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-height: 0vh;//100vh;
+    min-height: 100vh;
     overflow: hidden;
 `;
 
 const TopPageSpacer = styled.div`
-    height: 0px;//100px;
+    height: 100px;
 
     @media only screen and (max-width: 600px) {
-        height: 60px;//60px;
+        height: 60px;
     }
 `;
 
@@ -45,7 +45,7 @@ export default function Contact() {
             name: "Klaudia Sulowska",
             email: "klaudia.sulowska@hacknarok.pl",
             position: "Koordynator ds. Promocji",
-            src: "img/coordinators/unnown.png",
+            src: "img/coordinators/hack9/klaudia.JPG",
             placeholderSrc: "",
             animationDelay: 0,
         },
@@ -53,7 +53,7 @@ export default function Contact() {
             name: "Michał Filipkowski",
             email: "michal.filipkowski@hacknarok.pl",
             position: "Koordynator ds. Logistyki i Barteru",
-            src: "img/coordinators/unnown.png",
+            src: "img/coordinators/hack9/michal.JPG",
             placeholderSrc: "",
             animationDelay: 100,
         },
@@ -61,7 +61,7 @@ export default function Contact() {
             name: "Adrian Jaśkowiec",
             email: "adrian.jaskowiec@hacknarok.pl",
             position: "Koordynator Główny",
-            src: "img/coordinators/unnown.png",
+            src: "img/coordinators/hack9/adrian.JPG",
             placeholderSrc: "",
             animationDelay: 200,
         },
@@ -69,7 +69,7 @@ export default function Contact() {
             name: "Oskar Jung",
             email: "oskar.jung@hacknarok.pl",
             position: "Koordynator ds. Kontaktu z Uczestnikami i Administracji",
-            src: "img/coordinators/unnown.png",
+            src: "img/coordinators/hack9/oskar.JPG",
             placeholderSrc: "",
             animationDelay: 300,
         },
@@ -77,7 +77,7 @@ export default function Contact() {
             name: "Asia Zwierzyńska",
             email: "@hacknarok.pl",
             position: "Koordynatorka ds. Fundraisingu",
-            src: "img/coordinators/unnown.png",
+            src: "img/coordinators/hack9/asia.JPG",
             placeholderSrc: "",
             animationDelay: 400,
         },
@@ -86,7 +86,7 @@ export default function Contact() {
     return (
         <Content>
             <TopPageSpacer />
-            {/* <div data-aos="fade-up">
+            <div data-aos="fade-up">
                 <UnderlinedTitle
                     text="Kontakt"
                     textColor="light"
@@ -110,7 +110,7 @@ export default function Contact() {
                         ))}
                     </Grid>
                 </InternalGridContainer>
-            </GridContainer> */}
+            </GridContainer>
             <FlexSpacer />
             <Footer />
         </Content>

@@ -22,6 +22,8 @@ const Overlay = styled.div`
     width: 100%;
     aspect-ratio: 1;
     background-color: #010101b7;
+    overflow: hidden;
+    height: 100%;
 
     transition: background-color 0.3s;
 
