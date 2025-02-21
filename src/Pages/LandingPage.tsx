@@ -124,7 +124,7 @@ const Countdown = styled.h1`
 const Place = styled.p``;
 
 const FormOpen = true;
-const FormLink: string | undefined = "";
+const FormLink: string | undefined = "https://forms.gle/yg3CwS2Ed9RzZ9yX8";
 
 function LandingPage() {
     return (
@@ -144,7 +144,7 @@ function LandingPage() {
                         <span><br></br> Zapisy startują 24 lutego! </span>
                         {FormOpen ? (
                             <Button
-                                disabled={true}
+                                disabled={false}
                                 onClick={() => window.open(FormLink)}
                             >
                                 Zapisz się

@@ -76,49 +76,43 @@ const MainPartnerLogo = styled(Logo)`
 
 const partnerLogoPaths = [
     "partners/APTIV.png",
-    "partners/CodeEurope.png",
+    // "partners/CodeEurope.png",
     "partners/Kraków.jpg",
-    "partners/Pega.png",
+    // "partners/Pega.png",
     "partners/Remitly.png",
     "partners/KPT.jpg",
-    "partners/AVSystem.png",
-    "partners/Sabre.png",
+    // "partners/AVSystem.png",
+    "partners/Nokia.png",
 ];
 
 const mediaPatronsLogoPaths = [
     "media/Crossweb.png",
-    "media/dailyweb.png",
-    "media/Devmentor.png",
-    "media/HackYeah.png",
-    "media/KMS.png",
     "media/krakow.jpg",
-    "media/KSAF.png",
-    "media/MagazynProgramista.jpg",
-    "media/NFJ.png",
-    "media/OpenSecurity.png",
-    "media/Perspektywy.jpg",
+    "media/bitehack.png",
     "media/Radio1.7.png",
-    "media/SOLID.Jobs.png",
-    "media/TeoriaBiznesu.pl.png",
+    "media/logopp3.jpg",
+    "media/KSAF.png",
+    "media/grupa_student.png",
+    "media/devmentor.png",
+    "media/ensembleAI.png",
     "media/URSS.png",
+    "media/bis.png",
+    "media/dlastudentapl.png"
 ];
 
 const mediaPatronsUrls = [
     "https://crossweb.pl/",
-    "https://dailyweb.pl/",
-    "https://devmentor.pl/",
-    "https://hackyeah.pl/",
-    "https://kms.org.pl/",
     "https://krakow.pl/",
-    "https://ksaf.pl/",
-    "https://programistamag.pl/",
-    "https://nofluffjobs.com/",
-    "https://opensecurity.pl/",
-    "https://perspektywy.pl/",
+    "https://bitehack.best.krakow.pl/",
     "https://radio17.pl/",
-    "https://solid.jobs/",
-    "https://teoriabiznesu.pl/",
+    "https://podprad.pl/",
+    "https://ksaf.pl/",
+    "https://grupa.studentnews.pl/",
+    "https://devmentor.pl/",
+    "https://ensembleaihackathon.pl/",
     "https://samorzad.agh.edu.pl/",
+    "bis.pl",
+    "dlastudenta"
 ];
 
 const AssaLogo = styled(Logo)`
@@ -180,7 +174,7 @@ export default function Partners() {
             </GridContainer>
             <div data-aos="fade-up">
                 <UnderlinedTitle
-                    text="Zaufali nam"
+                    text="Zaufali nam także"
                     textColor="dark"
                     align="center"
                 />
