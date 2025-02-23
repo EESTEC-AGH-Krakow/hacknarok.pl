@@ -196,7 +196,7 @@ export default function Partners() {
                         </PartnersGridItem>
                     ))}
                 </PartnersGridContainer>
-            </GridContainer>*/}
+            </GridContainer>
             <div data-aos="fade-up">
                 <UnderlinedTitle
                     text="Patroni medialni"
@@ -216,7 +216,7 @@ export default function Partners() {
                         </PartnersGridItem>
                     ))}
                 </PartnersGridContainer>
-            </GridContainer>
+            </GridContainer>*/}
         </PartnersContainer>
     );
 }
