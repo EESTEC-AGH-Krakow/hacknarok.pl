@@ -75,14 +75,14 @@ const MainPartnerLogo = styled(Logo)`
 `;
 
 const partnerLogoPaths = [
-    "partners/APTIV.png",
+    //"partners/APTIV.png",
     // "partners/CodeEurope.png",
-    "partners/Kraków.jpg",
+    //"partners/Kraków.jpg",
     // "partners/Pega.png",
-    "partners/Remitly.png",
-    "partners/KPT.jpg",
+    //"partners/Remitly.png",
+    //"partners/KPT.jpg",
     // "partners/AVSystem.png",
-    "partners/Nokia.png",
+    //"partners/Nokia.png",
 ];
 
 const mediaPatronsLogoPaths = [
@@ -155,7 +155,7 @@ function PartnersGridItem({ children }: PropsWithChildren) {
 export default function Partners() {
     return (
         <PartnersContainer>
-            <TopPageSpacer />
+            {/*<TopPageSpacer />
             <div data-aos="fade-up">
                 <UnderlinedTitle
                     text="Partnerzy główni"
@@ -163,7 +163,7 @@ export default function Partners() {
                     align="center"
                 />
             </div>
-            <GridContainer>
+             <GridContainer>
                 <PartnersGridContainer>
                     <MainPartnerGridItem>
                         <MainPartnerLogoContainer>
@@ -180,7 +180,7 @@ export default function Partners() {
                 />
             </div>
             <GridContainer>
-                <PartnersGridContainer>
+                 <PartnersGridContainer>
                     <AssaPartnerGridItem>
                         <AssaLogoContainer>
                             <AssaLogo src="partners/ASSA.jpg" data-aos="fade-up" />
@@ -196,7 +196,7 @@ export default function Partners() {
                         </PartnersGridItem>
                     ))}
                 </PartnersGridContainer>
-            </GridContainer>
+            </GridContainer>*/}
             <div data-aos="fade-up">
                 <UnderlinedTitle
                     text="Patroni medialni"
