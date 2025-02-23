@@ -141,7 +141,7 @@ function LandingPage() {
                         <Date> 12-13 kwietnia</Date>
                         <RedLine />
                         <Place>Krakowski Park Technologiczny</Place>
-                        <span><br></br> Zapisy startują 24 lutego! </span>
+                        <span><br></br> Zapisz się już dziś! Zapisy tylko do 16 marca! </span>
                         {FormOpen ? (
                             <Button
                                 disabled={false}
