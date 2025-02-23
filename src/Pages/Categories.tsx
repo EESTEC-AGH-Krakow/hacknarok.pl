@@ -53,13 +53,15 @@ const ImgContainerRight = styled.div`
 `;
 const ImageRight = styled.img` // Kategoria Programistyczna
     box-sizing: border-box;
-    height: 100%;
-    mix-blend-mode: lighten;
+    width: 100%;
+    min-width: 600px;
+    overflow: hidden;
+    padding-top: 130px;
 
     mask-image: linear-gradient(
         to right,
-        rgba(0, 0, 0, 1) 50%,
-        transparent 100%
+        rgba(0, 0, 0, 1) 30%,
+        transparent 80%
     );
 
     @media only screen and (max-width: 600px) {
@@ -67,7 +69,7 @@ const ImageRight = styled.img` // Kategoria Programistyczna
         mask-image: linear-gradient(
             to left,
             rgba(0, 0, 0, 1) 10%,
-            transparent 100%
+            transparent 70%
     );
     }
 `;
@@ -76,6 +78,7 @@ const Image = styled.img`       // Category MOBILE AUGMENTED REALITY
     width: 100%;
     min-width: 600px;
     overflow: hidden;
+    padding-top: 130px;
 
     mask-image: linear-gradient(
         to left,
@@ -87,8 +90,8 @@ const Image = styled.img`       // Category MOBILE AUGMENTED REALITY
         min-width: initial;
         mask-image: linear-gradient(
             to bottom left,
-            rgba(0, 0, 0, 1) 0%,
-            transparent 80%
+            rgba(0, 0, 0, 1) 10%,
+            transparent 70%
     );
     }
 `;
@@ -133,10 +136,12 @@ const TextContainer = styled.div<{ alignRight?: boolean }>`
 const FakeContent = styled.div`
     box-sizing: border-box;
     text-align: justify;
+    
 `;
 const FakeContentRight = styled.div`
     box-sizing: border-box;
     text-align: justify;
+    padding-top: 30px;
 `;
 
 const ShowOnMapButton = styled(Button)`
