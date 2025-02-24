@@ -63,6 +63,19 @@ const AssaPartnerGridItem = styled(Grid).attrs(() => ({
     justify-content: center;
     align-items: center;
 `;
+
+const NokiaPartnerGridItem = styled(Grid).attrs(() => ({
+    item: true,
+    lg: 4,
+    md: 6,
+    sm: 8,
+    xs: 12,
+}))`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
+
 const MainPartnerLogoContainer = styled(LogoContainer)`
     width: 100%;
     height: 100%;
@@ -75,12 +88,12 @@ const MainPartnerLogo = styled(Logo)`
 `;
 
 const partnerLogoPaths = [
-    //"partners/APTIV.png",
+    "partners/APTIV.png",
     // "partners/CodeEurope.png",
-    //"partners/Kraków.jpg",
+    "partners/Kraków.jpg",
     // "partners/Pega.png",
-    //"partners/Remitly.png",
-    //"partners/KPT.jpg",
+    "partners/Remitly.png",
+    "partners/KPT.jpg",
     // "partners/AVSystem.png",
     //"partners/Nokia.png",
 ];
@@ -120,6 +133,11 @@ const AssaLogo = styled(Logo)`
     height: 200%; // Increase the height
 `;
 
+const NokiaLogo = styled(Logo)`
+    width: 70%; // Increase the width
+    height: 70%; // Increase the height
+`;
+
 const AssaLogoContainer = styled(LogoContainer)`
     margin-top: 20px;
     margin-bottom: 50px;
@@ -130,6 +148,18 @@ const AssaLogoContainer = styled(LogoContainer)`
     align-items: center;
     overflow: hidden;
 `;
+
+const NokiaLogoContainer = styled(LogoContainer)`
+    margin-top: 20px;
+    margin-bottom: 50px;
+    width: 100%; // Keep the width
+    height: 100%; // Keep the height
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+`;
+
 function PartnersGridContainer({ children }: PropsWithChildren) {
     return (
         <Grid
@@ -138,6 +168,7 @@ function PartnersGridContainer({ children }: PropsWithChildren) {
             alignItems="center"
             rowSpacing={10}
             columnSpacing={10}
+            marginY={1}
         >
             {children}
         </Grid>
@@ -155,10 +186,10 @@ function PartnersGridItem({ children }: PropsWithChildren) {
 export default function Partners() {
     return (
         <PartnersContainer>
-            {/*<TopPageSpacer />
+            <TopPageSpacer />
             <div data-aos="fade-up">
                 <UnderlinedTitle
-                    text="Partnerzy główni"
+                    text="Partner główny"
                     textColor="dark"
                     align="center"
                 />
@@ -186,6 +217,11 @@ export default function Partners() {
                             <AssaLogo src="partners/ASSA.jpg" data-aos="fade-up" />
                         </AssaLogoContainer>
                     </AssaPartnerGridItem>
+                    <NokiaPartnerGridItem>
+                        <NokiaLogoContainer>
+                            <NokiaLogo src="partners/Nokia.png" data-aos="fade-up" />
+                        </NokiaLogoContainer>
+                    </NokiaPartnerGridItem>
                 </PartnersGridContainer>
                 <PartnersGridContainer>
                     {partnerLogoPaths.map((logoPath) => (
@@ -216,7 +252,7 @@ export default function Partners() {
                         </PartnersGridItem>
                     ))}
                 </PartnersGridContainer>
-            </GridContainer>*/}
+            </GridContainer>
         </PartnersContainer>
     );
 }
