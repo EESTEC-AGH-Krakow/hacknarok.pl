@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { UnderlinedTitle } from "../components/Title";
 import { useProgressiveImage } from "../hooks/useProgressiveImage";
-
+import { Button } from "../components/Button";
 const ParentsContainer = styled.div`
     position: relative;
     margin-top: 40px;
@@ -70,7 +70,7 @@ const FakeContent = styled.div`
     box-sizing: border-box;
     text-align: justify;
 `;
-
+const NewsLink: string | undefined = "https://www.facebook.com/hacknarok/"
 export default function About() {
     const laptopImg = useProgressiveImage(
         "odyn-hack9.png",
@@ -94,6 +94,10 @@ export default function About() {
                 <FakeContent data-aos="fade-right">
                     Chwyć klawiaturę w dłoń i wyrusz w 24-godzinną podróż po światach mitologii nordyckiej. Tu walka odbywa się z wykorzystaniem siły linijek kodu, które napiszesz razem z Twoim zespołem. Czy uda Ci się stworzyć coś absolutnie wyjątkowego? Dołącz do wydarzenia i przekonaj się sam! W trakcie Hackathonu Twoje miejsce pracy zamieni się w arenę pełną niemal boskich, kreatywnych energii, a doświadczeni mentorzy będą służyć radą w kryzysowych momentach tej nierównej walki. Całość odbędzie się w Krakowskim Parku Technologicznym, w którym zapanuje wyjątkowa atmosfera... Nie możesz przegapić takiej okazji, zapisz się już dziś!
                 </FakeContent>
+                <Button
+                    disabled={false}
+                    onClick={() => window.open(NewsLink)}
+                >Aktualnosci</Button>
             </TextContainer>
         </ParentsContainer>
     );
