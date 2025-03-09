@@ -35,7 +35,7 @@ export default function Footer() {
                     <MailtoLink
                         target="_blank"
                         rel="noopener noreferrer"
-                        href="regulamin-hack9.pdf"
+                        href="regulamin_hack_9.pdf"
                     >
                         regulamin
                     </MailtoLink>
