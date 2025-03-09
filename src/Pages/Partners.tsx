@@ -97,6 +97,18 @@ const partnerLogoPaths = [
     // "partners/AVSystem.png",
     //"partners/Nokia.png",
 ];
+const partnerUrls = [
+    "",
+    "",
+    "",
+    // "https://www.aptiv.com/pl",
+    // "https://www.krakow.pl/",
+    // "https://www.remitly.com/pl/pl",
+    "https://www.kpt.krakow.pl",
+    // "https://www.nokia.com/",
+    ""
+
+];
 
 const mediaPatronsLogoPaths = [
     "media/Crossweb.png",
@@ -198,7 +210,9 @@ export default function Partners() {
                 <PartnersGridContainer>
                     <MainPartnerGridItem>
                         <MainPartnerLogoContainer>
+                            {/* <a href="https://sproutsocial.com/" target="_blank" rel="noopener noreferrer"> */}
                             <MainPartnerLogo src="partners/Sprout.png" data-aos="fade-up" />
+                            {/* </a> */}
                         </MainPartnerLogoContainer>
                     </MainPartnerGridItem>
                 </PartnersGridContainer>
@@ -214,7 +228,9 @@ export default function Partners() {
                  <PartnersGridContainer>
                     <AssaPartnerGridItem>
                         <AssaLogoContainer>
+                            {/* <a href="https://www.assaabloy.com/pl/pl" target="_blank" rel="noopener noreferrer"> */}
                             <AssaLogo src="partners/ASSA.jpg" data-aos="fade-up" />
+                            {/* </a> */}
                         </AssaLogoContainer>
                     </AssaPartnerGridItem>
                     <NokiaPartnerGridItem>
@@ -224,10 +240,12 @@ export default function Partners() {
                     </NokiaPartnerGridItem>
                 </PartnersGridContainer>
                 <PartnersGridContainer>
-                    {partnerLogoPaths.map((logoPath) => (
+                    {partnerLogoPaths.map((logoPath, index) => (
                         <PartnersGridItem key={logoPath}>
                             <LogoContainer>
-                                <Logo src={logoPath} data-aos="fade-up" />
+                                <a href={partnerUrls[index]} target="_blank" rel="noopener noreferrer">
+                                    <Logo src={logoPath} data-aos="fade-up" />
+                                </a>
                             </LogoContainer>
                         </PartnersGridItem>
                     ))}
