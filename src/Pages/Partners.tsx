@@ -243,9 +243,14 @@ export default function Partners() {
                     {partnerLogoPaths.map((logoPath, index) => (
                         <PartnersGridItem key={logoPath}>
                             <LogoContainer>
-                                <a href={partnerUrls[index]} target="_blank" rel="noopener noreferrer">
+                                {index === 3 ? ( // index 3 odpowiada za KPT
+                                    <a href={partnerUrls[index]} target="_blank" rel="noopener noreferrer">
+                                        <Logo src={logoPath} data-aos="fade-up" />
+                                    </a>
+                                ) : (
                                     <Logo src={logoPath} data-aos="fade-up" />
-                                </a>
+                                )}
+
                             </LogoContainer>
                         </PartnersGridItem>
                     ))}
