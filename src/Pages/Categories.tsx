@@ -183,7 +183,7 @@ export default function Categories() {
                     </FakeContent>
                 </TextContainer>
             </ParentsContainer>
-            <ParentsContainerRight>
+            {/* <ParentsContainerRight>
                 <ImgContainerRight data-aos="fade-up">
                     <Image src={mapImgem}></Image>
                 </ImgContainerRight>
@@ -201,7 +201,7 @@ export default function Categories() {
 
                     </FakeContentRight>
                 </TextContainerRight>
-            </ParentsContainerRight>
+            </ParentsContainerRight> */}
         </>
     );
 }

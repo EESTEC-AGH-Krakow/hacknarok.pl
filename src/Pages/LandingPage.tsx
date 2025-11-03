@@ -138,7 +138,7 @@ function LandingPage() {
                         data-aos-delay="500"
                         data-aos-once
                     >
-                        <Date> 12-13 kwietnia</Date>
+                        <Date> 18-19 kwietnia</Date>
                         <RedLine />
                         <Place>Krakowski Park Technologiczny</Place>
                         <span><br></br> Zapisz się już dziś! Zapisy tylko do 16 marca! </span>
