@@ -103,14 +103,14 @@ export default function Map() {
                     />
                 </div>
                 <FakeContent data-aos="fade-left">
-                Wydarzenie odbędzie się w Krakowskim Parku Technologicznym, 
-                który wspiera nas od pierwszej edycji. KPT to najbardziej 
-                kompletny one-stop-shop dla biznesu w Polsce, gdzie przedsiębiorcy, 
-                naukowcy i samorządowcy tworzą ekosystem rozwoju małopolskiej gospodarki. 
-                Biurowiec zlokalizowany jest przy ul. Podole 60, na terenie krakowskiej dzielnicy Dębniki. 
-                Niedaleko znajduje się przystanek autobusowy i tramwajowy Czerwone Maki P+R. 
-                Nie zapewniamy parkingu uczestnikom wydarzenia. 
-                Samochód będzie można zaparkować w miarę dostępności miejsc parkingowych nieopodal obiektu
+                    Wydarzenie odbędzie się w Krakowskim Parku Technologicznym,
+                    który wspiera nas od pierwszej edycji. KPT to najbardziej
+                    kompletny one-stop-shop dla biznesu w Polsce, gdzie przedsiębiorcy,
+                    naukowcy i samorządowcy tworzą ekosystem rozwoju małopolskiej gospodarki.
+                    Biurowiec zlokalizowany jest przy ul. Podole 60, na terenie krakowskiej dzielnicy Dębniki.
+                    Niedaleko znajduje się przystanek autobusowy i tramwajowy Czerwone Maki P+R.
+                    Nie zapewniamy parkingu uczestnikom wydarzenia.
+                    Samochód będzie można zaparkować w miarę dostępności miejsc parkingowych nieopodal obiektu
                 </FakeContent>
                 <ShowOnMapButton
                     data-aos="fade-up"

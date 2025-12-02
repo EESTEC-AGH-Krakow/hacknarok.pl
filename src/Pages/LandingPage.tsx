@@ -123,7 +123,7 @@ const Countdown = styled.h1`
 `;
 const Place = styled.p``;
 
-const FormOpen = true;
+const FormOpen = false;
 const FormLink: string | undefined = "https://forms.gle/yg3CwS2Ed9RzZ9yX8";
 
 function LandingPage() {
@@ -138,10 +138,10 @@ function LandingPage() {
                         data-aos-delay="500"
                         data-aos-once
                     >
-                        <Date> 12-13 kwietnia</Date>
+                        <Date> 18-19 kwietnia</Date>
                         <RedLine />
-                        <Place>Krakowski Park Technologiczny</Place>
-                        <span><br></br> Zapisz się już dziś! Zapisy tylko do 16 marca! </span>
+                        {/* <Place>Krakowski Park Technologiczny</Place>
+                        <span><br></br> Zapisz się już dziś! Zapisy tylko do 16 marca! </span> */}
                         {FormOpen ? (
                             <Button
                                 disabled={false}
