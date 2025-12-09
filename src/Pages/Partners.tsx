@@ -199,14 +199,15 @@ export default function Partners() {
     return (
         <PartnersContainer>
             <TopPageSpacer />
+
             <div data-aos="fade-up">
                 <UnderlinedTitle
-                    text="Partner główny"
+                    text="W zeszłym roku zaufali nam"
                     textColor="dark"
                     align="center"
                 />
             </div>
-             <GridContainer>
+            <GridContainer>
                 <PartnersGridContainer>
                     <MainPartnerGridItem>
                         <MainPartnerLogoContainer>
@@ -215,17 +216,6 @@ export default function Partners() {
                             {/* </a> */}
                         </MainPartnerLogoContainer>
                     </MainPartnerGridItem>
-                </PartnersGridContainer>
-            </GridContainer>
-            <div data-aos="fade-up">
-                <UnderlinedTitle
-                    text="Partnerzy"
-                    textColor="dark"
-                    align="center"
-                />
-            </div>
-            <GridContainer>
-                 <PartnersGridContainer>
                     <AssaPartnerGridItem>
                         <AssaLogoContainer>
                             {/* <a href="https://www.assaabloy.com/pl/pl" target="_blank" rel="noopener noreferrer"> */}
