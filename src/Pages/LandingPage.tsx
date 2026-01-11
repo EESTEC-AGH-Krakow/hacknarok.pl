@@ -140,8 +140,8 @@ function LandingPage() {
                     >
                         <Date> 18-19 kwietnia</Date>
                         <RedLine />
-                        {/* <Place>Krakowski Park Technologiczny</Place>
-                        <span><br></br> Zapisz się już dziś! Zapisy tylko do 16 marca! </span> */}
+                        <Place>Lubicz Park</Place>
+                        {/* <span><br></br> Zapisz się już dziś! Zapisy tylko do 16 marca! </span> */}
                         {FormOpen ? (
                             <Button
                                 disabled={false}

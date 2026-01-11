@@ -49,7 +49,7 @@ export default function Footer() {
                     <FooterLogo src="logo_eestec.png" />
                 </Grid>
                 <Grid item lg={2} md={3} sm={6} xs={12} textAlign={"center"}>
-                    <FooterLogo src="favicon-hack9.png" />
+                    <FooterLogo src="favicon.png" />
                 </Grid>
             </Grid>
         </Container>
