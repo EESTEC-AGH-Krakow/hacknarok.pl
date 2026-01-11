@@ -32,7 +32,7 @@ const CarouselContainer = styled.div`
 
 export default function Gallery() {
     const carouselContainerRef = useRef<HTMLDivElement>(null);
-    const images = Array.from({length: 21}, (_, i) => i + 1);
+    const images = Array.from({ length: 26 }, (_, i) => i + 1);
     const [centerSlidePercentage, setCenterSlidePercentage] = useState(60);
 
     useEffect(() => {
@@ -88,6 +88,21 @@ export default function Gallery() {
                     emulateTouch
                     interval={5000}
                 >
+                    <div>
+                        <img src="img/galery-hack9/1.webp" />
+                    </div>
+                    <div>
+                        <img src="img/galery-hack9/2.webp" />
+                    </div>
+                    <div>
+                        <img src="img/galery-hack9/3.webp" />
+                    </div>
+                    <div>
+                        <img src="img/galery-hack9/4.webp" />
+                    </div>
+                    <div>
+                        <img src="img/galery-hack9/5.webp" />
+                    </div>
                     <div>
                         <img src="img/galery-hack9/1.jpg" />
                     </div>

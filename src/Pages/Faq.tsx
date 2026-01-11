@@ -36,13 +36,13 @@ export default function Faq() {
             <FaqAccordion
                 question={"Czy mogę zgłosić się bez drużyny?"}
                 answer={
-                    "Przykro nam, ale Hacknarök to konkurs drużynowy. Musisz zebrać drużynę, by wziąć udział. Spróbuj zachęcić swoich znajomych!."
+                    "Jasne! Choć Hacknarök to starcie drużynowe, brak ekipy to żaden problem. Specjalnie dla osób takich jak Ty stworzyliśmy grupę na Facebooku. To idealne miejsce, aby poznać innych pasjonatów, wymienić się pomysłami i wspólnie stworzyć 4-osobowy zespół, z którym oficjalnie zarejestrujesz się na hackathon."
                 }
             />
             <FaqAccordion
                 question={"Ile osób może liczyć zespół?"}
                 answer={
-                    "Drużyny mogą liczyć 4 osoby dla kategorii programistycznej i 4 osoby dla kategorii mobilnej rozszerzonej rzeczywistości."
+                    "Drużyny mogą liczyć 4 osoby dla kategorii programistycznej i 4 osoby dla kategorii Artificial Intelligence of Things."
                 }
             />
             <FaqAccordion
@@ -70,7 +70,7 @@ export default function Faq() {
             <FaqAccordion
                 question={"Jak można zgłosić chęć uczestnictwa?"}
                 answer={
-                    "Po zapoznaniu się z regulaminem wydarzenia, możesz przejść do wypełnienia formularza aplikacyjnego. Prosimy o dokładne wypełnianie formularza aplikacyjnego, w tej części to my chcemy dowiedzieć się więcej o Was! Jeśli Wasza drużyna zostanie wybrana, dostaniecie maila z potwierdzeniem udziału w Hackathonie."
+                    "Proces jest prosty: zapoznaj się z regulaminem, a następnie wypełnij formularz aplikacyjny. Pamiętaj, że zgłoszenia przyjmujemy od 4-osobowych drużyn. Nie masz jeszcze zespołu? Żaden problem! Zanim wypełnisz formularz, wejdź na naszą grupę na Facebooku. To tam czekają inni uczestnicy, z którymi możesz stworzyć ekipę. Gdy będziecie już w komplecie, wyślijcie swoje zgłoszenie. Po zakończeniu rekrutacji wybrane drużyny otrzymają od nas maila z potwierdzeniem udziału!"
                 }
             />
             <FaqAccordion

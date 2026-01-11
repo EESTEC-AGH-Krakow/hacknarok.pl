@@ -84,7 +84,7 @@ const ShowOnMapButton = styled(Button)`
 
 export default function Map() {
     const mapImg = useProgressiveImage(
-        "Mapka (1).jpg",
+        "lubicz_park.jpg",
         // "map_thumb_5.png",
         // "map_thumb_10.png"
     );
