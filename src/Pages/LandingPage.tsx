@@ -141,7 +141,7 @@ function LandingPage() {
                         <Date> 18-19 kwietnia</Date>
                         <RedLine />
                         <Place>Lubicz Park</Place>
-                        <span><br></br> Zapisz się już dziś! Zapisy tylko do 15 marca! </span>
+                        {/* <span><br></br> Zapisz się już dziś! Zapisy tylko do 16 marca! </span> */}
                         {FormOpen ? (
                             <Button
                                 disabled={false}
