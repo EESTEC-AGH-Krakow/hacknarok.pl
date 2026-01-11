@@ -84,7 +84,7 @@ const ShowOnMapButton = styled(Button)`
 
 export default function Map() {
     const mapImg = useProgressiveImage(
-        "jak_dojechac_zloty.png",
+        "Mapka (1).jpg",
         // "map_thumb_5.png",
         // "map_thumb_10.png"
     );
@@ -103,20 +103,13 @@ export default function Map() {
                     />
                 </div>
                 <FakeContent data-aos="fade-left">
-                    Wydarzenie odbędzie się w Krakowskim Parku Technologicznym,
-                    który wspiera nas od pierwszej edycji. KPT to najbardziej
-                    kompletny one-stop-shop dla biznesu w Polsce, gdzie przedsiębiorcy,
-                    naukowcy i samorządowcy tworzą ekosystem rozwoju małopolskiej gospodarki.
-                    Biurowiec zlokalizowany jest przy ul. Podole 60, na terenie krakowskiej dzielnicy Dębniki.
-                    Niedaleko znajduje się przystanek autobusowy i tramwajowy Czerwone Maki P+R.
-                    Nie zapewniamy parkingu uczestnikom wydarzenia.
-                    Samochód będzie można zaparkować w miarę dostępności miejsc parkingowych nieopodal obiektu
+                    Wydarzenie odbędzie się w kompleksie Lubicz Park, położonym w samym sercu Krakowa, tuż obok ronda Mogilskiego i w bezpośredniej bliskości Dworca Głównego. Biurowiec znajduje się pod adresem Lubicz 23. Przed budynkiem znajduje się przystanek lubicz jednak w najbliższej okolicy znajdują się inne liczne przystanki tramwajowe i autobusowe, m.in. Rondo Mogilskie, zapewniające szybkie połączenia z większością dzielnic Krakowa. Dodatkowo dojście z Dworca Głównego zajmuje około 7 minut pieszo. Nie zapewniamy uczestnikom miejsc parkingowych, jednak w pobliżu dostępne są płatne parkingi publiczne.
                 </FakeContent>
                 <ShowOnMapButton
                     data-aos="fade-up"
                     onClick={() => {
                         window.open(
-                            "https://goo.gl/maps/1pCQR5vRVgAHndsx8?coh=178571&entry=tt"
+                            "https://maps.app.goo.gl/LXpWBdxtnRjk8qwR6"
                         );
                     }}
                 >
