@@ -88,14 +88,13 @@ const MainPartnerLogo = styled(Logo)`
 `;
 
 const partnerLogoPaths = [
-    "partners/APTIV.png",
-    // "partners/CodeEurope.png",
-    "partners/Kraków.jpg",
-    // "partners/Pega.png",
-    "partners/Remitly.png",
-    "partners/KPT.jpg",
-    // "partners/AVSystem.png",
-    //"partners/Nokia.png",
+    "partners/NORDIC.png",
+    "partners/AUTODESK.png",
+    "partners/AVSYSTEM.svg",
+    "partners/HITACHI.png",
+    "partners/NOKIA.png",
+    "partners/ASSAABLOY.png"
+
 ];
 const partnerUrls = [
     "",
@@ -104,7 +103,7 @@ const partnerUrls = [
     // "https://www.aptiv.com/pl",
     // "https://www.krakow.pl/",
     // "https://www.remitly.com/pl/pl",
-    "https://www.kpt.krakow.pl",
+    //"https://www.kpt.krakow.pl",
     // "https://www.nokia.com/",
     ""
 
@@ -112,32 +111,28 @@ const partnerUrls = [
 
 const mediaPatronsLogoPaths = [
     "media/Crossweb.png",
-    "media/krakow.jpg",
-    "media/bitehack.png",
+    "media/grupa_student.png",
+    "media/bis.png",
+    "media/URSS.png",
     "media/Radio1.7.png",
+    "media/colorful_media.png",
+    "media/KMS_logo.png",
     "media/logopp3.jpg",
     "media/KSAF.png",
-    "media/grupa_student.png",
-    "media/devmentor.png",
-    "media/ensembleAI.png",
-    "media/URSS.png",
-    "media/bis.png",
-    "media/dlastudentapl.png"
+    "media/bitehack.png"
 ];
 
 const mediaPatronsUrls = [
     "https://crossweb.pl/",
-    "https://krakow.pl/",
-    "https://bitehack.best.krakow.pl/",
+    "http://studentnews.pl/",
+    "https://bis.agh.edu.pl/",
+    "https://samorzad.agh.edu.pl/",
     "https://radio17.pl/",
+    "https://www.colorfulmedia.pl/",
+    "https://kms.org.pl/",
     "https://podprad.pl/",
     "https://ksaf.pl/",
-    "https://grupa.studentnews.pl/",
-    "https://devmentor.pl/",
-    "https://ensembleaihackathon.pl/",
-    "https://samorzad.agh.edu.pl/",
-    "bis.pl",
-    "dlastudenta"
+    "https://bitehack.best.krakow.pl/"
 ];
 
 const AssaLogo = styled(Logo)`
@@ -148,6 +143,11 @@ const AssaLogo = styled(Logo)`
 const NokiaLogo = styled(Logo)`
     width: 70%; // Increase the width
     height: 70%; // Increase the height
+`;
+
+const AceLogo = styled(Logo)`
+    width: 200%;
+    height: 200%;
 `;
 
 const AssaLogoContainer = styled(LogoContainer)`
@@ -194,6 +194,15 @@ function PartnersGridItem({ children }: PropsWithChildren) {
         </Grid>
     );
 }
+function MainPartnersGridItem({ children }: PropsWithChildren) {
+    return (
+        <Grid item lg={4} md={4} sm={6} xs={12}>
+            {children}
+        </Grid>
+    );
+}
+
+
 
 export default function Partners() {
     return (
@@ -202,48 +211,29 @@ export default function Partners() {
 
             <div data-aos="fade-up">
                 <UnderlinedTitle
-                    text="W zeszłym roku zaufali nam"
+                    text="Partnerzy"
                     textColor="dark"
                     align="center"
                 />
             </div>
             <GridContainer>
                 <PartnersGridContainer>
-                    <MainPartnerGridItem>
-                        <MainPartnerLogoContainer>
-                            {/* <a href="https://sproutsocial.com/" target="_blank" rel="noopener noreferrer"> */}
-                            <MainPartnerLogo src="partners/Sprout.png" data-aos="fade-up" />
-                            {/* </a> */}
-                        </MainPartnerLogoContainer>
-                    </MainPartnerGridItem>
-                    <AssaPartnerGridItem>
-                        <AssaLogoContainer>
-                            {/* <a href="https://www.assaabloy.com/pl/pl" target="_blank" rel="noopener noreferrer"> */}
-                            <AssaLogo src="partners/ASSA.jpg" data-aos="fade-up" />
-                            {/* </a> */}
-                        </AssaLogoContainer>
-                    </AssaPartnerGridItem>
-                    <NokiaPartnerGridItem>
-                        <NokiaLogoContainer>
-                            <NokiaLogo src="partners/Nokia.png" data-aos="fade-up" />
-                        </NokiaLogoContainer>
-                    </NokiaPartnerGridItem>
-                </PartnersGridContainer>
-                <PartnersGridContainer>
                     {partnerLogoPaths.map((logoPath, index) => (
-                        <PartnersGridItem key={logoPath}>
-                            <LogoContainer>
-                                {index === 3 ? ( // index 3 odpowiada za KPT
-                                    <a href={partnerUrls[index]} target="_blank" rel="noopener noreferrer">
-                                        <Logo src={logoPath} data-aos="fade-up" />
-                                    </a>
-                                ) : (
+                        <MainPartnersGridItem key={logoPath}>
+                            <a href={partnerUrls[index]} target="_blank" rel="noopener noreferrer">
+                                <LogoContainer>
                                     <Logo src={logoPath} data-aos="fade-up" />
-                                )}
-
-                            </LogoContainer>
-                        </PartnersGridItem>
+                                </LogoContainer>
+                            </a>
+                        </MainPartnersGridItem>
                     ))}
+                    <MainPartnersGridItem>
+                        <a href={"https://www.aceofspace.co/?utm_source=google&utm_medium=cpc&utm_campaign=PM%20-%20Wynajem%20biura%20(wszystkie%20lokalizacje)&utm_id=21875145971&gad_source=1&gad_campaignid=21904770236&gbraid=0AAAAA-ZywUkOnaxZ90fE490fGZeF0xq5n&gclid=Cj0KCQiAhtvMBhDBARIsAL26pjFRy0NhMU0NV2RqknyviTZsAfz0_czreMjNPOsX8vothyDZSKtu_CEaAjVWEALw_wcB"} target="_blank" rel="noopener noreferrer">
+                            <LogoContainer>
+                                <AceLogo src="partners/ACE.svg" data-aos="fade-up" />
+                            </LogoContainer>
+                        </a>
+                    </MainPartnersGridItem>
                 </PartnersGridContainer>
             </GridContainer>
             <div data-aos="fade-up">
