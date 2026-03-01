@@ -88,13 +88,12 @@ const MainPartnerLogo = styled(Logo)`
 `;
 
 const partnerLogoPaths = [
-    "partners/NORDIC.png",
-    "partners/AUTODESK.png",
-    "partners/AVSYSTEM.svg",
+    "partners/ASSAABLOY.png",
+    "partners/HID.png",
     "partners/HITACHI.png",
     "partners/NOKIA.png",
-    "partners/ASSAABLOY.png"
-
+    "partners/NORDIC.png",
+    "partners/AVSYSTEM.svg"
 ];
 const partnerUrls = [
     "",
@@ -136,16 +135,26 @@ const mediaPatronsUrls = [
 ];
 
 const AssaLogo = styled(Logo)`
-    width: 200%; // Increase the width
-    height: 200%; // Increase the height
+    width: 180%; // Increase the width
+    height: 180%; // Increase the height
 `;
 
 const NokiaLogo = styled(Logo)`
-    width: 70%; // Increase the width
-    height: 70%; // Increase the height
+    width: 90%; // Increase the width
+    height: 90%; // Increase the height
 `;
 
 const AceLogo = styled(Logo)`
+    width: 200%;
+    height: 200%;
+`;
+
+const HIDLogo = styled(Logo)`
+    width:  80%;
+    height: 80%;
+`;
+
+const HITACHILogo = styled(Logo)`
     width: 200%;
     height: 200%;
 `;
@@ -208,7 +217,24 @@ export default function Partners() {
     return (
         <PartnersContainer>
             <TopPageSpacer />
-
+            <div data-aos="fade-up">
+                <UnderlinedTitle
+                    text="Partner główny"
+                    textColor="dark"
+                    align="center"
+                />
+            </div>
+            <GridContainer>
+                <PartnersGridContainer>
+                    <MainPartnersGridItem>
+                        <a href={"https://www.aceofspace.co/?utm_source=google&utm_medium=cpc&utm_campaign=PM%20-%20Wynajem%20biura%20(wszystkie%20lokalizacje)&utm_id=21875145971&gad_source=1&gad_campaignid=21904770236&gbraid=0AAAAA-ZywUkOnaxZ90fE490fGZeF0xq5n&gclid=Cj0KCQiAhtvMBhDBARIsAL26pjFRy0NhMU0NV2RqknyviTZsAfz0_czreMjNPOsX8vothyDZSKtu_CEaAjVWEALw_wcB"} target="_blank" rel="noopener noreferrer">
+                            <LogoContainer>
+                                <AceLogo src="partners/AUTODESK.png" data-aos="fade-up" />
+                            </LogoContainer>
+                        </a>
+                    </MainPartnersGridItem>
+                </PartnersGridContainer>
+            </GridContainer>
             <div data-aos="fade-up">
                 <UnderlinedTitle
                     text="Partnerzy"
@@ -220,11 +246,19 @@ export default function Partners() {
                 <PartnersGridContainer>
                     {partnerLogoPaths.map((logoPath, index) => (
                         <MainPartnersGridItem key={logoPath}>
-                            <a href={partnerUrls[index]} target="_blank" rel="noopener noreferrer">
-                                <LogoContainer>
+                            <LogoContainer>
+                                {logoPath.includes("ASSAABLOY") ? (
+                                    <AssaLogo src={logoPath} data-aos="fade-up" />
+                                ) : logoPath.includes("NOKIA") ? (
+                                    <NokiaLogo src={logoPath} data-aos="fade-up" />
+                                ) : logoPath.includes("HID") ? (
+                                    <HIDLogo src={logoPath} data-aos="fade-up" />
+                                ) : logoPath.includes("HITACHI") ? (
+                                    <AssaLogo src={logoPath} data-aos="fade-up" />
+                                ) : (
                                     <Logo src={logoPath} data-aos="fade-up" />
-                                </LogoContainer>
-                            </a>
+                                )}
+                            </LogoContainer>
                         </MainPartnersGridItem>
                     ))}
                     <MainPartnersGridItem>
