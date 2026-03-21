@@ -123,7 +123,7 @@ const Countdown = styled.h1`
 `;
 const Place = styled.p``;
 
-const FormOpen = true;
+const FormOpen = false;
 const FormLink: string | undefined = "https://docs.google.com/forms/d/e/1FAIpQLSc0_fVm-QSvoUlBS-5C3vBwH51Hc16hrJB737XlTBlyL7fgwg/viewform";
 
 function LandingPage() {
@@ -141,7 +141,7 @@ function LandingPage() {
                         <Date> 18-19 kwietnia</Date>
                         <RedLine />
                         <Place>Lubicz Park</Place>
-                        <span><br></br> Zapisz się już dziś! Zapisy tylko do 15 marca! </span>
+                        {/* <span><br></br> Zapisz się już dziś! Zapisy tylko do 15 marca! </span> */}
                         {FormOpen ? (
                             <Button
                                 disabled={false}
@@ -150,7 +150,7 @@ function LandingPage() {
                                 Zapisz się
                             </Button>
                         ) : (
-                            <Button disabled={false} >Zapisy od 2 marca</Button>
+                            <Button disabled={false} >Zapisy zakończone</Button>
                         )}
                     </EventPlaceInnerContainer>
                 </EventPlaceContainer>

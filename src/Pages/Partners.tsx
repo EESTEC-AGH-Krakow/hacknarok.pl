@@ -118,20 +118,22 @@ const mediaPatronsLogoPaths = [
     "media/KMS_logo.png",
     "media/logopp3.jpg",
     "media/KSAF.png",
-    "media/bitehack.png"
+    "media/bitehack.png",
+    "media/neuron.svg"
 ];
 
 const mediaPatronsUrls = [
     "https://crossweb.pl/",
     "http://studentnews.pl/",
-    "https://bis.agh.edu.pl/",
+    "https://www.facebook.com/magazyn.bisagh/",
     "https://samorzad.agh.edu.pl/",
     "https://radio17.pl/",
     "https://www.colorfulmedia.pl/",
     "https://kms.org.pl/",
     "https://podprad.pl/",
-    "https://ksaf.pl/",
-    "https://bitehack.best.krakow.pl/"
+    "https://www.facebook.com/magazyn.bisagh/ ",
+    "https://bitehack.best.krakow.pl/",
+    "https://heroesofthebrain.pwr.edu.pl/"
 ];
 
 const AssaLogo = styled(Logo)`
@@ -154,9 +156,9 @@ const HIDLogo = styled(Logo)`
     height: 80%;
 `;
 
-const HITACHILogo = styled(Logo)`
-    width: 200%;
-    height: 200%;
+const NeuronLogo = styled(Logo)`
+    width: 75%;
+    height: 75%;
 `;
 
 const AssaLogoContainer = styled(LogoContainer)`
@@ -227,11 +229,9 @@ export default function Partners() {
             <GridContainer>
                 <PartnersGridContainer>
                     <MainPartnersGridItem>
-                        <a href={"https://www.aceofspace.co/?utm_source=google&utm_medium=cpc&utm_campaign=PM%20-%20Wynajem%20biura%20(wszystkie%20lokalizacje)&utm_id=21875145971&gad_source=1&gad_campaignid=21904770236&gbraid=0AAAAA-ZywUkOnaxZ90fE490fGZeF0xq5n&gclid=Cj0KCQiAhtvMBhDBARIsAL26pjFRy0NhMU0NV2RqknyviTZsAfz0_czreMjNPOsX8vothyDZSKtu_CEaAjVWEALw_wcB"} target="_blank" rel="noopener noreferrer">
-                            <LogoContainer>
-                                <AceLogo src="partners/AUTODESK.png" data-aos="fade-up" />
-                            </LogoContainer>
-                        </a>
+                        <LogoContainer>
+                            <AceLogo src="partners/AUTODESK.png" data-aos="fade-up" />
+                        </LogoContainer>
                     </MainPartnersGridItem>
                 </PartnersGridContainer>
             </GridContainer>
@@ -283,7 +283,11 @@ export default function Partners() {
                         <PartnersGridItem key={logoPath}>
                             <LogoContainer>
                                 <a href={mediaPatronsUrls[index]} target="_blank" rel="noopener noreferrer">
-                                    <Logo src={logoPath} data-aos="fade-up" />
+                                    {logoPath.includes("neuron.svg") ? (
+                                        <NeuronLogo src={logoPath} data-aos="fade-up" />
+                                    ) : (
+                                        <Logo src={logoPath} data-aos="fade-up" />
+                                    )}
                                 </a>
                             </LogoContainer>
                         </PartnersGridItem>
