@@ -93,7 +93,8 @@ const partnerLogoPaths = [
     "partners/HITACHI.png",
     "partners/NOKIA.png",
     "partners/NORDIC.png",
-    "partners/AVSYSTEM.svg"
+    "partners/AVSYSTEM.svg",
+    "partners/KRAKOW.png",
 ];
 const partnerUrls = [
     "",
@@ -119,7 +120,8 @@ const mediaPatronsLogoPaths = [
     "media/logopp3.jpg",
     "media/KSAF.png",
     "media/bitehack.png",
-    "media/neuron.svg"
+    "media/neuron.svg",
+    "media/krakowpl.png"
 ];
 
 const mediaPatronsUrls = [
@@ -133,7 +135,8 @@ const mediaPatronsUrls = [
     "https://podprad.pl/",
     "https://www.facebook.com/magazyn.bisagh/ ",
     "https://bitehack.best.krakow.pl/",
-    "https://heroesofthebrain.pwr.edu.pl/"
+    "https://heroesofthebrain.pwr.edu.pl/",
+    "https://krakow.pl/"
 ];
 
 const AssaLogo = styled(Logo)`
@@ -159,6 +162,11 @@ const HIDLogo = styled(Logo)`
 const NeuronLogo = styled(Logo)`
     width: 75%;
     height: 75%;
+`;
+
+const KrakowplLogo = styled(Logo)`
+    width: 120%;
+    height: 120%;
 `;
 
 const AssaLogoContainer = styled(LogoContainer)`
@@ -285,6 +293,8 @@ export default function Partners() {
                                 <a href={mediaPatronsUrls[index]} target="_blank" rel="noopener noreferrer">
                                     {logoPath.includes("neuron.svg") ? (
                                         <NeuronLogo src={logoPath} data-aos="fade-up" />
+                                    ) : logoPath.includes("krakow") ? (
+                                        <KrakowplLogo src={logoPath} data-aos="fade-up" />
                                     ) : (
                                         <Logo src={logoPath} data-aos="fade-up" />
                                     )}
