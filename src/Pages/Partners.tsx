@@ -172,6 +172,19 @@ const NokiaLogoContainer = styled(LogoContainer)`
     overflow: hidden;
 `;
 
+const PartnerSubTitle = styled.h2`
+    font-family: Norse;
+    font-size: 38px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+
+    @media only screen and (max-width: 600px) {
+        font-size: 26px;
+    }
+`;
+
 function PartnersGridContainer({ children }: PropsWithChildren) {
     return (
         <Grid
@@ -202,11 +215,12 @@ export default function Partners() {
 
             <div data-aos="fade-up">
                 <UnderlinedTitle
-                    text="W zeszłym roku zaufali nam"
+                    text="Zaufali nam"
                     textColor="dark"
                     align="center"
                 />
             </div>
+            <PartnerSubTitle data-aos="fade-up">Partner Główny</PartnerSubTitle>
             <GridContainer>
                 <PartnersGridContainer>
                     <MainPartnerGridItem>
@@ -216,6 +230,10 @@ export default function Partners() {
                             {/* </a> */}
                         </MainPartnerLogoContainer>
                     </MainPartnerGridItem>
+                </PartnersGridContainer>
+            </GridContainer>
+            <GridContainer>
+                <PartnersGridContainer>
                     <AssaPartnerGridItem>
                         <AssaLogoContainer>
                             {/* <a href="https://www.assaabloy.com/pl/pl" target="_blank" rel="noopener noreferrer"> */}

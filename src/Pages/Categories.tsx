@@ -190,13 +190,13 @@ export default function Categories() {
                 <TextContainerRight >
                     <div data-aos="fade-left">
                         <UnderlinedTitle
-                            text="KATEGORIA ARTIFICIAL INTELLIGENCE OF THINGS"
+                            text="KATEGORIA SAFETY AND SECURITY"
                             textColor="light"
                             align="flex-end"
                         />
                     </div>
                     <FakeContentRight data-aos="fade-right">
-                        Kategoria specjalistyczna AIoT to propozycja dla tych, którzy chcą tworzyć rozwiązania łączące sztuczną inteligencję z siecią inteligentnych urządzeń. Uczestnicy zmierzą się z projektami opartymi na danych zebranych przez sensory i systemy IoT, które dzięki algorytmom uczenia maszynowego zyskują zdolność analizy, predykcji i autonomicznego działania. Wyzwania koncentrować się mogą wokół realnych zastosowań technologii, takich jak smart city, automatyzacja przemysłowa, czy inteligentne systemy domowe. Liczyć się będzie nie tylko jakość kodu, ale również architektura rozwiązania, integracja sprzętu z oprogramowaniem oraz efektywna komunikacja między urządzeniami.
+                        Technologia towarzyszy nam na każdym kroku, dlatego jej bezpieczeństwo i niezawodność są dziś ważniejsze niż kiedykolwiek. Kategoria Security to przestrzeń do tworzenia rozwiązań, które pomagają chronić dane, urządzenia i systemy, a także monitorować i utrzymywać ich bezpieczeństwo. Możesz zająć się wykrywaniem zagrożeń i nieprawidłowości, ochroną prywatności, zapobieganiem awariom, automatyzacją zabezpieczeń czy zwiększaniem odporności systemów. Niezależnie od tego, czy interesujesz się cybersecurity, AI, analizą danych, IoT, elektroniką czy systemami embedded, wykorzystaj swoje umiejętności, aby tworzyć technologie, którym możemy zaufać.
                     </FakeContentRight>
                 </TextContainerRight>
             </ParentsContainerRight>

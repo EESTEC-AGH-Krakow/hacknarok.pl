@@ -58,7 +58,7 @@ function App() {
                     icon: <QuizIcon sx={{ color: "white" }} />,
                 },
                 {
-                    title: "Partnerzy",
+                    title: "Zaufali nam",
                     component: <Partners />,
                     icon: <HandshakeIcon sx={{ color: "white" }} />,
                 },
