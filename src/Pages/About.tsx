@@ -73,7 +73,7 @@ const FakeContent = styled.div`
 const NewsLink: string | undefined = "https://www.facebook.com/hacknarok/"
 export default function About() {
     const laptopImg = useProgressiveImage(
-        "odyn-hack9.png",
+        "odyn.png",
         // "laptop_thumb_5.png",
         // "laptop_thumb_10.png"
     );
