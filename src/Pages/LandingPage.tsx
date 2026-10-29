@@ -124,7 +124,7 @@ const Countdown = styled.h1`
 const Place = styled.p``;
 
 const FormOpen = false;
-const FormLink: string | undefined = "https://forms.gle/yg3CwS2Ed9RzZ9yX8";
+const FormLink: string | undefined = "https://docs.google.com/forms/d/e/1FAIpQLSc0_fVm-QSvoUlBS-5C3vBwH51Hc16hrJB737XlTBlyL7fgwg/viewform";
 
 function LandingPage() {
     return (
@@ -138,10 +138,10 @@ function LandingPage() {
                         data-aos-delay="500"
                         data-aos-once
                     >
-                        <Date> 18-19 kwietnia</Date>
+                        <Date> 18-19 kwietnia 2026</Date>
                         <RedLine />
-                        {/* <Place>Lubicz Park</Place> */}
-                        {/* <span><br></br> Zapisz się już dziś! Zapisy tylko do 16 marca! </span> */}
+                        <Place>Lubicz Park</Place>
+                        {/* <span><br></br> Zapisz się już dziś! Zapisy tylko do 15 marca! </span> */}
                         {FormOpen ? (
                             <Button
                                 disabled={false}
@@ -150,7 +150,7 @@ function LandingPage() {
                                 Zapisz się
                             </Button>
                         ) : (
-                            <Button disabled={false} >Zapisy już wkrótce</Button>
+                            <Button disabled={false} >Zapisy zakończone</Button>
                         )}
                     </EventPlaceInnerContainer>
                 </EventPlaceContainer>
