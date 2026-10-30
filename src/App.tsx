@@ -42,11 +42,11 @@ function App() {
                     component: <Categories />,
                     icon: <InfoIcon sx={{ color: "white" }} />,
                 },
-                {
-                    title: "Jak dojechać",
-                    component: <Map />,
-                    icon: <PlaceIcon sx={{ color: "white" }} />,
-                },
+                // {
+                //     title: "Jak dojechać",
+                //     component: <Map />,
+                //     icon: <PlaceIcon sx={{ color: "white" }} />,
+                // },
                 {
                     title: "Galeria",
                     component: <Gallery />,
@@ -58,7 +58,7 @@ function App() {
                     icon: <QuizIcon sx={{ color: "white" }} />,
                 },
                 {
-                    title: "Partnerzy",
+                    title: "Zaufali nam",
                     component: <Partners />,
                     icon: <HandshakeIcon sx={{ color: "white" }} />,
                 },

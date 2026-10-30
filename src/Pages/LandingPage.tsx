@@ -138,7 +138,7 @@ function LandingPage() {
                         data-aos-delay="500"
                         data-aos-once
                     >
-                        <Date> 18-19 kwietnia</Date>
+                        <Date> 18-19 kwietnia 2026</Date>
                         <RedLine />
                         <Place>Lubicz Park</Place>
                         {/* <span><br></br> Zapisz się już dziś! Zapisy tylko do 15 marca! </span> */}

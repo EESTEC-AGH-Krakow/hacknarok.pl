@@ -37,7 +37,7 @@ export default function Footer() {
                         rel="noopener noreferrer"
                         href="Regulamin.pdf"
                     >
-                        regulamin
+                        Regulamin
                     </MailtoLink>
                 </Grid>
                 <Grid item lg={2} md={3} sm={6} xs={12} textAlign={"center"}>

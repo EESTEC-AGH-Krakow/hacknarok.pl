@@ -20,7 +20,6 @@ const TabButton = styled.button<{
         props.isActive || props.isOnTopOfThePage ? "black" : "white"};
 
     box-sizing: border-box;
-    text-transform: lowercase;
     font-family: Montserrat;
     border-radius: 100px;
     font-size: 14px;
@@ -75,11 +74,11 @@ const MenuButtonContainer = styled.div<{ isOnTopOfThePage: boolean }>`
     @media screen and (max-width: 600px) {
         display: block;
         background-color: ${(props) =>
-            props.isOnTopOfThePage ? "transparent" : "#13131397"};
+        props.isOnTopOfThePage ? "transparent" : "#13131397"};
     }
 `;
 
-const MenuButton = styled(IconButton)<{ isOnTopOfThePage: boolean }>`
+const MenuButton = styled(IconButton) <{ isOnTopOfThePage: boolean }>`
     color: ${(props) =>
         props.isOnTopOfThePage ? "black" : "white !important"};
 
