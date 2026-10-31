@@ -89,6 +89,12 @@ export default function Gallery() {
                     interval={5000}
                 >
                     <div>
+                        <img src="img/galery-hack10/1.jpg" />
+                    </div>
+                    <div>
+                        <img src="img/galery-hack10/2.jpg" />
+                    </div>
+                    <div>
                         <img src="img/galery-hack9/1.webp" />
                     </div>
                     <div>

@@ -138,9 +138,9 @@ function LandingPage() {
                         data-aos-delay="500"
                         data-aos-once
                     >
-                        <Date> 18-19 kwietnia 2026</Date>
+                        <Date> kwiecień 2027</Date>
                         <RedLine />
-                        <Place>Lubicz Park</Place>
+                        {/* <Place>Lubicz Park</Place> */}
                         {/* <span><br></br> Zapisz się już dziś! Zapisy tylko do 15 marca! </span> */}
                         {FormOpen ? (
                             <Button
@@ -150,7 +150,7 @@ function LandingPage() {
                                 Zapisz się
                             </Button>
                         ) : (
-                            <Button disabled={false} >Zapisy zakończone</Button>
+                            <Button disabled={false} >Zapisy od 1 marca</Button>
                         )}
                     </EventPlaceInnerContainer>
                 </EventPlaceContainer>
