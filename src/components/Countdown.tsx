@@ -5,7 +5,7 @@ const Countdown = styled.div`
     font-weight: 500;
 `;
 const CountdownTimer: React.FC = () => {
-    const [countdownDate, setCountdownDate] = useState(new Date("Apr 18, 2026 08:00:00").getTime());
+    const [countdownDate, setCountdownDate] = useState(new Date("Mar 1, 2027 00:00:01").getTime());
     const [secondDate] = useState(new Date("Apr 19, 2026 15:37:25").getTime());
     const [now, setNow] = useState(new Date().getTime());
     const [distance, setDistance] = useState(countdownDate - now);
@@ -40,9 +40,10 @@ const CountdownTimer: React.FC = () => {
     const minutes = formatTime(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
     const seconds = formatTime(Math.floor((distance % (1000 * 60)) / 1000));
 
+    //{phase === 'beforeFirstDate' && <>Do wydarzenia pozostało: <br /><Countdown>{days}:{hours}:{minutes}:{seconds}</Countdown></>}
     return (
         <div>
-            {phase === 'beforeFirstDate' && <>Do wydarzenia pozostało: <br /><Countdown>{days}:{hours}:{minutes}:{seconds}</Countdown></>}
+            {phase === 'beforeFirstDate' && <>Start zapisów: <br /><Countdown>{days}:{hours}:{minutes}:{seconds}</Countdown></>}
             {phase === 'beforeSecondDate' && <>Walka zaczęta, do boju! <br /><Countdown>{days}:{hours}:{minutes}:{seconds}</Countdown></>}
             {phase === 'afterSecondDate' && <>Dziękujemy za udział!</>}
         </div>

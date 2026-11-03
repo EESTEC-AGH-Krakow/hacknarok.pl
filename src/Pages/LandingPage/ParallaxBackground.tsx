@@ -29,7 +29,7 @@ const Clouds = styled.img`
 
 const TitleContainer = styled.div`
     position: absolute;
-    top: 0;
+    top: -20px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -155,17 +155,17 @@ function ParallaxBackground() {
                     data-aos-once
                 >
                     <Title>
-                    <img 
-                        src={hacknarokLogo} 
-                        alt="Hacknarok Logo" 
-                        style={{ 
-                        width: '100px', 
-                        height: 'auto', 
-                        transform: 'scale(5.5)', 
-                        transformOrigin: 'center',
-                        [window.outerWidth < 600 ? 'transform' : '']: 'scale(4)',
-                        }} 
-                    />
+                        <img
+                            src={hacknarokLogo}
+                            alt="Hacknarok Logo"
+                            style={{
+                                width: '100px',
+                                height: 'auto',
+                                transform: 'scale(5.5)',
+                                transformOrigin: 'center',
+                                [window.outerWidth < 600 ? 'transform' : '']: 'scale(4)',
+                            }}
+                        />
                     </Title>
                 </TitleContainer>
                 {DisplaySnowflakes && (
