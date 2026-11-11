@@ -179,7 +179,7 @@ export default function Categories() {
                 <TextContainerRight >
                     <div data-aos="fade-left">
                         <UnderlinedTitle
-                            text="KATEGORIA SAFETY AND SECURITY"
+                            text="KATEGORIA SECURITY"
                             textColor="light"
                             align="flex-start"
                         />
